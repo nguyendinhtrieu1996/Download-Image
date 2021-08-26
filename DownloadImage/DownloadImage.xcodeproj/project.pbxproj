@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34A60BFAB5C5AE1630C8A1CA /* Pods_DownloadImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D748D6E4B62DF8426EFD2B /* Pods_DownloadImage.framework */; };
+		B20077282690ADA80021CB38 /* TNImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B20077272690ADA80021CB38 /* TNImageCoder.m */; };
+		B217ACD52685F7ED00403AEB /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACD12685F7ED00403AEB /* DataTransferService.swift */; };
+		B217ACD62685F7ED00403AEB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACD22685F7ED00403AEB /* NetworkService.swift */; };
+		B217ACD72685F7ED00403AEB /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACD32685F7ED00403AEB /* Endpoint.swift */; };
+		B217ACD82685F7ED00403AEB /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACD42685F7ED00403AEB /* NetworkConfig.swift */; };
+		B217ACDB2686292900403AEB /* ListPhotoAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACDA2686292900403AEB /* ListPhotoAPIEndPoint.swift */; };
+		B217ACDD2686296E00403AEB /* ListPhotoRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACDC2686296E00403AEB /* ListPhotoRequestDTO.swift */; };
+		B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACDE268629EE00403AEB /* ListPhotoResponseDTO.swift */; };
+		B217ACE22686371800403AEB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACE12686371800403AEB /* ImageDownloader.swift */; };
+		B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */; };
+		B227C2D926C8027A00297E90 /* TNWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B227C2D826C8027A00297E90 /* TNWebImageManager.m */; };
+		B227C2DC26C8044700297E90 /* TNWebImageCombineOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B227C2DB26C8044700297E90 /* TNWebImageCombineOperation.m */; };
+		B241064826C8C83300B71E49 /* TNWebImageLoaderBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = B241064726C8C83300B71E49 /* TNWebImageLoaderBlock.m */; };
+		B254658726B7DA8200EFC3E2 /* TNDiskCacheCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = B254658626B7DA8200EFC3E2 /* TNDiskCacheCleaner.m */; };
+		B27DCE7E26BA4D7600E14E32 /* TNImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B27DCE7D26BA4D7600E14E32 /* TNImageCoderHelper.m */; };
+		B28FF28826B923AF00085750 /* TNImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF28726B923AF00085750 /* TNImageCache.m */; };
+		B28FF28B26B9261D00085750 /* TNImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF28A26B9261D00085750 /* TNImageCacheConfig.m */; };
+		B28FF29726B94D2A00085750 /* TNWebImageBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF29626B94D2A00085750 /* TNWebImageBaseOperation.m */; };
+		B29C2B782684DD3A003B4F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B772684DD3A003B4F17 /* AppDelegate.swift */; };
+		B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */; };
+		B29C2B7C2684DD3A003B4F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B7B2684DD3A003B4F17 /* ViewController.swift */; };
+		B29C2B7F2684DD3A003B4F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29C2B7D2684DD3A003B4F17 /* Main.storyboard */; };
+		B29C2B812684DD3A003B4F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29C2B802684DD3A003B4F17 /* Assets.xcassets */; };
+		B29C2B842684DD3A003B4F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29C2B822684DD3A003B4F17 /* LaunchScreen.storyboard */; };
+		B29D38992685DB0E003E1F8B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38982685DB0E003E1F8B /* Photo.swift */; };
+		B29D389D2685DBA9003E1F8B /* PhotoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D389C2685DBA9003E1F8B /* PhotoQuery.swift */; };
+		B29D38A62685DDE6003E1F8B /* FetchListPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38A52685DDE6003E1F8B /* FetchListPhotoUseCase.swift */; };
+		B29D38AB2685DEF4003E1F8B /* ListPhotoRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38AA2685DEF4003E1F8B /* ListPhotoRespository.swift */; };
+		B29D38AF2685E126003E1F8B /* UserConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38AE2685E126003E1F8B /* UserConfigurationUseCase.swift */; };
+		B29D38B12685E13B003E1F8B /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38B02685E13B003E1F8B /* UserConfiguration.swift */; };
+		B29D38B32685E2A2003E1F8B /* UserConfigurtionRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38B22685E2A2003E1F8B /* UserConfigurtionRespository.swift */; };
+		B29D38B72685E80C003E1F8B /* DefaultListPhotoRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38B62685E80C003E1F8B /* DefaultListPhotoRespository.swift */; };
+		B29F96242687672300FFFD31 /* TNWebImageDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F96232687672300FFFD31 /* TNWebImageDefines.m */; };
+		B29F96272687679100FFFD31 /* TNWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F96262687679100FFFD31 /* TNWebImageDownloader.m */; };
+		B29F962A268767A700FFFD31 /* TNWebImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9629268767A700FFFD31 /* TNWebImageDownloaderConfig.m */; };
+		B29F962D268767BD00FFFD31 /* TNWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962C268767BD00FFFD31 /* TNWebImageDownloaderOperation.m */; };
+		B29F963026876B1400FFFD31 /* TNWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962F26876B1400FFFD31 /* TNWebImageOperation.m */; };
+		B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9634268777DD00FFFD31 /* TNWebImageError.m */; };
+		B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */; };
+		B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */; };
+		B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */; };
+		B2A3F92926B6EDD700D90289 /* TNDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92826B6EDD700D90289 /* TNDiskCache.m */; };
+		B2A3F92C26B6FA5900D90289 /* TNEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92B26B6FA5900D90289 /* TNEncryption.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		132B10E8E75AF48F2F971363 /* Pods-DownloadImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadImage.debug.xcconfig"; path = "Target Support Files/Pods-DownloadImage/Pods-DownloadImage.debug.xcconfig"; sourceTree = "<group>"; };
+		64D748D6E4B62DF8426EFD2B /* Pods_DownloadImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DownloadImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		976218C5B58C95AB908EF1C4 /* Pods-DownloadImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadImage.release.xcconfig"; path = "Target Support Files/Pods-DownloadImage/Pods-DownloadImage.release.xcconfig"; sourceTree = "<group>"; };
+		B20077262690ADA80021CB38 /* TNImageCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCoder.h; sourceTree = "<group>"; };
+		B20077272690ADA80021CB38 /* TNImageCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCoder.m; sourceTree = "<group>"; };
+		B217ACD12685F7ED00403AEB /* DataTransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		B217ACD22685F7ED00403AEB /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B217ACD32685F7ED00403AEB /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B217ACD42685F7ED00403AEB /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		B217ACDA2686292900403AEB /* ListPhotoAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoAPIEndPoint.swift; sourceTree = "<group>"; };
+		B217ACDC2686296E00403AEB /* ListPhotoRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoRequestDTO.swift; sourceTree = "<group>"; };
+		B217ACDE268629EE00403AEB /* ListPhotoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoResponseDTO.swift; sourceTree = "<group>"; };
+		B217ACE12686371800403AEB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageDownloader.swift; sourceTree = "<group>"; };
+		B227C2D726C8027A00297E90 /* TNWebImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageManager.h; sourceTree = "<group>"; };
+		B227C2D826C8027A00297E90 /* TNWebImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageManager.m; sourceTree = "<group>"; };
+		B227C2DA26C8044700297E90 /* TNWebImageCombineOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageCombineOperation.h; sourceTree = "<group>"; };
+		B227C2DB26C8044700297E90 /* TNWebImageCombineOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageCombineOperation.m; sourceTree = "<group>"; };
+		B241064626C8C83300B71E49 /* TNWebImageLoaderBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageLoaderBlock.h; sourceTree = "<group>"; };
+		B241064726C8C83300B71E49 /* TNWebImageLoaderBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageLoaderBlock.m; sourceTree = "<group>"; };
+		B254658526B7DA8200EFC3E2 /* TNDiskCacheCleaner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCacheCleaner.h; sourceTree = "<group>"; };
+		B254658626B7DA8200EFC3E2 /* TNDiskCacheCleaner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCacheCleaner.m; sourceTree = "<group>"; };
+		B27DCE7C26BA4D7600E14E32 /* TNImageCoderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCoderHelper.h; sourceTree = "<group>"; };
+		B27DCE7D26BA4D7600E14E32 /* TNImageCoderHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCoderHelper.m; sourceTree = "<group>"; };
+		B28FF28626B923AF00085750 /* TNImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCache.h; sourceTree = "<group>"; };
+		B28FF28726B923AF00085750 /* TNImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCache.m; sourceTree = "<group>"; };
+		B28FF28926B9261D00085750 /* TNImageCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCacheConfig.h; sourceTree = "<group>"; };
+		B28FF28A26B9261D00085750 /* TNImageCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCacheConfig.m; sourceTree = "<group>"; };
+		B28FF29526B94D2A00085750 /* TNWebImageBaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageBaseOperation.h; sourceTree = "<group>"; };
+		B28FF29626B94D2A00085750 /* TNWebImageBaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageBaseOperation.m; sourceTree = "<group>"; };
+		B28FF29826B94D4F00085750 /* TNWebImageBaseOperation+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNWebImageBaseOperation+Internal.h"; sourceTree = "<group>"; };
+		B29C2B742684DD3A003B4F17 /* DownloadImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29C2B772684DD3A003B4F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B29C2B7B2684DD3A003B4F17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B29C2B7E2684DD3A003B4F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B29C2B802684DD3A003B4F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B29C2B832684DD3A003B4F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B29C2B852684DD3A003B4F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29D38982685DB0E003E1F8B /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B29D389C2685DBA9003E1F8B /* PhotoQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQuery.swift; sourceTree = "<group>"; };
+		B29D38A52685DDE6003E1F8B /* FetchListPhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListPhotoUseCase.swift; sourceTree = "<group>"; };
+		B29D38AA2685DEF4003E1F8B /* ListPhotoRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoRespository.swift; sourceTree = "<group>"; };
+		B29D38AE2685E126003E1F8B /* UserConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationUseCase.swift; sourceTree = "<group>"; };
+		B29D38B02685E13B003E1F8B /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
+		B29D38B22685E2A2003E1F8B /* UserConfigurtionRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurtionRespository.swift; sourceTree = "<group>"; };
+		B29D38B62685E80C003E1F8B /* DefaultListPhotoRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListPhotoRespository.swift; sourceTree = "<group>"; };
+		B29F96212687672200FFFD31 /* DownloadImage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadImage-Bridging-Header.h"; sourceTree = "<group>"; };
+		B29F96222687672300FFFD31 /* TNWebImageDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageDefines.h; sourceTree = "<group>"; };
+		B29F96232687672300FFFD31 /* TNWebImageDefines.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageDefines.m; sourceTree = "<group>"; };
+		B29F96252687679100FFFD31 /* TNWebImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageDownloader.h; sourceTree = "<group>"; };
+		B29F96262687679100FFFD31 /* TNWebImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageDownloader.m; sourceTree = "<group>"; };
+		B29F9628268767A700FFFD31 /* TNWebImageDownloaderConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageDownloaderConfig.h; sourceTree = "<group>"; };
+		B29F9629268767A700FFFD31 /* TNWebImageDownloaderConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageDownloaderConfig.m; sourceTree = "<group>"; };
+		B29F962B268767BD00FFFD31 /* TNWebImageDownloaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		B29F962C268767BD00FFFD31 /* TNWebImageDownloaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		B29F962E26876B1400FFFD31 /* TNWebImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageOperation.h; sourceTree = "<group>"; };
+		B29F962F26876B1400FFFD31 /* TNWebImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageOperation.m; sourceTree = "<group>"; };
+		B29F9632268776C900FFFD31 /* TNInternalMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNInternalMacros.h; sourceTree = "<group>"; };
+		B29F9633268777DD00FFFD31 /* TNWebImageError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageError.h; sourceTree = "<group>"; };
+		B29F9634268777DD00FFFD31 /* TNWebImageError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageError.m; sourceTree = "<group>"; };
+		B2A3F91526B6E68D00D90289 /* TNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCache.h; sourceTree = "<group>"; };
+		B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCache.m; sourceTree = "<group>"; };
+		B2A3F91B26B6E70900D90289 /* TNCacheDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheDefines.h; sourceTree = "<group>"; };
+		B2A3F91E26B6E82900D90289 /* TNMemoryCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCacheConfig.h; sourceTree = "<group>"; };
+		B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCacheConfig.m; sourceTree = "<group>"; };
+		B2A3F92426B6EDCB00D90289 /* TNDiskCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCacheConfig.h; sourceTree = "<group>"; };
+		B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCacheConfig.m; sourceTree = "<group>"; };
+		B2A3F92726B6EDD700D90289 /* TNDiskCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCache.h; sourceTree = "<group>"; };
+		B2A3F92826B6EDD700D90289 /* TNDiskCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCache.m; sourceTree = "<group>"; };
+		B2A3F92A26B6FA5900D90289 /* TNEncryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNEncryption.h; sourceTree = "<group>"; };
+		B2A3F92B26B6FA5900D90289 /* TNEncryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNEncryption.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B29C2B712684DD39003B4F17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34A60BFAB5C5AE1630C8A1CA /* Pods_DownloadImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A8F21E377C8047C037BDF6F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				132B10E8E75AF48F2F971363 /* Pods-DownloadImage.debug.xcconfig */,
+				976218C5B58C95AB908EF1C4 /* Pods-DownloadImage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A18631B42C24A7EC5582121F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64D748D6E4B62DF8426EFD2B /* Pods_DownloadImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B20077222690AB160021CB38 /* ImageCoder */ = {
+			isa = PBXGroup;
+			children = (
+				B20077262690ADA80021CB38 /* TNImageCoder.h */,
+				B20077272690ADA80021CB38 /* TNImageCoder.m */,
+				B27DCE7C26BA4D7600E14E32 /* TNImageCoderHelper.h */,
+				B27DCE7D26BA4D7600E14E32 /* TNImageCoderHelper.m */,
+			);
+			path = ImageCoder;
+			sourceTree = "<group>";
+		};
+		B20BFC9D26B2F24000C87BE5 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				B28FF28526B91D4D00085750 /* CacheImage */,
+				B2A3F92326B6E83D00D90289 /* DiskCache */,
+				B2A3F92226B6E83500D90289 /* MemCache */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		B217ACCF2685F7CF00403AEB /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				B217ACD02685F7ED00403AEB /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		B217ACD02685F7ED00403AEB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B217ACD12685F7ED00403AEB /* DataTransferService.swift */,
+				B217ACD22685F7ED00403AEB /* NetworkService.swift */,
+				B217ACD32685F7ED00403AEB /* Endpoint.swift */,
+				B217ACD42685F7ED00403AEB /* NetworkConfig.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B217ACD92686291300403AEB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B217ACDA2686292900403AEB /* ListPhotoAPIEndPoint.swift */,
+				B217ACDC2686296E00403AEB /* ListPhotoRequestDTO.swift */,
+				B217ACDE268629EE00403AEB /* ListPhotoResponseDTO.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B217ACE0268635F300403AEB /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				B217ACE12686371800403AEB /* ImageDownloader.swift */,
+				B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		B227C2D626C8026B00297E90 /* WebImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				B227C2D726C8027A00297E90 /* TNWebImageManager.h */,
+				B227C2D826C8027A00297E90 /* TNWebImageManager.m */,
+				B227C2DA26C8044700297E90 /* TNWebImageCombineOperation.h */,
+				B227C2DB26C8044700297E90 /* TNWebImageCombineOperation.m */,
+				B241064626C8C83300B71E49 /* TNWebImageLoaderBlock.h */,
+				B241064726C8C83300B71E49 /* TNWebImageLoaderBlock.m */,
+			);
+			path = WebImageManager;
+			sourceTree = "<group>";
+		};
+		B28FF28526B91D4D00085750 /* CacheImage */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3F91B26B6E70900D90289 /* TNCacheDefines.h */,
+				B28FF28626B923AF00085750 /* TNImageCache.h */,
+				B28FF28726B923AF00085750 /* TNImageCache.m */,
+				B28FF28926B9261D00085750 /* TNImageCacheConfig.h */,
+				B28FF28A26B9261D00085750 /* TNImageCacheConfig.m */,
+			);
+			path = CacheImage;
+			sourceTree = "<group>";
+		};
+		B29C2B6B2684DD39003B4F17 = {
+			isa = PBXGroup;
+			children = (
+				B29C2B762684DD3A003B4F17 /* DownloadImage */,
+				B29C2B752684DD3A003B4F17 /* Products */,
+				7A8F21E377C8047C037BDF6F /* Pods */,
+				A18631B42C24A7EC5582121F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B29C2B752684DD3A003B4F17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B29C2B742684DD3A003B4F17 /* DownloadImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B29C2B762684DD3A003B4F17 /* DownloadImage */ = {
+			isa = PBXGroup;
+			children = (
+				B29D38A02685DCB8003E1F8B /* Application */,
+				B29D38B42685E7BD003E1F8B /* Data */,
+				B29D38A42685DD8D003E1F8B /* Domain */,
+				B217ACCF2685F7CF00403AEB /* Infrastructure */,
+				B29D38952685DADA003E1F8B /* Presentation */,
+				B29D38A22685DCD2003E1F8B /* Resources */,
+				B29F961D268766B700FFFD31 /* Modules */,
+			);
+			path = DownloadImage;
+			sourceTree = "<group>";
+		};
+		B29D38952685DADA003E1F8B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B29C2B7B2684DD3A003B4F17 /* ViewController.swift */,
+				B29C2B7D2684DD3A003B4F17 /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B29D38962685DAF6003E1F8B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B29D38982685DB0E003E1F8B /* Photo.swift */,
+				B29D389C2685DBA9003E1F8B /* PhotoQuery.swift */,
+				B29D38B02685E13B003E1F8B /* UserConfiguration.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B29D389E2685DC3B003E1F8B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B29D38A52685DDE6003E1F8B /* FetchListPhotoUseCase.swift */,
+				B29D38AE2685E126003E1F8B /* UserConfigurationUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B29D38A02685DCB8003E1F8B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */,
+				B29C2B772684DD3A003B4F17 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B29D38A22685DCD2003E1F8B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B29F96212687672200FFFD31 /* DownloadImage-Bridging-Header.h */,
+				B29C2B822684DD3A003B4F17 /* LaunchScreen.storyboard */,
+				B29C2B802684DD3A003B4F17 /* Assets.xcassets */,
+				B29C2B852684DD3A003B4F17 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B29D38A42685DD8D003E1F8B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B29D38962685DAF6003E1F8B /* Entities */,
+				B29D389E2685DC3B003E1F8B /* UseCases */,
+				B29D38A92685DEA8003E1F8B /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B29D38A92685DEA8003E1F8B /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B29D38AA2685DEF4003E1F8B /* ListPhotoRespository.swift */,
+				B29D38B22685E2A2003E1F8B /* UserConfigurtionRespository.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		B29D38B42685E7BD003E1F8B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B217ACD92686291300403AEB /* Network */,
+				B29D38B52685E7F5003E1F8B /* Respositories */,
+				B217ACE0268635F300403AEB /* ImageDownloader */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B29D38B52685E7F5003E1F8B /* Respositories */ = {
+			isa = PBXGroup;
+			children = (
+				B29D38B62685E80C003E1F8B /* DefaultListPhotoRespository.swift */,
+			);
+			path = Respositories;
+			sourceTree = "<group>";
+		};
+		B29F961D268766B700FFFD31 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B29F961E268766BF00FFFD31 /* TNWebImage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B29F961E268766BF00FFFD31 /* TNWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				B227C2D626C8026B00297E90 /* WebImageManager */,
+				B20BFC9D26B2F24000C87BE5 /* Cache */,
+				B20077222690AB160021CB38 /* ImageCoder */,
+				B29F9620268766E300FFFD31 /* ImageDownloader */,
+				B29F961F268766DD00FFFD31 /* Core */,
+			);
+			path = TNWebImage;
+			sourceTree = "<group>";
+		};
+		B29F961F268766DD00FFFD31 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3F92A26B6FA5900D90289 /* TNEncryption.h */,
+				B2A3F92B26B6FA5900D90289 /* TNEncryption.m */,
+				B29F9632268776C900FFFD31 /* TNInternalMacros.h */,
+				B28FF29526B94D2A00085750 /* TNWebImageBaseOperation.h */,
+				B28FF29626B94D2A00085750 /* TNWebImageBaseOperation.m */,
+				B28FF29826B94D4F00085750 /* TNWebImageBaseOperation+Internal.h */,
+				B29F96222687672300FFFD31 /* TNWebImageDefines.h */,
+				B29F96232687672300FFFD31 /* TNWebImageDefines.m */,
+				B29F9633268777DD00FFFD31 /* TNWebImageError.h */,
+				B29F9634268777DD00FFFD31 /* TNWebImageError.m */,
+				B29F962E26876B1400FFFD31 /* TNWebImageOperation.h */,
+				B29F962F26876B1400FFFD31 /* TNWebImageOperation.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B29F9620268766E300FFFD31 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				B29F96252687679100FFFD31 /* TNWebImageDownloader.h */,
+				B29F96262687679100FFFD31 /* TNWebImageDownloader.m */,
+				B29F9628268767A700FFFD31 /* TNWebImageDownloaderConfig.h */,
+				B29F9629268767A700FFFD31 /* TNWebImageDownloaderConfig.m */,
+				B29F962B268767BD00FFFD31 /* TNWebImageDownloaderOperation.h */,
+				B29F962C268767BD00FFFD31 /* TNWebImageDownloaderOperation.m */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		B2A3F92226B6E83500D90289 /* MemCache */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3F91526B6E68D00D90289 /* TNMemoryCache.h */,
+				B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */,
+				B2A3F91E26B6E82900D90289 /* TNMemoryCacheConfig.h */,
+				B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */,
+			);
+			path = MemCache;
+			sourceTree = "<group>";
+		};
+		B2A3F92326B6E83D00D90289 /* DiskCache */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3F92426B6EDCB00D90289 /* TNDiskCacheConfig.h */,
+				B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */,
+				B2A3F92726B6EDD700D90289 /* TNDiskCache.h */,
+				B2A3F92826B6EDD700D90289 /* TNDiskCache.m */,
+				B254658526B7DA8200EFC3E2 /* TNDiskCacheCleaner.h */,
+				B254658626B7DA8200EFC3E2 /* TNDiskCacheCleaner.m */,
+			);
+			path = DiskCache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B29C2B732684DD39003B4F17 /* DownloadImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29C2B882684DD3A003B4F17 /* Build configuration list for PBXNativeTarget "DownloadImage" */;
+			buildPhases = (
+				D496435C193136B7642D5911 /* [CP] Check Pods Manifest.lock */,
+				B29C2B702684DD39003B4F17 /* Sources */,
+				B29C2B712684DD39003B4F17 /* Frameworks */,
+				B29C2B722684DD39003B4F17 /* Resources */,
+				67CE46C7AC6C7CD1F9398F61 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DownloadImage;
+			productName = DownloadImage;
+			productReference = B29C2B742684DD3A003B4F17 /* DownloadImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B29C2B6C2684DD39003B4F17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					B29C2B732684DD39003B4F17 = {
+						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = B29C2B6F2684DD39003B4F17 /* Build configuration list for PBXProject "DownloadImage" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B29C2B6B2684DD39003B4F17;
+			productRefGroup = B29C2B752684DD3A003B4F17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B29C2B732684DD39003B4F17 /* DownloadImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B29C2B722684DD39003B4F17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29C2B842684DD3A003B4F17 /* LaunchScreen.storyboard in Resources */,
+				B29C2B812684DD3A003B4F17 /* Assets.xcassets in Resources */,
+				B29C2B7F2684DD3A003B4F17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67CE46C7AC6C7CD1F9398F61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DownloadImage/Pods-DownloadImage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DownloadImage/Pods-DownloadImage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DownloadImage/Pods-DownloadImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D496435C193136B7642D5911 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DownloadImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B29C2B702684DD39003B4F17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B217ACD52685F7ED00403AEB /* DataTransferService.swift in Sources */,
+				B20077282690ADA80021CB38 /* TNImageCoder.m in Sources */,
+				B28FF28826B923AF00085750 /* TNImageCache.m in Sources */,
+				B227C2DC26C8044700297E90 /* TNWebImageCombineOperation.m in Sources */,
+				B29D38992685DB0E003E1F8B /* Photo.swift in Sources */,
+				B29C2B7C2684DD3A003B4F17 /* ViewController.swift in Sources */,
+				B29F962A268767A700FFFD31 /* TNWebImageDownloaderConfig.m in Sources */,
+				B217ACDD2686296E00403AEB /* ListPhotoRequestDTO.swift in Sources */,
+				B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */,
+				B28FF29726B94D2A00085750 /* TNWebImageBaseOperation.m in Sources */,
+				B29C2B782684DD3A003B4F17 /* AppDelegate.swift in Sources */,
+				B29D38A62685DDE6003E1F8B /* FetchListPhotoUseCase.swift in Sources */,
+				B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */,
+				B217ACD82685F7ED00403AEB /* NetworkConfig.swift in Sources */,
+				B29D389D2685DBA9003E1F8B /* PhotoQuery.swift in Sources */,
+				B217ACE22686371800403AEB /* ImageDownloader.swift in Sources */,
+				B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */,
+				B28FF28B26B9261D00085750 /* TNImageCacheConfig.m in Sources */,
+				B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */,
+				B29F963026876B1400FFFD31 /* TNWebImageOperation.m in Sources */,
+				B2A3F92926B6EDD700D90289 /* TNDiskCache.m in Sources */,
+				B29D38B72685E80C003E1F8B /* DefaultListPhotoRespository.swift in Sources */,
+				B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */,
+				B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */,
+				B27DCE7E26BA4D7600E14E32 /* TNImageCoderHelper.m in Sources */,
+				B29F962D268767BD00FFFD31 /* TNWebImageDownloaderOperation.m in Sources */,
+				B29D38B32685E2A2003E1F8B /* UserConfigurtionRespository.swift in Sources */,
+				B227C2D926C8027A00297E90 /* TNWebImageManager.m in Sources */,
+				B2A3F92C26B6FA5900D90289 /* TNEncryption.m in Sources */,
+				B217ACD72685F7ED00403AEB /* Endpoint.swift in Sources */,
+				B217ACD62685F7ED00403AEB /* NetworkService.swift in Sources */,
+				B241064826C8C83300B71E49 /* TNWebImageLoaderBlock.m in Sources */,
+				B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */,
+				B29D38AB2685DEF4003E1F8B /* ListPhotoRespository.swift in Sources */,
+				B29D38AF2685E126003E1F8B /* UserConfigurationUseCase.swift in Sources */,
+				B254658726B7DA8200EFC3E2 /* TNDiskCacheCleaner.m in Sources */,
+				B29F96242687672300FFFD31 /* TNWebImageDefines.m in Sources */,
+				B217ACDB2686292900403AEB /* ListPhotoAPIEndPoint.swift in Sources */,
+				B29D38B12685E13B003E1F8B /* UserConfiguration.swift in Sources */,
+				B29F96272687679100FFFD31 /* TNWebImageDownloader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B29C2B7D2684DD3A003B4F17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29C2B7E2684DD3A003B4F17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B29C2B822684DD3A003B4F17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29C2B832684DD3A003B4F17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B29C2B862684DD3A003B4F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B29C2B872684DD3A003B4F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B29C2B892684DD3A003B4F17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132B10E8E75AF48F2F971363 /* Pods-DownloadImage.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				INFOPLIST_FILE = DownloadImage/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.DownloadImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DownloadImage/Resources/DownloadImage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B29C2B8A2684DD3A003B4F17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 976218C5B58C95AB908EF1C4 /* Pods-DownloadImage.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				INFOPLIST_FILE = DownloadImage/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.DownloadImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "DownloadImage/Resources/DownloadImage-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B29C2B6F2684DD39003B4F17 /* Build configuration list for PBXProject "DownloadImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29C2B862684DD3A003B4F17 /* Debug */,
+				B29C2B872684DD3A003B4F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29C2B882684DD3A003B4F17 /* Build configuration list for PBXNativeTarget "DownloadImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29C2B892684DD3A003B4F17 /* Debug */,
+				B29C2B8A2684DD3A003B4F17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B29C2B6C2684DD39003B4F17 /* Project object */;
+}
