@@ -9,9 +9,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol TNWebImageOperation <NSObject>
+
+@protocol TNCancellable <NSObject>
 
 - (void)cancel;
+
+@end // @protocol TNCancellable
+
+
+@protocol TNWebImageOperation <TNCancellable>
 
 @end // @protocol TNWebImageOperation
 

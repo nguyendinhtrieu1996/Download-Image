@@ -9,12 +9,12 @@
 
 #import "TNCacheDefines.h"
 #import "TNWebImageDefines.h"
-#import "TNWebImageDownloader.h"
+#import "TNImageDownloader.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef TNWebImageDownloaderProgressBlock TNWebImageDownloadProgressBlock;
+typedef TNImageDownloaderProgressBlock TNWebImageDownloadProgressBlock;
 
 typedef void(^TNWebImageDownloadCompletionBlock)(UIImage * _Nullable image,
                                                  NSError * _Nullable error,

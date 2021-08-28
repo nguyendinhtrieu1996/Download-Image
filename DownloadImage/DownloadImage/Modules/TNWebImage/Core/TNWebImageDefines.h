@@ -10,8 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-typedef NSString TNImageDownloaderIdentifier;
-
 typedef void(^TNWebImageNoParamsBlock)(void);
 typedef NSString *TNWebImageContextOption;
 typedef NSDictionary<TNWebImageContextOption, id> TNWebImageContext;

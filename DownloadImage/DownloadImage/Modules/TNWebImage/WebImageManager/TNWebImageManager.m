@@ -16,7 +16,7 @@
 @interface TNWebImageManager ()
 {
     id<TNImageCache> _imageCache;
-    id<TNImageDownloader> _loader;
+    id<TNImageDownloaderType> _imageDownloader;
     
     NSMutableSet<NSURL *> *_failedURLs;
     NSMutableDictionary<NSURL *, TNWebImageCombineOperation *> *_runningOperations;
@@ -35,7 +35,7 @@
 #pragma mark LifeCycle
 
 - (instancetype)initWithImageCache:(id<TNImageCache>)imageCache
-                            loader:(id<TNImageDownloader>)loader {
+                            loader:(id<TNImageDownloaderType>)loader {
     
     TN_ASSERT_NONNULL(imageCache);
     TN_ASSERT_NONNULL(loader);
@@ -43,7 +43,7 @@
     self = [super init];
     if (self) {
         _imageCache = imageCache;
-        _loader = loader;
+        _imageDownloader = loader;
         _failedURLs = [NSMutableSet new];
         _runningOperations = [NSMutableDictionary new];
     }
@@ -57,7 +57,7 @@
     dispatch_once(&once, ^{
         instance = [[TNWebImageManager alloc]
                     initWithImageCache:[TNImageCache new]
-                    loader:[TNWebImageDownloader new]];
+                    loader:[TNImageDownloader new]];
     });
     
     return instance;
@@ -161,7 +161,29 @@
                     cacheData:(NSData *)cacheData
                     cacheType:(TNImageCacheType)cacheType {
     
+    id<TNImageDownloaderType> imageDownloader = _imageDownloader;
+    
+    TNWebImageCombineOperation *runningOperation = [self _runningOperationByURL:url];
+    
+    WEAKSELF
+    runningOperation.loaderOperation
+    = [imageDownloader
+       downloadImageWithURL:url
+       options:options
+       progressBlock:^(id<TNImageDownloaderProgessObjectType> progressObj) {
+        STRONGSELF_RETURN()
+        
+        if (!runningOperation || runningOperation.isCancelled) {
+            [self _completeOperationByURL:url];
+            return;
+        }
+    } completion:^(id<TNImageDownloaderCompleteObjectType> completionObj) {
+        
+    }];
 }
+
+#pragma mark Cache
+
 
 #pragma mark Private Helper
 

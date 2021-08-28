@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TNWebImageManager : NSObject <TNWebImageManagerProtocol>
 
 - (instancetype)initWithImageCache:(id<TNImageCache>)imageCache
-                            loader:(id<TNImageDownloader>)loader;
+                            loader:(id<TNImageDownloaderType>)loader;
 
 + (instancetype)defaultWebImageDownloader;
 

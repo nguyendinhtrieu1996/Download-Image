@@ -1,15 +1,16 @@
 //
-//  TNWebImageDownloaderOperation.m
+//  TNImageDownloaderOperation.m
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 26/06/2021.
 //
 
-#import "TNWebImageDownloaderOperation.h"
+#import "TNImageDownloaderOperation.h"
 
 #import "TNInternalMacros.h"
 #import "TNWebImageError.h"
 #import "TNImageCoder.h"
+#import "TNImageDownloaderObjects.h"
 #import "TNWebImageBaseOperation+Internal.h"
 
 
@@ -21,10 +22,10 @@ static NSString * const kProgressCallbackKey = @"progress";
 static NSString * const kCompletionCallbackKey = @"completed";
 
 typedef NSMutableDictionary<NSString *, id> TNCallbacksDictionary;
-typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary *> TNCallbackBlocks;
+typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *> TNCallbackBlocks;
 
 
-@interface TNWebImageDownloaderOperation ()
+@interface TNImageDownloaderOperation ()
 {
     // Synthesize
     NSURLRequest *_request;
@@ -32,8 +33,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
     NSURLSession *_session;
     NSURLSessionDataTask *_dataTask;
     double _mininumProgressInterval;
-    TNWebImageDownloaderOptions _options;
-    TNWebImageContext *_context;
+    TNImageDownloaderOptions _options;
     
     NSOperationQueue *_callbackQueue;
     TNCallbackBlocks *_callbackBlocks;
@@ -47,10 +47,10 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
     TNWebImageCoder *_imageCoder;
 }
 
-@end // @interface TNWebImageDownloaderOperation ()
+@end // @interface TNImageDownloaderOperation ()
 
 
-@implementation TNWebImageDownloaderOperation
+@implementation TNImageDownloaderOperation
 
 @synthesize request = _request;
 @synthesize response = _response;
@@ -59,23 +59,13 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
 @synthesize mininumProgressInterval = _mininumProgressInterval;
 @synthesize options = _options;
 @synthesize context = _context;
+
 #pragma mark LifeCycle
 
 - (instancetype)initWithRequest:(NSURLRequest *)request
                       inSession:(NSURLSession *)session
-                        options:(TNWebImageDownloaderOptions)options {
+                        options:(TNImageDownloaderOptions)options {
     
-    return [[[self class] alloc]
-            initWithRequest:request
-            inSession:session
-            options:options
-            context:nil];
-}
-
-- (instancetype)initWithRequest:(NSURLRequest *)request
-                      inSession:(NSURLSession *)session
-                        options:(TNWebImageDownloaderOptions)options
-                        context:(TNWebImageContext *)context {
     self = [super init];
     
     if (self) {
@@ -83,7 +73,6 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
         
         _session = session;
         _options = options;
-        _context = [context mutableCopy];
         
         _callbackQueue = [NSOperationQueue new];
         _callbackQueue.name = @"com.TNWebImage.DownloaderOperationCallbackQueue";
@@ -100,10 +89,10 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
 
 #pragma mark Public Method
 
-- (TNImageDownloaderIdentifier *)addHandlerForProgress:(TNWebImageDownloaderProgressBlock)progressBlock
-                                            completion:(TNWebImageDownloaderCompletionBlock)completionBlock {
+- (TNImageDownloaderIdentifier)addHandlerForProgress:(TNImageDownloaderProgressBlock)progressBlock
+                                            completion:(TNImageDownloaderCompletionBlock)completionBlock {
     
-    TNImageDownloaderIdentifier *identifier = [self _generateDownloadIdentifier];
+    TNImageDownloaderIdentifier identifier = [self _generateDownloadIdentifier];
     TNCallbacksDictionary *callbackDict = [NSMutableDictionary new];
     
     if (progressBlock) {
@@ -162,9 +151,9 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
         return;
     }
     
-    if (self.options & TNWebImageDownloader_HighPriority) {
+    if (self.options & TNImageDownloader_HighPriority) {
         _dataTask.priority = NSURLSessionTaskPriorityHigh;
-    } else if (self.options & TNWebImageDownloader_LowPriotiry) {
+    } else if (self.options & TNImageDownloader_LowPriotiry) {
         _dataTask.priority = NSURLSessionTaskPriorityLow;
     } else {
         _dataTask.priority = NSURLSessionTaskPriorityDefault;
@@ -177,7 +166,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
 
 #pragma mark Cancel
 
-- (BOOL)cancel:(TNImageDownloaderIdentifier *)identifier {
+- (BOOL)cancel:(TNImageDownloaderIdentifier)identifier {
     ifnot (identifier) {
         return NO;
     }
@@ -194,11 +183,15 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
             [self cancel];
         }
         
-        TNWebImageDownloaderCompletionBlock completionBlock = [callbacksDict objectForKey:kCompletionCallbackKey];
+        TNImageDownloaderCompletionBlock completionBlock = [callbacksDict objectForKey:kCompletionCallbackKey];
         if (completionBlock) {
             NSError *error = TNWebImageMakeError(TNWebImageError_Cancelled,
                                                  @"Operation canclled by user during sending the request");
-            completionBlock(nil, nil, error, YES);
+            TNImageDownloaderCompleteObject *completionObj = [TNImageDownloaderCompleteObject new];
+            completionObj.error = error;
+            completionObj.isFinished = YES;
+            
+            completionBlock(completionObj);
         }
     }
     
@@ -244,8 +237,14 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
                                         url:(nullable NSURL *)url {
     
     NSArray *progressBlocks = [self _callbackForKey:kProgressCallbackKey];
-    for (TNWebImageDownloaderProgressBlock progressBlock in progressBlocks) {
-        progressBlock(receiveSize, expectSize, url);
+    for (TNImageDownloaderProgressBlock progressBlock in progressBlocks) {
+        
+        TNImageDownloaderProgressObject *progressObj = [TNImageDownloaderProgressObject new];
+        progressObj.expectedSize = expectSize;
+        progressObj.receiveSize = receiveSize;
+        progressObj.targetURL = url;
+        
+        progressBlock(progressObj);
     }
 }
 
@@ -273,8 +272,14 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
     
     NSArray *completionBlocks = [self _callbackForKey:kCompletionCallbackKey];
     [_callbackQueue addOperationWithBlock:^{
-        for (TNWebImageDownloaderCompletionBlock completion in completionBlocks) {
-            completion(image, imageData, error, finished);
+        for (TNImageDownloaderCompletionBlock completion in completionBlocks) {
+            
+            TNImageDownloaderCompleteObject *completionObj = [TNImageDownloaderCompleteObject new];
+            completionObj.image = image;
+            completionObj.data = imageData;
+            completionObj.error = error;
+            completionObj.isFinished = YES;
+            completion(completionObj);
         }
     }];
 }
@@ -284,7 +289,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
 - (NSArray *)_callbackForKey:(NSString *)queryKey {
     NSMutableArray *callbacks = [NSMutableArray new];
     @synchronized (self) {
-        [_callbackBlocks enumerateKeysAndObjectsUsingBlock:^(TNImageDownloaderIdentifier * _Nonnull key,
+        [_callbackBlocks enumerateKeysAndObjectsUsingBlock:^(TNImageDownloaderIdentifier _Nonnull key,
                                                              TNCallbacksDictionary * _Nonnull obj,
                                                              BOOL * _Nonnull stop) {
             @autoreleasepool {
@@ -317,21 +322,16 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier *, TNCallbacksDictionary
     }
 }
 
-- (TNImageDownloaderIdentifier *)_generateDownloadIdentifier {
+- (TNImageDownloaderIdentifier)_generateDownloadIdentifier {
     return [[NSUUID UUID] UUIDString];
 }
 
 #pragma mark Decode Image
 
 - (UIImage *)_decodeImageFromData:(NSData *)data {
-#if DEBUG
-    CGFloat imageSize = data.length;
-    NSLog(@"SIZE OF IMAGE: %f Mb", imageSize/1024/1024);
-#endif // DEBUG
-    
     NSMutableDictionary *decodingOptions = [NSMutableDictionary new];
     
-    if (TN_OPTIONS_CONTAINS(_options, TNWebImageDownloader_ScaleDownLargeImage)) {
+    if (TN_OPTIONS_CONTAINS(_options, TNImageDownloader_ScaleDownLargeImage)) {
         CGFloat numberBytesPerPixel = 4.0;
         CGFloat thumbnailPixels = kDestImageLimitBytes / numberBytesPerPixel;
         CGFloat dimension = ceil(sqrtl(thumbnailPixels));
@@ -421,4 +421,4 @@ didCompleteWithError:(NSError *)error {
                                           url:_request.URL];
 }
 
-@end // @implementation TNWebImageDownloaderOperation
+@end // @implementation TNImageDownloaderOperation

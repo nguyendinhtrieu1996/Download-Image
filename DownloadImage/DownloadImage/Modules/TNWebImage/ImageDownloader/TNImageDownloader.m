@@ -1,48 +1,19 @@
 //
-//  TNWebImageDownloader.m
+//  TNImageDownloader.m
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 26/06/2021.
 //
 
-#import "TNWebImageDownloader.h"
+#import "TNImageDownloader.h"
 
 #import "TNInternalMacros.h"
 #import "TNWebImageError.h"
-#import "TNWebImageDownloaderOperation.h"
+#import "TNImageDownloaderOperation.h"
+#import "TNImageDownloaderObjects.h"
 
 
-@interface TNWebImageDownloadToken ()
-
-@property (nonatomic, readwrite, nullable) NSURL *url;
-@property (nonatomic, readwrite, nullable) NSURLRequest *request;
-@property (nonatomic, readwrite, nullable) NSURLResponse *response;
-
-@property (nonatomic, weak) NSOperation<TNWebImageDownloaderOperationProtocol> *downloadOperation;
-@property (nonatomic, getter=isCancelled) BOOL cancelled;
-
-@end // @interface TNWebImageDownloadToken ()
-
-@implementation TNWebImageDownloadToken
-
-- (void)cancel {
-    @synchronized (self) {
-        if (self.isCancelled) {
-            return;
-        }
-        
-        self.cancelled = YES;
-        [self.downloadOperation cancel:_identifier];
-    }
-}
-
-@end // @implementation TNWebImageDownloadToken
-
-
-#pragma mark - [TNWebImageDownloader]
-
-
-@interface TNWebImageDownloader ()
+@interface TNImageDownloader ()
 <
 NSURLSessionTaskDelegate
 , NSURLSessionDataDelegate
@@ -51,26 +22,26 @@ NSURLSessionTaskDelegate
 {
     NSURLSession *_session;
     NSOperationQueue *_downloadQueue;
-    NSMutableDictionary<NSURL *, NSOperation<TNWebImageDownloaderOperationProtocol> *> *_URLOperation;
+    NSMutableDictionary<NSURL *, NSOperation<TNImageDownloaderOperationType> *> *_URLOperation;
     
     TN_LOCK_DECLARE(_operationsLock);
 }
 
 
-@end // @interface TNWebImageDownloader ()
+@end // @interface TNImageDownloader ()
 
-@implementation TNWebImageDownloader
+@implementation TNImageDownloader
 
 
 #pragma mark Object LifeCycle
 
-- (instancetype)initWithConfig:(TNWebImageDownloaderConfig *)conig {
+- (instancetype)initWithConfig:(TNImageDownloaderConfig *)conig {
     self = [super init];
     
     if (self) {
         _config = [conig copy];
         if (!_config) {
-            _config = [TNWebImageDownloaderConfig defaultDownloaderConfig];
+            _config = [TNImageDownloaderConfig defaultDownloaderConfig];
         }
         
         _downloadQueue = [NSOperationQueue new];
@@ -93,48 +64,51 @@ NSURLSessionTaskDelegate
     return self;
 }
 
-+ (TNWebImageDownloader *)sharedDownloader {
++ (TNImageDownloader *)sharedDownloader {
     static dispatch_once_t once;
-    static TNWebImageDownloader *instance;
+    static TNImageDownloader *instance;
     dispatch_once(&once, ^{
-        instance = [[[self class] alloc] initWithConfig:[TNWebImageDownloaderConfig defaultDownloaderConfig]];
+        instance = [[[self class] alloc] initWithConfig:[TNImageDownloaderConfig defaultDownloaderConfig]];
     });
     return instance;
 }
 
 #pragma mark Donwload EntryPoint
 
-- (TNWebImageDownloadToken *)downloadImageWithURL:(NSURL *)url
-                                       completion:(TNWebImageDownloaderCompletionBlock)completionBlock {
+- (id<TNImageDownloadTokenType>)downloadImageWithURL:(NSURL *)url
+                                          completion:(TNImageDownloaderCompletionBlock)completionBlock {
+    
     return [self downloadImageWithURL:url
                               options:0
-                              context:nil
                         progressBlock:nil
                            completion:completionBlock];
 }
 
-- (TNWebImageDownloadToken *)downloadImageWithURL:(NSURL *)url
-                                          options:(TNWebImageDownloaderOptions)options
-                                          context:(TNWebImageContext *)context
-                                    progressBlock:(TNWebImageDownloaderProgressBlock)progressBlock
-                                       completion:(TNWebImageDownloaderCompletionBlock)completionBlock {
+- (id<TNImageDownloadTokenType>)downloadImageWithURL:(NSURL *)url
+                                             options:(TNImageDownloaderOptions)options
+                                       progressBlock:(TNImageDownloaderProgressBlock)progressBlock
+                                          completion:(TNImageDownloaderCompletionBlock)completionBlock {
     
     ifnot (url) {
         NSError *error = TNWebImageMakeError(TNWebImageError_InavlidURL, @"Image url is nil");
-        safeExec(completionBlock, nil, nil, error, YES);
+        
+        id<TNImageDownloaderCompleteObjectType> object = [TNImageDownloaderCompleteObject new];
+        object.isFinished = YES;
+        object.error = error;
+        
+        safeExec(completionBlock, object);
         return nil;
     }
     
     TN_LOCK(_operationsLock);
     
-    TNImageDownloaderIdentifier *downloadIdentifier;
-    NSOperation<TNWebImageDownloaderOperationProtocol> *operation;
+    TNImageDownloaderIdentifier downloadIdentifier;
+    NSOperation<TNImageDownloaderOperationType> *operation;
     operation = [_URLOperation objectForKey:url];
     
     if(!operation || operation.isFinished || operation.isCancelled) {
         operation = [self _createDownloadOperationWithURL:url
-                                                  options:options
-                                                  context:context];
+                                                  options:options];
         WEAKSELF
         operation.completionBlock = ^{
             STRONGSELF_RETURN()
@@ -150,9 +124,9 @@ NSURLSessionTaskDelegate
         [_downloadQueue addOperation:operation];
     } else {
         ifnot (operation.isExecuting) {
-            if (TN_OPTIONS_CONTAINS(options, TNWebImageDownloader_HighPriority)) {
+            if (TN_OPTIONS_CONTAINS(options, TNImageDownloader_HighPriority)) {
                 operation.queuePriority = NSOperationQueuePriorityHigh;
-            } else if (TN_OPTIONS_CONTAINS(options, TNWebImageDownloader_LowPriotiry)) {
+            } else if (TN_OPTIONS_CONTAINS(options, TNImageDownloader_LowPriotiry)) {
                 operation.queuePriority = NSOperationQueuePriorityLow;
             } else {
                 operation.queuePriority = NSOperationQueuePriorityNormal;
@@ -162,7 +136,7 @@ NSURLSessionTaskDelegate
         downloadIdentifier = [operation addHandlerForProgress:progressBlock completion:completionBlock];
     }
     
-    TNWebImageDownloadToken *downloadToken = [TNWebImageDownloadToken new];
+    TNImageDownloadToken *downloadToken = [TNImageDownloadToken new];
     downloadToken.url = url;
     downloadToken.request = operation.request;
     downloadToken.identifier = downloadIdentifier;
@@ -181,32 +155,30 @@ NSURLSessionTaskDelegate
 
 #pragma mark Helper Methods
 
-- (NSOperation<TNWebImageDownloaderOperationProtocol> *)_createDownloadOperationWithURL:(NSURL *)url
-                                                                                options:(TNWebImageDownloaderOptions)options
-                                                                                context:(TNWebImageContext *)context {
+- (NSOperation<TNImageDownloaderOperationType> *)_createDownloadOperationWithURL:(NSURL *)url
+                                                                                options:(TNImageDownloaderOptions)options {
     
-    BOOL useURLCache = TN_OPTIONS_CONTAINS(options, TNWebImageDownloader_UseNSURLCache);
+    BOOL useURLCache = TN_OPTIONS_CONTAINS(options, TNImageDownloader_UseNSURLCache);
     NSURLRequestCachePolicy cachePolicy = useURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url
                                                               cachePolicy:cachePolicy
                                                           timeoutInterval:_config.downloadTimeout];
     
     
-    NSOperation<TNWebImageDownloaderOperationProtocol> *operation;
-    operation = [[TNWebImageDownloaderOperation alloc] initWithRequest:urlRequest
+    NSOperation<TNImageDownloaderOperationType> *operation;
+    operation = [[TNImageDownloaderOperation alloc] initWithRequest:urlRequest
                                                              inSession:_session
-                                                               options:options
-                                                               context:context];
+                                                               options:options];
     
-    if (TN_OPTIONS_CONTAINS(options, TNWebImageDownloader_HighPriority)) {
+    if (TN_OPTIONS_CONTAINS(options, TNImageDownloader_HighPriority)) {
         operation.queuePriority = NSOperationQueuePriorityHigh;
-    } else if (TN_OPTIONS_CONTAINS(options, TNWebImageDownloader_LowPriotiry)) {
+    } else if (TN_OPTIONS_CONTAINS(options, TNImageDownloader_LowPriotiry)) {
         operation.queuePriority = NSOperationQueuePriorityLow;
     } else {
         operation.queuePriority = NSOperationQueuePriorityNormal;
     }
     
-    if (self.config.executionOrder == TNWebImageDownloaderExecutionOrder_LIFO) {
+    if (self.config.executionOrder == TNImageDownloaderExecutionOrder_LIFO) {
         for (NSOperation *pendingOperation in _downloadQueue.operations) {
             [pendingOperation addDependency:operation];
         }
@@ -215,17 +187,17 @@ NSURLSessionTaskDelegate
     return operation;
 }
 
-- (NSOperation<TNWebImageDownloaderOperationProtocol> *)_operationByTask:(NSURLSessionTask *)task {
+- (NSOperation<TNImageDownloaderOperationType> *)_operationByTask:(NSURLSessionTask *)task {
     ifnot (task) {
         return nil;
     }
     
-    NSOperation<TNWebImageDownloaderOperationProtocol> *returnOperation = nil;
+    NSOperation<TNImageDownloaderOperationType> *returnOperation = nil;
     
     TN_LOCK(_operationsLock);
     
-    for (NSOperation<TNWebImageDownloaderOperationProtocol> *operation in _downloadQueue.operations) {
-        ifnot ([operation conformsToProtocol:@protocol(TNWebImageDownloaderOperationProtocol)]) {
+    for (NSOperation<TNImageDownloaderOperationType> *operation in _downloadQueue.operations) {
+        ifnot ([operation conformsToProtocol:@protocol(TNImageDownloaderOperationType)]) {
             NSAssert(false, NSInternalInconsistencyException);
             continue;
         }
@@ -248,7 +220,7 @@ NSURLSessionTaskDelegate
 didReceiveResponse:(NSURLResponse *)response
  completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     
-    NSOperation<TNWebImageDownloaderOperationProtocol> *operation = [self _operationByTask:dataTask];
+    NSOperation<TNImageDownloaderOperationType> *operation = [self _operationByTask:dataTask];
     ifnot (operation) {
         return;
     }
@@ -266,7 +238,7 @@ didReceiveResponse:(NSURLResponse *)response
               task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error {
     
-    NSOperation<TNWebImageDownloaderOperationProtocol> *operation = [self _operationByTask:task];
+    NSOperation<TNImageDownloaderOperationType> *operation = [self _operationByTask:task];
     ifnot (operation) {
         return;
     }
@@ -283,7 +255,7 @@ didCompleteWithError:(NSError *)error {
           dataTask:(NSURLSessionDataTask *)dataTask
     didReceiveData:(NSData *)data {
     
-    NSOperation<TNWebImageDownloaderOperationProtocol> *operation = [self _operationByTask:dataTask];
+    NSOperation<TNImageDownloaderOperationType> *operation = [self _operationByTask:dataTask];
     ifnot (operation) {
         return;
     }
@@ -296,4 +268,4 @@ didCompleteWithError:(NSError *)error {
     }
 }
 
-@end // @implementation TNWebImageDownloader
+@end // @implementation TNImageDownloader

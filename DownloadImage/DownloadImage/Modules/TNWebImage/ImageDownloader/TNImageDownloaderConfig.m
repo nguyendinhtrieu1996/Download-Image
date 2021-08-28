@@ -1,25 +1,30 @@
 //
-//  TNWebImageDownloaderConfig.m
+//  TNImageDownloaderConfig.m
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 26/06/2021.
 //
 
-#import "TNWebImageDownloaderConfig.h"
+#import "TNImageDownloaderConfig.h"
 
 
 static NSUInteger const kDefaultMaxConcurrentDownload = 6;
 static NSTimeInterval const kDefaultDownloadTimeout = 15;
 
 
-@implementation TNWebImageDownloaderConfig
+@implementation TNImageDownloaderConfig
 
-+ (TNWebImageDownloaderConfig *)defaultDownloaderConfig {
-    static TNWebImageDownloaderConfig *_defaultDownloaderConfig;
+@synthesize maxConcurrentDownload;
+@synthesize downloadTimeout;
+@synthesize sessionConfiguration;
+@synthesize executionOrder;
+
++ (TNImageDownloaderConfig *)defaultDownloaderConfig {
+    static TNImageDownloaderConfig *_defaultDownloaderConfig;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        _defaultDownloaderConfig = [TNWebImageDownloaderConfig new];
+        _defaultDownloaderConfig = [TNImageDownloaderConfig new];
     });
     
     return _defaultDownloaderConfig;
@@ -29,15 +34,15 @@ static NSTimeInterval const kDefaultDownloadTimeout = 15;
 {
     self = [super init];
     if (self) {
-        _maxConcurrentDownload = kDefaultMaxConcurrentDownload;
-        _downloadTimeout = kDefaultDownloadTimeout;
-        _executionOrder = TNWebImageDownloaderExecutionOrder_FIFO;
+        self.maxConcurrentDownload = kDefaultMaxConcurrentDownload;
+        self.downloadTimeout = kDefaultDownloadTimeout;
+        self.executionOrder = TNImageDownloaderExecutionOrder_FIFO;
     }
     return self;
 }
 
-- (instancetype)_initFromOther:(TNWebImageDownloaderConfig *)other {
-    TNWebImageDownloaderConfig *copy = [[[self class] alloc] init];
+- (instancetype)_initFromOther:(TNImageDownloaderConfig *)other {
+    TNImageDownloaderConfig *copy = [[[self class] alloc] init];
     
     copy.maxConcurrentDownload = other.maxConcurrentDownload;
     copy.downloadTimeout = other.downloadTimeout;
