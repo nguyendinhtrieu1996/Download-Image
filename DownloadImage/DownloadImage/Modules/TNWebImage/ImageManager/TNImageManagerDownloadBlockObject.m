@@ -1,13 +1,13 @@
 //
-//  TNWebImageLoaderBlock.m
+//  TNImageManagerDownloadBlockObject.m
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 15/08/2021.
 //
 
-#import "TNWebImageLoaderBlock.h"
+#import "TNImageManagerDownloadBlockObject.h"
 
-@implementation TNWebImageLoaderBlock
+@implementation TNImageManagerDownloadBlockObject
 
 @synthesize progressBlock;
 @synthesize completionBlock;
@@ -22,4 +22,4 @@
     return self;
 }
 
-@end // @implementation TNWebImageLoaderBlock
+@end // @implementation TNImageManagerDownloadBlockObject

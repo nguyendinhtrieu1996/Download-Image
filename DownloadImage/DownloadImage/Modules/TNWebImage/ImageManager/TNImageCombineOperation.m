@@ -18,7 +18,20 @@
 
 @implementation TNImageCombineOperation
 
+@synthesize cacheOperation;
+@synthesize loaderOperation;
 @synthesize cancelled = _cancelled;
+
+- (instancetype)initWithCacheOperation:(id<TNWebImageOperation>)cacheOperation
+                       loaderOperation:(id<TNWebImageOperation>)loaderOperation {
+    
+    self = [super init];
+    if (self) {
+        self.cacheOperation = cacheOperation;
+        self.loaderOperation = loaderOperation;
+    }
+    return self;
+}
 
 - (void)cancel {
     @synchronized (self) {

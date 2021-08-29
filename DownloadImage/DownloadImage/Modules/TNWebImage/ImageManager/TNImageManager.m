@@ -9,7 +9,9 @@
 
 #import "TNImageCache.h"
 #import "TNWebImageError.h"
+#import "TNImageDownloader.h"
 #import "TNInternalMacros.h"
+#import "TNImageManagerDownloadBlockObject.h"
 #import "TNImageCombineOperation.h"
 
 
@@ -20,7 +22,7 @@
     
     NSMutableSet<NSURL *> *_failedURLs;
     NSMutableDictionary<NSURL *, TNImageCombineOperation *> *_runningOperations;
-    NSMutableDictionary<NSURL *, NSMutableArray<id<TNImageLoaderBlockObjectType>> *> *_runningBlockObjs;
+    NSMutableDictionary<NSURL *, NSMutableArray<id<TNImageManagerDownloadBlockObjectType>> *> *_runningBlockObjs;
     
     TN_LOCK_DECLARE(_failedURLLock);
     TN_LOCK_DECLARE(_runningOperationsLock);
@@ -96,7 +98,7 @@
     runningOperation = [TNImageCombineOperation new];
     [self _addRunningOperation:runningOperation withURL:url];
     
-    TNWebImageLoaderBlock *loaderBlock = [TNWebImageLoaderBlock new];
+    TNImageManagerDownloadBlockObject *loaderBlock = [TNImageManagerDownloadBlockObject new];
     loaderBlock.progressBlock = progressBlock;
     loaderBlock.completionBlock = completionBlock;
     
@@ -306,7 +308,7 @@
         return;
     }
     
-    id<TNImageLoaderBlockObjectType> loaderBlock = [[TNWebImageLoaderBlock alloc]
+    id<TNImageManagerDownloadBlockObjectType> loaderBlock = [[TNImageManagerDownloadBlockObject alloc]
                                           initWithProgress:progressBlock
                                           completion:completionBlock];
     [runningBlocks addObject:loaderBlock];
@@ -326,8 +328,8 @@
 
 #pragma mark Block Objs Helper
 
-- (NSArray<id<TNImageLoaderBlockObjectType>> *)_runningBlockObjsByURL:(NSURL *)url {
-    NSArray<id<TNImageLoaderBlockObjectType>> *objs = nil;
+- (NSArray<id<TNImageManagerDownloadBlockObjectType>> *)_runningBlockObjsByURL:(NSURL *)url {
+    NSArray<id<TNImageManagerDownloadBlockObjectType>> *objs = nil;
     
     TN_LOCK(_runningBlockObjsLock);
     objs = [[_runningBlockObjs objectForKey:url] copy];
@@ -336,7 +338,7 @@
     return objs;
 }
 
-- (void)_addRunningBlock:(TNWebImageLoaderBlock *)block withURL:(NSURL *)url {
+- (void)_addRunningBlock:(TNImageManagerDownloadBlockObject *)block withURL:(NSURL *)url {
     TN_LOCK(_runningBlockObjsLock);
     [_runningBlockObjs setObject:block forKey:url];
     TN_UNLOCK(_runningBlockObjsLock);
@@ -347,17 +349,20 @@
 - (void)_informProgressBlockWithURL:(NSURL *)url
                         progressObj:(id<TNImageDownloaderProgessObjectType>)progressObj {
     
-    NSArray<id<TNImageLoaderBlockObjectType>> *objs = [self _runningBlockObjsByURL:url];
-    for (id<TNImageLoaderBlockObjectType> blockObj in objs) {
-        safeExec(blockObj.progressBlock, progressObj);
+    NSArray<id<TNImageManagerDownloadBlockObjectType>> *objs = [self _runningBlockObjsByURL:url];
+    for (id<TNImageManagerDownloadBlockObjectType> blockObj in objs) {
+        safeExec(blockObj.progressBlock,
+                 progressObj.expectedSize,
+                 progressObj.receiveSize,
+                 progressObj.targetURL);
     }
 }
 
 - (void)_informCompletionBlockWithURL:(NSURL *)url
                           completeObj:(id<TNImageDownloaderCompleteObjectType>)completionObj  {
     
-    NSArray<id<TNImageLoaderBlockObjectType>> *objs = [self _runningBlockObjsByURL:url];
-    for (id<TNImageLoaderBlockObjectType> blockObj in objs) {
+    NSArray<id<TNImageManagerDownloadBlockObjectType>> *objs = [self _runningBlockObjsByURL:url];
+    for (id<TNImageManagerDownloadBlockObjectType> blockObj in objs) {
         
         safeExec(blockObj.completionBlock,
                  completionObj.image,

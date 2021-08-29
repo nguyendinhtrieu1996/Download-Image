@@ -7,16 +7,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TNWebImageOperation.h"
+#import "TNImageManagerDefines.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TNImageCombineOperation : NSOperation <TNWebImageOperation>
+@interface TNImageCombineOperation : NSOperation <TNImageCombineOperationType>
 
-@property (nonatomic, nullable) id<TNWebImageOperation> cacheOperation;
-
-@property (nonatomic, nullable) id<TNWebImageOperation> loaderOperation;
+- (instancetype)initWithCacheOperation:(id<TNWebImageOperation>)cacheOperation
+                       loaderOperation:(id<TNWebImageOperation>)loaderOperation;
 
 @end // @interface TNImageCombineOperation
 

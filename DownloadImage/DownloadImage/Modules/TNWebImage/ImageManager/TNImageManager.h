@@ -7,28 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import "TNWebImageLoaderBlock.h"
+#import "TNImageManagerDefines.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
-
-@protocol TNImageManagerType <NSObject>
-
-@required
-
-- (nullable id<TNWebImageOperation>)loadImageWithURL:(NSURL *)url
-                                             options:(TNWebImageOptions)options
-                                            progress:(nullable TNImageManagerProgressBlock)progressBlock
-                                          completion:(nullable TNImageManagerCompletionBlock)completionBlock;
-
-- (void)cancelAll;
-
-- (void)removeFailedURL:(NSURL *)url;
-
-- (void)removeAllFailedURLs;
-
-@end // @protocol TNImageManagerType
-
 
 @interface TNImageManager : NSObject <TNImageManagerType>
 
