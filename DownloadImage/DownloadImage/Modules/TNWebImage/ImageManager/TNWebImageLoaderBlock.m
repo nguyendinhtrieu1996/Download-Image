@@ -12,8 +12,8 @@
 @synthesize progressBlock;
 @synthesize completionBlock;
 
-- (instancetype)initWithProgress:(TNWebImageDownloadProgressBlock)progressBlock
-                      completion:(TNWebImageDownloadCompletionBlock)completionBlock {
+- (instancetype)initWithProgress:(TNImageManagerProgressBlock)progressBlock
+                      completion:(TNImageManagerCompletionBlock)completionBlock {
     self = [super init];
     if (self) {
         self.progressBlock = progressBlock;

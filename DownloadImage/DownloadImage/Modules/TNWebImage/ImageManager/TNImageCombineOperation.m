@@ -1,22 +1,22 @@
 //
-//  TNWebImageCombineOperation.m
+//  TNImageCombineOperation.m
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 14/08/2021.
 //
 
-#import "TNWebImageCombineOperation.h"
+#import "TNImageCombineOperation.h"
 
 
-@interface TNWebImageCombineOperation ()
+@interface TNImageCombineOperation ()
 {
     BOOL _cancelled;
 }
 
-@end // @interface TNWebImageCombineOperation ()
+@end // @interface TNImageCombineOperation ()
 
 
-@implementation TNWebImageCombineOperation
+@implementation TNImageCombineOperation
 
 @synthesize cancelled = _cancelled;
 
@@ -40,4 +40,4 @@
     }
 }
 
-@end // @implementation TNWebImageCombineOperation
+@end // @implementation TNImageCombineOperation

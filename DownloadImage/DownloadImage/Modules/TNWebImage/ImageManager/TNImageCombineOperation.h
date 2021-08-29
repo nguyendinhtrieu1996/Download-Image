@@ -1,5 +1,5 @@
 //
-//  TNWebImageCombineOperation.h
+//  TNImageCombineOperation.h
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 14/08/2021.
@@ -12,12 +12,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TNWebImageCombineOperation : NSOperation <TNWebImageOperation>
+@interface TNImageCombineOperation : NSOperation <TNWebImageOperation>
 
 @property (nonatomic, nullable) id<TNWebImageOperation> cacheOperation;
 
 @property (nonatomic, nullable) id<TNWebImageOperation> loaderOperation;
 
-@end // @interface TNWebImageCombineOperation
+@end // @interface TNImageCombineOperation
 
 NS_ASSUME_NONNULL_END

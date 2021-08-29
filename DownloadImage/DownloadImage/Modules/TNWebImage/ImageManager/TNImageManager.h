@@ -1,5 +1,5 @@
 //
-//  TNWebImageManager.h
+//  TNImageManager.h
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 14/08/2021.
@@ -12,14 +12,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol TNWebImageManagerProtocol <NSObject>
+@protocol TNImageManagerType <NSObject>
 
 @required
 
 - (nullable id<TNWebImageOperation>)loadImageWithURL:(NSURL *)url
                                              options:(TNWebImageOptions)options
-                                            progress:(nullable TNWebImageDownloadProgressBlock)progressBlock
-                                          completion:(nullable TNWebImageDownloadCompletionBlock)completionBlock;
+                                            progress:(nullable TNImageManagerProgressBlock)progressBlock
+                                          completion:(nullable TNImageManagerCompletionBlock)completionBlock;
 
 - (void)cancelAll;
 
@@ -27,16 +27,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeAllFailedURLs;
 
-@end // @protocol TNWebImageManagerProtocol
+@end // @protocol TNImageManagerType
 
 
-@interface TNWebImageManager : NSObject <TNWebImageManagerProtocol>
+@interface TNImageManager : NSObject <TNImageManagerType>
 
 - (instancetype)initWithImageCache:(id<TNImageCache>)imageCache
                             loader:(id<TNImageDownloaderType>)loader;
 
-@property (nonatomic, readonly, class) TNWebImageManager *defaultWebImageDownloader;
+@property (nonatomic, readonly, class) TNImageManager *sharedImageManager;
 
-@end // @interface TNWebImageManager
+@end // @interface TNImageManager
 
 NS_ASSUME_NONNULL_END
