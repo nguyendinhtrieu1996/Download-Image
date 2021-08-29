@@ -10,9 +10,9 @@
 
 @implementation TNImageDownloaderProgressObject
 
-@dynamic expectedSize;
-@dynamic receiveSize;
-@dynamic targetURL;
+@synthesize expectedSize;
+@synthesize receiveSize;
+@synthesize targetURL;
 
 - (instancetype)initWithExpectedSize:(NSInteger)expectedSize
                         receivedSize:(NSInteger)receivedSize
@@ -31,15 +31,28 @@
 
 @implementation TNImageDownloaderCompleteObject
 
-@dynamic data;
-@dynamic image;
-@dynamic error;
-@dynamic isFinished;
+@synthesize data;
+@synthesize image;
+@synthesize error;
+@synthesize isFinished;
+@synthesize isCancelled;
 
 - (instancetype)initWithImageData:(NSData *)data
                             image:(UIImage *)image
                             error:(NSError *)error
                        isFinished:(BOOL)isFinished {
+    
+    return [self initWithImageData:data
+                             image:image error:error
+                        isFinished:isFinished
+                       isCancelled:NO];
+}
+
+- (instancetype)initWithImageData:(NSData *)data
+                            image:(UIImage *)image
+                            error:(NSError *)error
+                       isFinished:(BOOL)isFinished
+                      isCancelled:(BOOL)isCancelled {
     
     self = [super init];
     if (self) {
@@ -47,6 +60,7 @@
         self.image = image;
         self.error = error;
         self.isFinished = isFinished;
+        self.isCancelled = isCancelled;
     }
     return self;
 }
@@ -63,11 +77,11 @@
 
 @implementation TNImageDownloadToken
 
-@dynamic url;
-@dynamic request;
-@dynamic response;
-@dynamic identifier;
-@dynamic downloadOperation;
+@synthesize url;
+@synthesize request;
+@synthesize response;
+@synthesize identifier;
+@synthesize downloadOperation;
 
 - (void)cancel {
     @synchronized (self) {

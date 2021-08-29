@@ -22,11 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_OPTIONS(NSUInteger, TNImageDownloaderOptions) {
     TNImageDownloader_LowPriotiry            = 1 << 0,
     
-    TNImageDownloader_UseNSURLCache          = 1 << 1,
+    TNImageDownloader_HighPriority           = 1 << 1,
     
-    TNImageDownloader_ContinueInBackground   = 1 << 2,
+    TNImageDownloader_UseNSURLCache          = 1 << 2,
     
-    TNImageDownloader_HighPriority           = 1 << 3,
+    TNImageDownloader_ContinueInBackground   = 1 << 3,
     
     TNImageDownloader_ScaleDownLargeImage    = 1 << 4
 };
@@ -70,6 +70,8 @@ typedef void(^TNImageDownloaderCompletionBlock)(id<TNImageDownloaderCompleteObje
 
 @property (nonatomic) BOOL isFinished;
 
+@property (nonatomic) BOOL isCancelled;
+
 @end // @protocol TNImageDownloaderCompletionObject
 
 
@@ -89,7 +91,6 @@ NSURLSessionTaskDelegate
 
 @property (nonatomic) double mininumProgressInterval;
 @property (nonatomic) TNImageDownloaderOptions options;
-@property (nonatomic, nullable) TNWebImageContext *context;
 
 - (TNImageDownloaderIdentifier)addHandlerForProgress:(nullable TNImageDownloaderProgressBlock)progressBlock
                                           completion:(nullable TNImageDownloaderCompletionBlock)completionBlock;

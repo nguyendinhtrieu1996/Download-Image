@@ -17,6 +17,14 @@ class ViewController: UIViewController {
         
         let url = URL(string: "https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73751/world.topo.bathy.200407.3x5400x2700.png")!
         
+        TNWebImageManager
+            .defaultWebImageDownloader
+            .loadImage(with: url, options: .loaderHighPriority)
+            { progressObj in
+                
+            } completion: { image, error, cacheType, url in
+                self.imageView.image = image
+            }
     }
     
 }

@@ -9,6 +9,16 @@
 
 @implementation TNImageCacheConfig
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _memoryCacheConfig = TNMemoryCacheConfig.defaultCacheConfig;
+        _diskCacheConfig = TNDiskCacheConfig.defaultConfig;
+    }
+    return self;
+}
+
 - (instancetype)initFromOther:(TNImageCacheConfig *)other {
     self = [super init];
     
@@ -21,14 +31,12 @@
 }
 
 + (TNImageCacheConfig *)defaultCacheConfig {
-    static TNImageCacheConfig *defaultCache = nil;
+    static id instance;
     static dispatch_once_t onceToken;
-    
     dispatch_once(&onceToken, ^{
-        defaultCache = [[self class] new];
+        instance = [self new];
     });
-    
-    return defaultCache;
+    return instance;
 }
 
 - (id)copyWithZone:(nullable NSZone *)zone {

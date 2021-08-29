@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithImageCache:(id<TNImageCache>)imageCache
                             loader:(id<TNImageDownloaderType>)loader;
 
-+ (instancetype)defaultWebImageDownloader;
+@property (nonatomic, readonly, class) TNWebImageManager *defaultWebImageDownloader;
 
 @end // @interface TNWebImageManager
 

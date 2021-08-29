@@ -30,6 +30,20 @@
 
 #pragma mark LifeCycle
 
++ (instancetype)sharedImageCache {
+    static dispatch_once_t once;
+    static id instance;
+    dispatch_once(&once, ^{
+        instance = [self new];
+    });
+    return instance;
+}
+
+- (instancetype)init
+{
+    return [[self.class alloc] initWithDirectory:@"default"];
+}
+
 - (instancetype)initWithDirectory:(NSString *)directory {
     return [self initWithDirectory:directory
                             config:TNImageCacheConfig.defaultCacheConfig];

@@ -20,6 +20,7 @@ static CGFloat kDestImageLimitBytes = 6.f * kBytesPerMB;
 
 static NSString * const kProgressCallbackKey = @"progress";
 static NSString * const kCompletionCallbackKey = @"completed";
+static NSString * const kCallbackQueueName =  @"com.TNWebImage.DownloaderOperationCallbackQueue";
 
 typedef NSMutableDictionary<NSString *, id> TNCallbacksDictionary;
 typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *> TNCallbackBlocks;
@@ -58,7 +59,6 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
 @synthesize dataTask = _dataTask;
 @synthesize mininumProgressInterval = _mininumProgressInterval;
 @synthesize options = _options;
-@synthesize context = _context;
 
 #pragma mark LifeCycle
 
@@ -75,7 +75,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
         _options = options;
         
         _callbackQueue = [NSOperationQueue new];
-        _callbackQueue.name = @"com.TNWebImage.DownloaderOperationCallbackQueue";
+        _callbackQueue.name = kCallbackQueueName;
         _callbackQueue.maxConcurrentOperationCount = 1;
         
         _callbackBlocks = [NSMutableDictionary new];
@@ -161,7 +161,9 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
     
     [_dataTask resume];
     
-    [self _informProgressBlockWithReceiveSize:0 expectSize:NSURLResponseUnknownLength url:self.request.URL];
+    [self _informProgressBlockWithReceiveSize:0
+                                   expectSize:NSURLResponseUnknownLength
+                                          url:self.request.URL];
 }
 
 #pragma mark Cancel
@@ -216,11 +218,11 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
     }
     
     if (self.isExecuting) {
-        _executing = NO;
+        [self _informExecuting];
     }
     
     ifnot (self.isFinished) {
-        _finished = YES;
+        [self _informFinished];
     }
     
     NSError *error = TNWebImageMakeError(TNWebImageError_Cancelled,

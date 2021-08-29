@@ -28,6 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
                             error:(nullable NSError *)error
                        isFinished:(BOOL)isFinished;
 
+- (instancetype)initWithImageData:(nullable NSData *)data
+                            image:(nullable UIImage *)image
+                            error:(nullable NSError *)error
+                       isFinished:(BOOL)isFinished
+                      isCancelled:(BOOL)isCancelled;
+
 @end // @interface TNImageDownloaderCompleteObject
 
 

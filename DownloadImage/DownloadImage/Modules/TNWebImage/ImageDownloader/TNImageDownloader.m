@@ -13,6 +13,8 @@
 #import "TNImageDownloaderObjects.h"
 
 
+static NSString * const kDownloadQueueName =  @"com.TNWebImage.WebImageDownloader";
+
 @interface TNImageDownloader ()
 <
 NSURLSessionTaskDelegate
@@ -23,6 +25,8 @@ NSURLSessionTaskDelegate
     NSURLSession *_session;
     NSOperationQueue *_downloadQueue;
     NSMutableDictionary<NSURL *, NSOperation<TNImageDownloaderOperationType> *> *_URLOperation;
+    TNImageDownloaderConfig *_config;
+    NSURLSessionConfiguration *_sesionConfiguration;
     
     TN_LOCK_DECLARE(_operationsLock);
 }
@@ -34,6 +38,11 @@ NSURLSessionTaskDelegate
 
 
 #pragma mark Object LifeCycle
+
+- (instancetype)init
+{
+    return [self initWithConfig:TNImageDownloaderConfig.defaultDownloaderConfig];
+}
 
 - (instancetype)initWithConfig:(TNImageDownloaderConfig *)conig {
     self = [super init];
@@ -66,9 +75,9 @@ NSURLSessionTaskDelegate
 
 + (TNImageDownloader *)sharedDownloader {
     static dispatch_once_t once;
-    static TNImageDownloader *instance;
+    static id instance;
     dispatch_once(&once, ^{
-        instance = [[[self class] alloc] initWithConfig:[TNImageDownloaderConfig defaultDownloaderConfig]];
+        instance = [self new];
     });
     return instance;
 }
@@ -90,7 +99,7 @@ NSURLSessionTaskDelegate
                                           completion:(TNImageDownloaderCompletionBlock)completionBlock {
     
     ifnot (url) {
-        NSError *error = TNWebImageMakeError(TNWebImageError_InavlidURL, @"Image url is nil");
+        NSError *error = TNWebImageMakeError(TNWebImageError_InvalidURL, @"Image url is nil");
         
         id<TNImageDownloaderCompleteObjectType> object = [TNImageDownloaderCompleteObject new];
         object.isFinished = YES;
@@ -149,7 +158,7 @@ NSURLSessionTaskDelegate
 
 #pragma mark Cancel
 
-- (void)cancelALlDownloads {
+- (void)cancelAllDownloads {
     [_downloadQueue cancelAllOperations];
 }
 
@@ -178,7 +187,7 @@ NSURLSessionTaskDelegate
         operation.queuePriority = NSOperationQueuePriorityNormal;
     }
     
-    if (self.config.executionOrder == TNImageDownloaderExecutionOrder_LIFO) {
+    if (_config.executionOrder == TNImageDownloaderExecutionOrder_LIFO) {
         for (NSOperation *pendingOperation in _downloadQueue.operations) {
             [pendingOperation addDependency:operation];
         }

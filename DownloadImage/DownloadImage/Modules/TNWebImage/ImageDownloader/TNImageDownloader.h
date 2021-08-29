@@ -18,8 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TNImageDownloader : NSObject <TNImageDownloaderType>
 
-@property (nonatomic, readonly, copy) TNImageDownloaderConfig *config;
-@property (nonatomic, readonly) NSURLSessionConfiguration *sesionConfiguration;
 @property (nonatomic, readonly, class) TNImageDownloader *sharedDownloader;
 
 - (instancetype)initWithConfig:(nullable TNImageDownloaderConfig *)conig;
