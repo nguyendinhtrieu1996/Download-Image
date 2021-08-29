@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TNWebImageDefines.h"
-#import "TNWebImageOperation.h"
+#import "TNImageDefines.h"
+#import "TNImageOperationType.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -81,7 +81,7 @@ typedef void(^TNImageDownloaderCompletionBlock)(id<TNImageDownloaderCompleteObje
 <
 NSURLSessionTaskDelegate
 , NSURLSessionDataDelegate
-, TNWebImageOperation
+, TNImageOperationType
 >
 
 @property (nonatomic, nullable) NSURLRequest *request;
@@ -102,7 +102,7 @@ NSURLSessionTaskDelegate
 
 #pragma mark Download Token
 
-@protocol TNImageDownloadTokenType <TNWebImageOperation>
+@protocol TNImageDownloadTokenType <TNImageOperationType>
 
 @required
 

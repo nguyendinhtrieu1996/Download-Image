@@ -8,8 +8,8 @@
 #import <UIKit/UIKit.h>
 
 #import "TNCacheDefines.h"
-#import "TNWebImageDefines.h"
-#import "TNWebImageOperation.h"
+#import "TNImageDefines.h"
+#import "TNImageOperationType.h"
 #import "TNImageDownloaderDefines.h"
 
 
@@ -17,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - TNImageCombineOperationType
 
-@protocol TNImageCombineOperationType <TNWebImageOperation>
+@protocol TNImageCombineOperationType <TNImageOperationType>
 
-@property (nonatomic, nullable) id<TNWebImageOperation> cacheOperation;
+@property (nonatomic, nullable) id<TNImageOperationType> cacheOperation;
 
-@property (nonatomic, nullable) id<TNWebImageOperation> loaderOperation;
+@property (nonatomic, nullable) id<TNImageOperationType> loaderOperation;
 
 @end // @protocol TNImageCombineOperationType
 
@@ -55,10 +55,10 @@ typedef void(^TNImageManagerCompletionBlock)(UIImage * _Nullable image,
 
 @required
 
-- (nullable id<TNWebImageOperation>)loadImageWithURL:(NSURL *)url
-                                             options:(TNWebImageOptions)options
-                                            progress:(nullable TNImageManagerProgressBlock)progressBlock
-                                          completion:(nullable TNImageManagerCompletionBlock)completionBlock;
+- (nullable id<TNImageOperationType>)loadImageWithURL:(NSURL *)url
+                                              options:(TNImageOptions)options
+                                             progress:(nullable TNImageManagerProgressBlock)progressBlock
+                                           completion:(nullable TNImageManagerCompletionBlock)completionBlock;
 
 - (void)cancelAll;
 

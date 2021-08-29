@@ -19,9 +19,9 @@
 #define STRONGSELF_RETURN(obj)      __strong typeof(weakSelf) self = weakSelf;\
                                     ifnot (self) return obj;
 
-#define TNWebImageMakeError(ErrorCode, Description) [NSError errorWithDomain:TNWebImageErrorDomain \
-                                                                        code:ErrorCode \
-                                                                    userInfo:@{NSLocalizedDescriptionKey : Description}]
+#define TNImageMakeError(ErrorCode, Description) [NSError errorWithDomain:TNImageErrorDomain \
+                                                                    code:ErrorCode \
+                                                                userInfo:@{NSLocalizedDescriptionKey : Description}]
 
 #define TN_LOCK_DECLARE(lock) os_unfair_lock lock
 #define TN_LOCK_INIT(lock) lock = OS_UNFAIR_LOCK_INIT

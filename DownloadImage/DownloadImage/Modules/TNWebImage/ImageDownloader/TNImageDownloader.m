@@ -99,7 +99,7 @@ NSURLSessionTaskDelegate
                                           completion:(TNImageDownloaderCompletionBlock)completionBlock {
     
     ifnot (url) {
-        NSError *error = TNWebImageMakeError(TNWebImageError_InvalidURL, @"Image url is nil");
+        NSError *error = TNImageMakeError(TNImageError_InvalidURL, @"Image url is nil");
         
         id<TNImageDownloaderCompleteObjectType> object = [TNImageDownloaderCompleteObject new];
         object.isFinished = YES;
@@ -165,7 +165,7 @@ NSURLSessionTaskDelegate
 #pragma mark Helper Methods
 
 - (NSOperation<TNImageDownloaderOperationType> *)_createDownloadOperationWithURL:(NSURL *)url
-                                                                                options:(TNImageDownloaderOptions)options {
+                                                                         options:(TNImageDownloaderOptions)options {
     
     BOOL useURLCache = TN_OPTIONS_CONTAINS(options, TNImageDownloader_UseNSURLCache);
     NSURLRequestCachePolicy cachePolicy = useURLCache ? NSURLRequestUseProtocolCachePolicy : NSURLRequestReloadIgnoringLocalCacheData;
@@ -176,8 +176,8 @@ NSURLSessionTaskDelegate
     
     NSOperation<TNImageDownloaderOperationType> *operation;
     operation = [[TNImageDownloaderOperation alloc] initWithRequest:urlRequest
-                                                             inSession:_session
-                                                               options:options];
+                                                          inSession:_session
+                                                            options:options];
     
     if (TN_OPTIONS_CONTAINS(options, TNImageDownloader_HighPriority)) {
         operation.queuePriority = NSOperationQueuePriorityHigh;

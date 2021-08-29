@@ -6,13 +6,13 @@
 //
 
 #import "TNImageDownloader.h"
-#import "TNWebImageDefines.h"
-#import "TNWebImageBaseOperation+Internal.h"
+#import "TNImageDefines.h"
+#import "TNImageBaseOperation+Internal.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TNImageDownloaderOperation: TNWebImageBaseOperation <TNImageDownloaderOperationType>
+@interface TNImageDownloaderOperation: TNImageBaseOperation <TNImageDownloaderOperationType>
 
 - (instancetype)initWithRequest:(NSURLRequest *)request
                       inSession:(NSURLSession *)session

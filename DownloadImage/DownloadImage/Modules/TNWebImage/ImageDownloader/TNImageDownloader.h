@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TNWebImageDefines.h"
-#import "TNWebImageOperation.h"
+#import "TNImageDefines.h"
+#import "TNImageOperationType.h"
 #import "TNImageDownloaderConfig.h"
 #import "TNImageDownloaderDefines.h"
 

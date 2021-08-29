@@ -1,5 +1,5 @@
 //
-//  TNWebImageBaseOperation.h
+//  TNImageBaseOperation.h
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 03/08/2021.
@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TNWebImageBaseOperation : NSOperation
+@interface TNImageBaseOperation : NSOperation
 
-@end // @interface TNWebImageBaseOperation
+@end // @interface TNImageBaseOperation
 
 NS_ASSUME_NONNULL_END

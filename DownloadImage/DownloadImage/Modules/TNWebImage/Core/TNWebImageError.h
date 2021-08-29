@@ -10,13 +10,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-FOUNDATION_EXPORT NSErrorDomain const TNWebImageErrorDomain;
+FOUNDATION_EXPORT NSErrorDomain const TNImageErrorDomain;
 
-typedef NS_ERROR_ENUM(TNWebImageErrorDomain, TNWebImageError) {
-    TNWebImageError_InvalidURL                          = 1000,
-    TNWebImageError_Cancelled                           = 1001,
-    TNWebImageError_InvalidDownloadOperation            = 1002,
-    TNWebImageError_BlackListed                         = 1003,
+typedef NS_ERROR_ENUM(TNImageErrorDomain, TNWebImageError) {
+    TNImageError_InvalidURL                          = 1000,
+    TNImageError_Cancelled                           = 1001,
+    TNImageError_InvalidDownloadOperation            = 1002,
+    TNImageError_BlackListed                         = 1003,
 };
 
 

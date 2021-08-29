@@ -1,16 +1,16 @@
 //
-//  TNWebImageBaseOperation.m
+//  TNImageBaseOperation.m
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 03/08/2021.
 //
 
-#import "TNWebImageBaseOperation.h"
+#import "TNImageBaseOperation.h"
 
-#import "TNWebImageBaseOperation+Internal.h"
+#import "TNImageBaseOperation+Internal.h"
 
 
-@implementation TNWebImageBaseOperation
+@implementation TNImageBaseOperation
 
 @synthesize executing = _executing;
 @synthesize finished = _finished;
@@ -35,4 +35,4 @@
     self.finished = YES;
 }
 
-@end // @implementation TNWebImageBaseOperation
+@end // @implementation TNImageBaseOperation

@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TNWebImageDefines.h"
-#import "TNWebImageOperation.h"
+#import "TNImageDefines.h"
+#import "TNImageOperationType.h"
 #import "TNImageCacheConfig.h"
 
 
@@ -81,35 +81,35 @@ typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long 
 
 #pragma mark Query Cache
 
-- (nullable id<TNWebImageOperation>)queryImageForKey:(TNImageCacheKey)key
-                                          completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock;
+- (nullable id<TNImageOperationType>)queryImageForKey:(TNImageCacheKey)key
+                                           completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock;
 
-- (nullable id<TNWebImageOperation>)queryImageForKey:(TNImageCacheKey)key
-                                           cacheType:(TNImageCacheType)cacheType
-                                          completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock;
+- (nullable id<TNImageOperationType>)queryImageForKey:(TNImageCacheKey)key
+                                            cacheType:(TNImageCacheType)cacheType
+                                           completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock;
 
 #pragma mark Store Cache
 
-- (nullable id<TNWebImageOperation>)storeImage:(nullable UIImage *)image
-                                     imageData:(nullable NSData *)imageData
-                                        forKey:(TNImageCacheKey)key
-                                     cacheType:(TNImageCacheType)cacheType
-                                    completion:(nullable TNWebImageNoParamsBlock)completionBlock;
+- (nullable id<TNImageOperationType>)storeImage:(nullable UIImage *)image
+                                      imageData:(nullable NSData *)imageData
+                                         forKey:(TNImageCacheKey)key
+                                      cacheType:(TNImageCacheType)cacheType
+                                     completion:(nullable TNImageNoParamsBlock)completionBlock;
 
 #pragma mark Remove Cache
 
-- (nullable id<TNWebImageOperation>)removeImageForKey:(TNImageCacheKey)key
-                                            cacheType:(TNImageCacheType)cacheType
-                                           completion:(nullable TNWebImageNoParamsBlock)completionBlock;
+- (nullable id<TNImageOperationType>)removeImageForKey:(TNImageCacheKey)key
+                                             cacheType:(TNImageCacheType)cacheType
+                                            completion:(nullable TNImageNoParamsBlock)completionBlock;
 
-- (nullable id<TNWebImageOperation>)clearWithCacheType:(TNImageCacheType)cacheType
-                                            completion:(nullable TNWebImageNoParamsBlock)completionBlock;
+- (nullable id<TNImageOperationType>)clearWithCacheType:(TNImageCacheType)cacheType
+                                             completion:(nullable TNImageNoParamsBlock)completionBlock;
 
 #pragma mark Check Cache
 
-- (nullable id<TNWebImageOperation>)containImageForKey:(TNImageCacheKey)key
-                                             cacheType:(TNImageCacheType)cacheType
-                                            completion:(nullable TNImageCacheContainCompletionBock)completionBlock;
+- (nullable id<TNImageOperationType>)containImageForKey:(TNImageCacheKey)key
+                                              cacheType:(TNImageCacheType)cacheType
+                                             completion:(nullable TNImageCacheContainCompletionBock)completionBlock;
 
 @end // @protocol TNImageCacheType
 

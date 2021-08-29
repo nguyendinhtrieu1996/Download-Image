@@ -85,16 +85,16 @@
 
 #pragma mark Query
 
-- (id<TNWebImageOperation>)queryImageForKey:(TNImageCacheKey)key
-                                 completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock {
+- (id<TNImageOperationType>)queryImageForKey:(TNImageCacheKey)key
+                                  completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock {
     return [self queryImageForKey:key
                         cacheType:TNImageCacheType_All
                        completion:completionBlock];
 }
 
-- (id<TNWebImageOperation>)queryImageForKey:(TNImageCacheKey)key
-                                  cacheType:(TNImageCacheType)cacheType
-                                 completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock {
+- (id<TNImageOperationType>)queryImageForKey:(TNImageCacheKey)key
+                                   cacheType:(TNImageCacheType)cacheType
+                                  completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock {
     TN_ASSRT_NONEMPTY_STR(key);
     
     if (cacheType == TNImageCacheType_None) {
@@ -115,7 +115,7 @@
     }
     
     WEAKSELF
-    id<TNWebImageOperation> operation = [self _executeOperationWithBlock:^{
+    id<TNImageOperationType> operation = [self _executeOperationWithBlock:^{
         STRONGSELF_RETURN()
         id value = [self->_diskCache objectForKey:key];
         
@@ -142,11 +142,11 @@
 
 #pragma mark Store
 
-- (id<TNWebImageOperation>)storeImage:(nullable UIImage *)image
-                            imageData:(nullable NSData *)imageData
-                               forKey:(nonnull TNImageCacheKey)key
-                            cacheType:(TNImageCacheType)cacheType
-                           completion:(TNWebImageNoParamsBlock)completionBlock {
+- (id<TNImageOperationType>)storeImage:(nullable UIImage *)image
+                             imageData:(nullable NSData *)imageData
+                                forKey:(nonnull TNImageCacheKey)key
+                             cacheType:(TNImageCacheType)cacheType
+                            completion:(TNImageNoParamsBlock)completionBlock {
     
     BOOL toMemory = NO;
     BOOL toDisk = NO;
@@ -177,12 +177,12 @@
                   completion:completionBlock];
 }
 
-- (id<TNWebImageOperation>)_storeImage:(nullable UIImage *)image
-                             imageData:(nullable NSData *)imageData
-                                forKey:(nonnull TNImageCacheKey)key
-                              toMemory:(BOOL)toMemory
-                                toDisk:(BOOL)toDisk
-                            completion:(TNWebImageNoParamsBlock)completionBlock {
+- (id<TNImageOperationType>)_storeImage:(nullable UIImage *)image
+                              imageData:(nullable NSData *)imageData
+                                 forKey:(nonnull TNImageCacheKey)key
+                               toMemory:(BOOL)toMemory
+                                 toDisk:(BOOL)toDisk
+                             completion:(TNImageNoParamsBlock)completionBlock {
     
     if (NO == toMemory && NO == toDisk) {
         safeExec(completionBlock);
@@ -198,7 +198,7 @@
         return nil;
     }
     
-    id<TNWebImageOperation> operation = [self _executeOperationWithBlock:^{
+    id<TNImageOperationType> operation = [self _executeOperationWithBlock:^{
         NSData *data = imageData;
         
         if (NULL == data && image) {
@@ -216,9 +216,9 @@
 
 #pragma mark Remove
 
-- (nullable id<TNWebImageOperation>)removeImageForKey:(TNImageCacheKey)key
-                                            cacheType:(TNImageCacheType)cacheType
-                                           completion:(TNWebImageNoParamsBlock)completionBlock {
+- (nullable id<TNImageOperationType>)removeImageForKey:(TNImageCacheKey)key
+                                             cacheType:(TNImageCacheType)cacheType
+                                            completion:(TNImageNoParamsBlock)completionBlock {
     
     if (TN_EMPTY_STR(key)) {
         safeExec(completionBlock);
@@ -253,10 +253,10 @@
                          completion:completionBlock];
 }
 
-- (nullable id<TNWebImageOperation>)_removeImageForKey:(TNImageCacheKey)key
-                                            fromMemory:(BOOL)fromMemory
-                                              fromDisk:(BOOL)fromDisk
-                                            completion:(TNWebImageNoParamsBlock)completionBlock {
+- (nullable id<TNImageOperationType>)_removeImageForKey:(TNImageCacheKey)key
+                                             fromMemory:(BOOL)fromMemory
+                                               fromDisk:(BOOL)fromDisk
+                                             completion:(TNImageNoParamsBlock)completionBlock {
     
     if (NO == fromMemory && NO == fromDisk) {
         safeExec(completionBlock);
@@ -267,7 +267,7 @@
         [_memoryCache removeObjectForKey:key];
     }
     
-    id<TNWebImageOperation> operation = nil;
+    id<TNImageOperationType> operation = nil;
     
     if (fromDisk) {
         WEAKSELF
@@ -286,8 +286,8 @@
 
 #pragma mark Clear
 
-- (nullable id<TNWebImageOperation>)clearWithCacheType:(TNImageCacheType)cacheType
-                                            completion:(TNWebImageNoParamsBlock)completionBlock {
+- (nullable id<TNImageOperationType>)clearWithCacheType:(TNImageCacheType)cacheType
+                                             completion:(TNImageNoParamsBlock)completionBlock {
     
     switch (cacheType) {
         case TNImageCacheType_None: {
@@ -335,10 +335,10 @@
 
 #pragma mark Check
 
-- (nullable id<TNWebImageOperation>)containImageForKey:(nonnull TNImageCacheKey)key
-                                             cacheType:(TNImageCacheType)cacheType
-                                            completion:(TNImageCacheContainCompletionBock)completionBlock {
-    id<TNWebImageOperation> operation = nil;
+- (nullable id<TNImageOperationType>)containImageForKey:(nonnull TNImageCacheKey)key
+                                              cacheType:(TNImageCacheType)cacheType
+                                             completion:(TNImageCacheContainCompletionBock)completionBlock {
+    id<TNImageOperationType> operation = nil;
     
     switch (cacheType) {
         case TNImageCacheType_None: {
@@ -424,7 +424,7 @@
 
 #pragma mark Common Helper
 
-- (id<TNWebImageOperation>)_executeOperationWithBlock:(TNWebImageNoParamsBlock)block {
+- (id<TNImageOperationType>)_executeOperationWithBlock:(TNImageNoParamsBlock)block {
     NSOperation *operation = [NSBlockOperation blockOperationWithBlock:block];
     [_executeQueue addOperation:operation];
     return operation;

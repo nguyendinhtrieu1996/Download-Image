@@ -1,15 +1,15 @@
 //
-//  TNWebImageBaseOperation+Internal.h
+//  TNImageBaseOperation+Internal.h
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 03/08/2021.
 //
 
-#import "TNWebImageBaseOperation.h"
+#import "TNImageBaseOperation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TNWebImageBaseOperation ()
+@interface TNImageBaseOperation ()
 {
     @public
     BOOL _executing;
@@ -20,6 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)_informFinished;
 
-@end // @interface TNWebImageBaseOperation ()
+@end // @interface TNImageBaseOperation ()
 
 NS_ASSUME_NONNULL_END

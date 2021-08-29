@@ -26,7 +26,7 @@
 		B27DCE7E26BA4D7600E14E32 /* TNImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B27DCE7D26BA4D7600E14E32 /* TNImageCoderHelper.m */; };
 		B28FF28826B923AF00085750 /* TNImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF28726B923AF00085750 /* TNImageCache.m */; };
 		B28FF28B26B9261D00085750 /* TNImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF28A26B9261D00085750 /* TNImageCacheConfig.m */; };
-		B28FF29726B94D2A00085750 /* TNWebImageBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF29626B94D2A00085750 /* TNWebImageBaseOperation.m */; };
+		B28FF29726B94D2A00085750 /* TNImageBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF29626B94D2A00085750 /* TNImageBaseOperation.m */; };
 		B29C2B782684DD3A003B4F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B772684DD3A003B4F17 /* AppDelegate.swift */; };
 		B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */; };
 		B29C2B7C2684DD3A003B4F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B7B2684DD3A003B4F17 /* ViewController.swift */; };
@@ -44,7 +44,7 @@
 		B29F96272687679100FFFD31 /* TNImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F96262687679100FFFD31 /* TNImageDownloader.m */; };
 		B29F962A268767A700FFFD31 /* TNImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9629268767A700FFFD31 /* TNImageDownloaderConfig.m */; };
 		B29F962D268767BD00FFFD31 /* TNImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962C268767BD00FFFD31 /* TNImageDownloaderOperation.m */; };
-		B29F963026876B1400FFFD31 /* TNWebImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962F26876B1400FFFD31 /* TNWebImageOperation.m */; };
+		B29F963026876B1400FFFD31 /* TNImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962F26876B1400FFFD31 /* TNImageOperation.m */; };
 		B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9634268777DD00FFFD31 /* TNWebImageError.m */; };
 		B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */; };
 		B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */; };
@@ -86,9 +86,9 @@
 		B28FF28726B923AF00085750 /* TNImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCache.m; sourceTree = "<group>"; };
 		B28FF28926B9261D00085750 /* TNImageCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCacheConfig.h; sourceTree = "<group>"; };
 		B28FF28A26B9261D00085750 /* TNImageCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCacheConfig.m; sourceTree = "<group>"; };
-		B28FF29526B94D2A00085750 /* TNWebImageBaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageBaseOperation.h; sourceTree = "<group>"; };
-		B28FF29626B94D2A00085750 /* TNWebImageBaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageBaseOperation.m; sourceTree = "<group>"; };
-		B28FF29826B94D4F00085750 /* TNWebImageBaseOperation+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNWebImageBaseOperation+Internal.h"; sourceTree = "<group>"; };
+		B28FF29526B94D2A00085750 /* TNImageBaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageBaseOperation.h; sourceTree = "<group>"; };
+		B28FF29626B94D2A00085750 /* TNImageBaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageBaseOperation.m; sourceTree = "<group>"; };
+		B28FF29826B94D4F00085750 /* TNImageBaseOperation+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNImageBaseOperation+Internal.h"; sourceTree = "<group>"; };
 		B29C2B742684DD3A003B4F17 /* DownloadImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29C2B772684DD3A003B4F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,15 +106,15 @@
 		B29D38B22685E2A2003E1F8B /* UserConfigurtionRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurtionRespository.swift; sourceTree = "<group>"; };
 		B29D38B62685E80C003E1F8B /* DefaultListPhotoRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListPhotoRespository.swift; sourceTree = "<group>"; };
 		B29F96212687672200FFFD31 /* DownloadImage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadImage-Bridging-Header.h"; sourceTree = "<group>"; };
-		B29F96222687672300FFFD31 /* TNWebImageDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageDefines.h; sourceTree = "<group>"; };
+		B29F96222687672300FFFD31 /* TNImageDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDefines.h; sourceTree = "<group>"; };
 		B29F96252687679100FFFD31 /* TNImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloader.h; sourceTree = "<group>"; };
 		B29F96262687679100FFFD31 /* TNImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloader.m; sourceTree = "<group>"; };
 		B29F9628268767A700FFFD31 /* TNImageDownloaderConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderConfig.h; sourceTree = "<group>"; };
 		B29F9629268767A700FFFD31 /* TNImageDownloaderConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloaderConfig.m; sourceTree = "<group>"; };
 		B29F962B268767BD00FFFD31 /* TNImageDownloaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderOperation.h; sourceTree = "<group>"; };
 		B29F962C268767BD00FFFD31 /* TNImageDownloaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloaderOperation.m; sourceTree = "<group>"; };
-		B29F962E26876B1400FFFD31 /* TNWebImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageOperation.h; sourceTree = "<group>"; };
-		B29F962F26876B1400FFFD31 /* TNWebImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageOperation.m; sourceTree = "<group>"; };
+		B29F962E26876B1400FFFD31 /* TNImageOperationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageOperationType.h; sourceTree = "<group>"; };
+		B29F962F26876B1400FFFD31 /* TNImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageOperation.m; sourceTree = "<group>"; };
 		B29F9632268776C900FFFD31 /* TNInternalMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNInternalMacros.h; sourceTree = "<group>"; };
 		B29F9633268777DD00FFFD31 /* TNWebImageError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageError.h; sourceTree = "<group>"; };
 		B29F9634268777DD00FFFD31 /* TNWebImageError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageError.m; sourceTree = "<group>"; };
@@ -388,14 +388,14 @@
 				B2A3F92A26B6FA5900D90289 /* TNEncryption.h */,
 				B2A3F92B26B6FA5900D90289 /* TNEncryption.m */,
 				B29F9632268776C900FFFD31 /* TNInternalMacros.h */,
-				B28FF29526B94D2A00085750 /* TNWebImageBaseOperation.h */,
-				B28FF29626B94D2A00085750 /* TNWebImageBaseOperation.m */,
-				B28FF29826B94D4F00085750 /* TNWebImageBaseOperation+Internal.h */,
-				B29F96222687672300FFFD31 /* TNWebImageDefines.h */,
+				B28FF29526B94D2A00085750 /* TNImageBaseOperation.h */,
+				B28FF29626B94D2A00085750 /* TNImageBaseOperation.m */,
+				B28FF29826B94D4F00085750 /* TNImageBaseOperation+Internal.h */,
+				B29F96222687672300FFFD31 /* TNImageDefines.h */,
 				B29F9633268777DD00FFFD31 /* TNWebImageError.h */,
 				B29F9634268777DD00FFFD31 /* TNWebImageError.m */,
-				B29F962E26876B1400FFFD31 /* TNWebImageOperation.h */,
-				B29F962F26876B1400FFFD31 /* TNWebImageOperation.m */,
+				B29F962E26876B1400FFFD31 /* TNImageOperationType.h */,
+				B29F962F26876B1400FFFD31 /* TNImageOperation.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 				B29F962A268767A700FFFD31 /* TNImageDownloaderConfig.m in Sources */,
 				B217ACDD2686296E00403AEB /* ListPhotoRequestDTO.swift in Sources */,
 				B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */,
-				B28FF29726B94D2A00085750 /* TNWebImageBaseOperation.m in Sources */,
+				B28FF29726B94D2A00085750 /* TNImageBaseOperation.m in Sources */,
 				B29C2B782684DD3A003B4F17 /* AppDelegate.swift in Sources */,
 				B29D38A62685DDE6003E1F8B /* FetchListPhotoUseCase.swift in Sources */,
 				B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */,
@@ -574,7 +574,7 @@
 				B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */,
 				B28FF28B26B9261D00085750 /* TNImageCacheConfig.m in Sources */,
 				B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */,
-				B29F963026876B1400FFFD31 /* TNWebImageOperation.m in Sources */,
+				B29F963026876B1400FFFD31 /* TNImageOperation.m in Sources */,
 				B2A3F92926B6EDD700D90289 /* TNDiskCache.m in Sources */,
 				B29D38B72685E80C003E1F8B /* DefaultListPhotoRespository.swift in Sources */,
 				B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */,

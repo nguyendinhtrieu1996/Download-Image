@@ -1,5 +1,5 @@
 //
-//  TNWebImageOperation.h
+//  TNImageOperationType.h
 //  DownloadImage
 //
 //  Created by Trieu Nguyen on 26/06/2021.
@@ -17,17 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
 @end // @protocol TNCancellable
 
 
-@protocol TNWebImageOperation <TNCancellable>
+@protocol TNImageOperationType <TNCancellable>
 
-@end // @protocol TNWebImageOperation
+@end // @protocol TNImageOperationType
 
 
-@interface NSOperation (TNWebImageOperation)
+@interface NSOperation (TNImageOperationType)
 <
-TNWebImageOperation
+TNImageOperationType
 >
 
-@end // @interface NSOperation (TNWebImageOperation)
+@end // @interface NSOperation (TNImageOperationType)
 
 
 NS_ASSUME_NONNULL_END

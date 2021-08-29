@@ -11,7 +11,7 @@
 #import "TNWebImageError.h"
 #import "TNImageCoder.h"
 #import "TNImageDownloaderObjects.h"
-#import "TNWebImageBaseOperation+Internal.h"
+#import "TNImageBaseOperation+Internal.h"
 
 
 static const CGFloat kBytesPerMB = 1024.0f * 1024.0f;
@@ -90,7 +90,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
 #pragma mark Public Method
 
 - (TNImageDownloaderIdentifier)addHandlerForProgress:(TNImageDownloaderProgressBlock)progressBlock
-                                            completion:(TNImageDownloaderCompletionBlock)completionBlock {
+                                          completion:(TNImageDownloaderCompletionBlock)completionBlock {
     
     TNImageDownloaderIdentifier identifier = [self _generateDownloadIdentifier];
     TNCallbacksDictionary *callbackDict = [NSMutableDictionary new];
@@ -123,7 +123,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
 
 - (void)_internalStartDownload {
     if (self.isCancelled) {
-        NSError *error = TNWebImageMakeError(TNWebImageError_Cancelled, @"Downloader cancelled");
+        NSError *error = TNImageMakeError(TNImageError_Cancelled, @"Downloader cancelled");
         [self _completeWithError:error];
         return;
     }
@@ -137,7 +137,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
     
     NSURLSession *session = self.session;
     ifnot (session.delegate) {
-        NSError *error = TNWebImageMakeError(TNWebImageError_InvalidDownloadOperation, @"Session delegate is nil");
+        NSError *error = TNImageMakeError(TNImageError_InvalidDownloadOperation, @"Session delegate is nil");
         [self _completeWithError:error];
         return;
     }
@@ -146,7 +146,7 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
     [self _informExecuting];
     
     ifnot (_dataTask) {
-        NSError *error = TNWebImageMakeError(TNWebImageError_InvalidDownloadOperation, @"DataTask can't be initialized");
+        NSError *error = TNImageMakeError(TNImageError_InvalidDownloadOperation, @"DataTask can't be initialized");
         [self _completeWithError:error];
         return;
     }
@@ -187,8 +187,8 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
         
         TNImageDownloaderCompletionBlock completionBlock = [callbacksDict objectForKey:kCompletionCallbackKey];
         if (completionBlock) {
-            NSError *error = TNWebImageMakeError(TNWebImageError_Cancelled,
-                                                 @"Operation canclled by user during sending the request");
+            NSError *error = TNImageMakeError(TNImageError_Cancelled,
+                                              @"Operation canclled by user during sending the request");
             TNImageDownloaderCompleteObject *completionObj = [TNImageDownloaderCompleteObject new];
             completionObj.error = error;
             completionObj.isFinished = YES;
@@ -225,8 +225,8 @@ typedef NSMutableDictionary<TNImageDownloaderIdentifier, TNCallbacksDictionary *
         [self _informFinished];
     }
     
-    NSError *error = TNWebImageMakeError(TNWebImageError_Cancelled,
-                                         @"Operation canclled by user during sending the request");
+    NSError *error = TNImageMakeError(TNImageError_Cancelled,
+                                      @"Operation canclled by user during sending the request");
     [self _informCompletionBlockWithError:error];
     
     [self _reset];

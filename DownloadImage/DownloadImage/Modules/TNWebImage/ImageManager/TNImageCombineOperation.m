@@ -22,8 +22,8 @@
 @synthesize loaderOperation;
 @synthesize cancelled = _cancelled;
 
-- (instancetype)initWithCacheOperation:(id<TNWebImageOperation>)cacheOperation
-                       loaderOperation:(id<TNWebImageOperation>)loaderOperation {
+- (instancetype)initWithCacheOperation:(id<TNImageOperationType>)cacheOperation
+                       loaderOperation:(id<TNImageOperationType>)loaderOperation {
     
     self = [super init];
     if (self) {

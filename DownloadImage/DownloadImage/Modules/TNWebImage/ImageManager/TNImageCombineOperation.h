@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TNImageCombineOperation : NSOperation <TNImageCombineOperationType>
 
-- (instancetype)initWithCacheOperation:(id<TNWebImageOperation>)cacheOperation
-                       loaderOperation:(id<TNWebImageOperation>)loaderOperation;
+- (instancetype)initWithCacheOperation:(id<TNImageOperationType>)cacheOperation
+                       loaderOperation:(id<TNImageOperationType>)loaderOperation;
 
 @end // @interface TNImageCombineOperation
 

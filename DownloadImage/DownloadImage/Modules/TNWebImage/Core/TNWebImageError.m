@@ -8,4 +8,4 @@
 #import "TNWebImageError.h"
 
 
-NSErrorDomain const TNWebImageErrorDomain = @"TNWebImageErrorDomain";
+NSErrorDomain const TNImageErrorDomain = @"TNWebImageErrorDomain";
