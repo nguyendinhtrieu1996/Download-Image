@@ -13,16 +13,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol TNMemoryCache <TNCache>
+@protocol TNMemoryCacheType <TNCacheType>
 
-@required
+@end // @protocol TNCacheType
+
+
+@interface TNMemoryCache : NSCache <TNMemoryCacheType>
 
 - (instancetype)initWithConfig:(TNMemoryCacheConfig *)config;
-
-@end // @protocol TNMemoryCache
-
-
-@interface TNMemoryCache : NSCache <TNMemoryCache>
 
 @end // @interface TNMemoryCache
 

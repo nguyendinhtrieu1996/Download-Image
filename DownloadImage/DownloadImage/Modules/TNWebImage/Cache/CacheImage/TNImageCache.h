@@ -12,7 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TNImageCache : NSObject <TNImageCache>
+@interface TNImageCache : NSObject <TNImageCacheType>
 
 + (instancetype)sharedImageCache;
 

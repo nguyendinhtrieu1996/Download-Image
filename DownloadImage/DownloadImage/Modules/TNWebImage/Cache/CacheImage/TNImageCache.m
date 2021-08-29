@@ -15,8 +15,8 @@
 
 @interface TNImageCache ()
 {
-    id<TNDiskCache> _diskCache;
-    id<TNMemoryCache> _memoryCache;
+    id<TNDiskCacheType> _diskCache;
+    id<TNMemoryCacheType> _memoryCache;
     TNImageCacheConfig *_config;
     NSString *_diskCachePath;
     NSOperationQueue *_executeQueue;

@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@protocol TNDiskCache <TNCache>
+@protocol TNDiskCacheType <TNCacheType>
 
 @required
 
@@ -22,15 +22,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) long long totalSize;
 
-- (instancetype)initWithCachePath:(NSString *)cachePath
-                           config:(TNDiskCacheConfig *)config;
-
 - (void)removeExpiredData;
 
-@end // @protocol TNDiskCache
+@end // @protocol TNDiskCacheType
 
 
-@interface TNDiskCache : NSObject <TNDiskCache>
+@interface TNDiskCache : NSObject <TNDiskCacheType>
+
+- (instancetype)initWithCachePath:(NSString *)cachePath
+                           config:(TNDiskCacheConfig *)config;
 
 @end // @interface TNDiskCache
 

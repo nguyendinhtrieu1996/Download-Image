@@ -17,7 +17,7 @@
 
 @interface TNImageManager ()
 {
-    id<TNImageCache> _imageCache;
+    id<TNImageCacheType> _imageCache;
     id<TNImageDownloaderType> _imageDownloader;
     
     NSMutableSet<NSURL *> *_failedURLs;
@@ -42,7 +42,7 @@
                              loader:TNImageDownloader.sharedDownloader];
 }
 
-- (instancetype)initWithImageCache:(id<TNImageCache>)imageCache
+- (instancetype)initWithImageCache:(id<TNImageCacheType>)imageCache
                             loader:(id<TNImageDownloaderType>)loader {
     
     TN_ASSERT_NONNULL(imageCache);

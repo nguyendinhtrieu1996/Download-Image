@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TNImageManager : NSObject <TNImageManagerType>
 
-- (instancetype)initWithImageCache:(id<TNImageCache>)imageCache
+- (instancetype)initWithImageCache:(id<TNImageCacheType>)imageCache
                             loader:(id<TNImageDownloaderType>)loader;
 
 @property (nonatomic, readonly, class) TNImageManager *sharedImageManager;

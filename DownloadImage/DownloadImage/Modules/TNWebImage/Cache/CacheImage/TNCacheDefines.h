@@ -35,9 +35,9 @@ typedef void(^TNImageCacheContainCompletionBock)(TNImageCacheType cacheType);
 typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long totalSize);
 
 
-#pragma mark - <TNCache>
+#pragma mark - <TNCacheType>
 
-@protocol TNCache <NSObject>
+@protocol TNCacheType <NSObject>
 
 @required
 
@@ -55,12 +55,12 @@ typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long 
 
 - (void)removeAllObjects;
 
-@end // @protocol TNCache
+@end // @protocol TNCacheType
 
 
-#pragma mark - <TNImageCache>
+#pragma mark - <TNImageCacheType>
 
-@protocol TNImageCache <NSObject>
+@protocol TNImageCacheType <NSObject>
 
 @required
 
@@ -111,6 +111,6 @@ typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long 
                                              cacheType:(TNImageCacheType)cacheType
                                             completion:(nullable TNImageCacheContainCompletionBock)completionBlock;
 
-@end // @protocol TNImageCache
+@end // @protocol TNImageCacheType
 
 NS_ASSUME_NONNULL_END
