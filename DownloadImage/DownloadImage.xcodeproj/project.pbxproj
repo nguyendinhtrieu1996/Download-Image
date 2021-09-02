@@ -381,7 +381,7 @@
 		B29F961E268766BF00FFFD31 /* TNWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				B2A3A2B626E0DAAC00ECC1BF /* Uti-lExtensions */,
+				B2A3A2B626E0DAAC00ECC1BF /* Util-Extensions */,
 				B227C2D626C8026B00297E90 /* ImageManager */,
 				B20BFC9D26B2F24000C87BE5 /* Cache */,
 				B20077222690AB160021CB38 /* ImageCoder */,
@@ -425,13 +425,13 @@
 			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
-		B2A3A2B626E0DAAC00ECC1BF /* Uti-lExtensions */ = {
+		B2A3A2B626E0DAAC00ECC1BF /* Util-Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				B2A3A2B726E0DAD300ECC1BF /* UIImageView+TNWebImage.h */,
 				B2A3A2B826E0DAD300ECC1BF /* UIImageView+TNWebImage.m */,
 			);
-			path = "Uti-lExtensions";
+			path = "Util-Extensions";
 			sourceTree = "<group>";
 		};
 		B2A3F92226B6E83500D90289 /* MemCache */ = {
