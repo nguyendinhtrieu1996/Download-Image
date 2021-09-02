@@ -54,6 +54,8 @@
 		B2A3A2CC26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2CB26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift */; };
 		B2A3A2D026E1186200ECC1BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */; };
 		B2A3A2D426E11AD900ECC1BF /* ListPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */; };
+		B2A3A2D626E11F1F00ECC1BF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D526E11F1F00ECC1BF /* BaseViewModel.swift */; };
+		B2A3A2D826E11F3F00ECC1BF /* ViewModelTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D726E11F3F00ECC1BF /* ViewModelTypeProtocol.swift */; };
 		B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */; };
 		B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */; };
 		B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */; };
@@ -136,6 +138,8 @@
 		B2A3A2CB26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationKeychainStorage.swift; sourceTree = "<group>"; };
 		B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoViewModel.swift; sourceTree = "<group>"; };
+		B2A3A2D526E11F1F00ECC1BF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B2A3A2D726E11F3F00ECC1BF /* ViewModelTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeProtocol.swift; sourceTree = "<group>"; };
 		B2A3F91526B6E68D00D90289 /* TNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCache.h; sourceTree = "<group>"; };
 		B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCache.m; sourceTree = "<group>"; };
 		B2A3F91B26B6E70900D90289 /* TNCacheDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheDefines.h; sourceTree = "<group>"; };
@@ -488,6 +492,8 @@
 			isa = PBXGroup;
 			children = (
 				B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */,
+				B2A3A2D526E11F1F00ECC1BF /* BaseViewModel.swift */,
+				B2A3A2D726E11F3F00ECC1BF /* ViewModelTypeProtocol.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -671,12 +677,14 @@
 				B2A3F92926B6EDD700D90289 /* TNDiskCache.m in Sources */,
 				B2A3A2C326E112DB00ECC1BF /* KeychainItemAccessibility.swift in Sources */,
 				B29D38B72685E80C003E1F8B /* DefaultListPhotoRespository.swift in Sources */,
+				B2A3A2D826E11F3F00ECC1BF /* ViewModelTypeProtocol.swift in Sources */,
 				B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */,
 				B2A3A2C426E112DB00ECC1BF /* KeychainWrapper.swift in Sources */,
 				B2A3A2C926E113AB00ECC1BF /* TNSecureCoding.swift in Sources */,
 				B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */,
 				B2A3A2B926E0DAD300ECC1BF /* UIImageView+TNWebImage.m in Sources */,
 				B2A3A2D026E1186200ECC1BF /* BaseViewController.swift in Sources */,
+				B2A3A2D626E11F1F00ECC1BF /* BaseViewModel.swift in Sources */,
 				B27DCE7E26BA4D7600E14E32 /* TNImageCoderHelper.m in Sources */,
 				B2A3A2C726E1132E00ECC1BF /* KeyValueStoreProtocol.swift in Sources */,
 				B29F962D268767BD00FFFD31 /* TNImageDownloaderOperation.m in Sources */,
@@ -839,7 +847,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5C62MBXTS;
 				INFOPLIST_FILE = DownloadImage/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -866,7 +874,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T5C62MBXTS;
 				INFOPLIST_FILE = DownloadImage/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

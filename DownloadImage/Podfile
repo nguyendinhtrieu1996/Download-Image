@@ -4,7 +4,7 @@ platform :ios, '10.0'
 target 'DownloadImage' do
  
    pod 'SDWebImage'
-   pod 'AlamofireImage', '~> 4.1'
-   pod 'Alamofire', '~> 5.4'
+   pod 'RxSwift', '6.2.0'
+   pod 'RxCocoa', '6.2.0'
    
 end
