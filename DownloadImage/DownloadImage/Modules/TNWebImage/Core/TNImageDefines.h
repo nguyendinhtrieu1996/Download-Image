@@ -11,9 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 typedef void(^TNImageNoParamsBlock)(void);
-typedef NSString *TNImageContextOption;
-typedef NSDictionary<TNImageContextOption, id> TNImageContext;
-typedef NSMutableDictionary<TNImageContextOption, id> TNImageMutableContext;
 
 
 typedef NS_OPTIONS(NSUInteger, TNImageOptions) {
