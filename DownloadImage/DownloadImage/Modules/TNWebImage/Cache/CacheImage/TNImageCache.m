@@ -11,6 +11,7 @@
 #import "TNInternalMacros.h"
 #import "TNDiskCache.h"
 #import "TNMemoryCache.h"
+#import "TNCacheQueryResponse.h"
 
 
 @interface TNImageCache ()
@@ -97,8 +98,10 @@
                                   completion:(nullable TNImageCacheQueryCompletionBlock)completionBlock {
     TN_ASSRT_NONEMPTY_STR(key);
     
+    
+    
     if (cacheType == TNImageCacheType_None) {
-        safeExec(completionBlock, nil, nil, cacheType);
+        safeExec(completionBlock, TN_CreateCacheQueryResponseNULLData(cacheType));
         return nil;
     }
     
@@ -106,7 +109,7 @@
     
     if (cacheType == TNImageCacheType_Memory) {
         image = [self _imageForMemoryCacheForKey:key];
-        safeExec(completionBlock, image, nil, cacheType);
+        safeExec(completionBlock, TN_CreateCacheQueryResponseNULLData(cacheType));
         return nil;
     }
     
@@ -118,13 +121,14 @@
     id<TNImageOperationType> operation = [self _executeOperationWithBlock:^{
         STRONGSELF_RETURN()
         id value = [self->_diskCache objectForKey:key];
+        NSData *data = nil;
         
         if (TN_IS_KIND_OF_CLASS(value, NSData)) {
-            NSData *data = (NSData *)value;
+            data = (NSData *)value;
             image = [self->_imageCoder decodedImageWithData:data options:@{}];
         }
         
-        safeExec(completionBlock, image, nil, cacheType);
+        safeExec(completionBlock, TN_CreateCacheQueryResponse(image, data, cacheType));
     }];
     
     return operation;

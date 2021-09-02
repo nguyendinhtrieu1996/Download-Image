@@ -15,18 +15,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#pragma mark - TNImageCombineOperationType
+#pragma mark - Combine Operation
 
 @protocol TNImageCombineOperationType <TNImageOperationType>
 
 @property (nonatomic, nullable) id<TNImageOperationType> cacheOperation;
 
-@property (nonatomic, nullable) id<TNImageOperationType> loaderOperation;
+@property (nonatomic, nullable) id<TNImageOperationType> downloaderOperation;
 
 @end // @protocol TNImageCombineOperationType
 
 
-#pragma mark - TNImageLoaderBlockObjectType
+#pragma mark - Downloader Block
 
 typedef void(^TNImageManagerProgressBlock)(NSUInteger expectSize,
                                            NSUInteger receivedSize,
@@ -38,7 +38,7 @@ typedef void(^TNImageManagerCompletionBlock)(UIImage * _Nullable image,
                                              NSURL * _Nullable imageURL);
 
 
-@protocol TNImageManagerDownloadBlockObjectType <NSObject>
+@protocol TNImageManagerDownloaderBlockObjectType <NSObject>
 
 @required
 
@@ -49,16 +49,34 @@ typedef void(^TNImageManagerCompletionBlock)(UIImage * _Nullable image,
 @end // @protocol TNImageManagerDownloadBlockObjectType
 
 
-#pragma mark - TNImageManagerType
+#pragma mark - Loader Object
+
+@protocol TNImageManagerLoaderObjectType <TNCancellable>
+
+@property (nonatomic, readonly) NSURL *url;
+@property (nonatomic, readonly) TNImageOptions options;
+@property (nonatomic, readonly) TNImageCacheType cacheType;
+@property (nonatomic, readonly) id<TNImageCombineOperationType> combineOperation;
+@property (nonatomic, readonly) id<TNImageManagerDownloaderBlockObjectType> blockObject;
+
+- (void)updateCacheOperation:(id<TNImageOperationType>)cacheOperation;
+
+- (void)updateDownloaderOperation:(id<TNImageOperationType>)downloaderOperation;
+
+@end // @protocol TNImageManagerLoaderObjectType
+
+
+#pragma mark - Image Manager
 
 @protocol TNImageManagerType <NSObject>
 
 @required
 
-- (nullable id<TNImageOperationType>)loadImageWithURL:(NSURL *)url
-                                              options:(TNImageOptions)options
-                                             progress:(nullable TNImageManagerProgressBlock)progressBlock
-                                           completion:(nullable TNImageManagerCompletionBlock)completionBlock;
+- (id<TNCancellable>)loadImageWithURL:(NSURL *)url
+                              options:(TNImageOptions)options
+                            cacheType:(TNImageCacheType)cacheType
+                             progress:(nullable TNImageManagerProgressBlock)progressBlock
+                           completion:(nullable TNImageManagerCompletionBlock)completionBlock;
 
 - (void)cancelAll;
 

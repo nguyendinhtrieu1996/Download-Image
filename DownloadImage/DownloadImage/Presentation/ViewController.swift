@@ -17,12 +17,7 @@ class ViewController: UIViewController {
         
         let url = URL(string: "https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73751/world.topo.bathy.200407.3x5400x2700.png")!
         
-        TNImageManager.shared.loadImage(with: url, options: .scaleDownLargeImages)
-        { expectSize, receivedSize, targetURL in
-            
-        } completion: { image, error, TNImageCache, url in
-            
-        }
+        
     }
     
 }

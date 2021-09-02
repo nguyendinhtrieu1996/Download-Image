@@ -55,7 +55,7 @@ NSURLSessionTaskDelegate
         
         _downloadQueue = [NSOperationQueue new];
         _downloadQueue.maxConcurrentOperationCount = conig.maxConcurrentDownload;
-        _downloadQueue.name = @"com.TNWebImage.WebImageDownloader";
+        _downloadQueue.name = kDownloadQueueName;
         
         _URLOperation = [NSMutableDictionary new];
         
@@ -84,7 +84,7 @@ NSURLSessionTaskDelegate
 
 #pragma mark Donwload EntryPoint
 
-- (id<TNImageDownloadTokenType>)downloadImageWithURL:(NSURL *)url
+- (id<TNImageDownloaderTokenType>)downloadImageWithURL:(NSURL *)url
                                           completion:(TNImageDownloaderCompletionBlock)completionBlock {
     
     return [self downloadImageWithURL:url
@@ -93,7 +93,7 @@ NSURLSessionTaskDelegate
                            completion:completionBlock];
 }
 
-- (id<TNImageDownloadTokenType>)downloadImageWithURL:(NSURL *)url
+- (id<TNImageDownloaderTokenType>)downloadImageWithURL:(NSURL *)url
                                              options:(TNImageDownloaderOptions)options
                                        progressBlock:(TNImageDownloaderProgressBlock)progressBlock
                                           completion:(TNImageDownloaderCompletionBlock)completionBlock {
@@ -145,7 +145,7 @@ NSURLSessionTaskDelegate
         downloadIdentifier = [operation addHandlerForProgress:progressBlock completion:completionBlock];
     }
     
-    TNImageDownloadToken *downloadToken = [TNImageDownloadToken new];
+    TNImageDownloaderToken *downloadToken = [TNImageDownloaderToken new];
     downloadToken.url = url;
     downloadToken.request = operation.request;
     downloadToken.identifier = downloadIdentifier;

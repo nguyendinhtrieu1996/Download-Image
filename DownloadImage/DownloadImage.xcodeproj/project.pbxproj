@@ -20,7 +20,7 @@
 		B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */; };
 		B227C2D926C8027A00297E90 /* TNImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B227C2D826C8027A00297E90 /* TNImageManager.m */; };
 		B227C2DC26C8044700297E90 /* TNImageCombineOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B227C2DB26C8044700297E90 /* TNImageCombineOperation.m */; };
-		B241064826C8C83300B71E49 /* TNImageManagerDownloadBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B241064726C8C83300B71E49 /* TNImageManagerDownloadBlockObject.m */; };
+		B241064826C8C83300B71E49 /* TNImageManageLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B241064726C8C83300B71E49 /* TNImageManageLoaderObject.m */; };
 		B254658726B7DA8200EFC3E2 /* TNDiskCacheCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = B254658626B7DA8200EFC3E2 /* TNDiskCacheCleaner.m */; };
 		B25C763C26D7E0EE0037922B /* TNImageDownloaderObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B25C763B26D7E0EE0037922B /* TNImageDownloaderObjects.m */; };
 		B27DCE7E26BA4D7600E14E32 /* TNImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B27DCE7D26BA4D7600E14E32 /* TNImageCoderHelper.m */; };
@@ -46,6 +46,7 @@
 		B29F962D268767BD00FFFD31 /* TNImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962C268767BD00FFFD31 /* TNImageDownloaderOperation.m */; };
 		B29F963026876B1400FFFD31 /* TNImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962F26876B1400FFFD31 /* TNImageOperation.m */; };
 		B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9634268777DD00FFFD31 /* TNWebImageError.m */; };
+		B2A3A2B526E0C86000ECC1BF /* TNCacheQueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2B426E0C86000ECC1BF /* TNCacheQueryResponse.m */; };
 		B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */; };
 		B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */; };
 		B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */; };
@@ -72,8 +73,8 @@
 		B227C2D826C8027A00297E90 /* TNImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManager.m; sourceTree = "<group>"; };
 		B227C2DA26C8044700297E90 /* TNImageCombineOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCombineOperation.h; sourceTree = "<group>"; };
 		B227C2DB26C8044700297E90 /* TNImageCombineOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCombineOperation.m; sourceTree = "<group>"; };
-		B241064626C8C83300B71E49 /* TNImageManagerDownloadBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManagerDownloadBlockObject.h; sourceTree = "<group>"; };
-		B241064726C8C83300B71E49 /* TNImageManagerDownloadBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManagerDownloadBlockObject.m; sourceTree = "<group>"; };
+		B241064626C8C83300B71E49 /* TNImageManageLoaderObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManageLoaderObject.h; sourceTree = "<group>"; };
+		B241064726C8C83300B71E49 /* TNImageManageLoaderObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManageLoaderObject.m; sourceTree = "<group>"; };
 		B24C321126DB33DB002BF2F3 /* TNImageManagerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManagerDefines.h; sourceTree = "<group>"; };
 		B254658526B7DA8200EFC3E2 /* TNDiskCacheCleaner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCacheCleaner.h; sourceTree = "<group>"; };
 		B254658626B7DA8200EFC3E2 /* TNDiskCacheCleaner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCacheCleaner.m; sourceTree = "<group>"; };
@@ -118,6 +119,8 @@
 		B29F9632268776C900FFFD31 /* TNInternalMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNInternalMacros.h; sourceTree = "<group>"; };
 		B29F9633268777DD00FFFD31 /* TNWebImageError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageError.h; sourceTree = "<group>"; };
 		B29F9634268777DD00FFFD31 /* TNWebImageError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageError.m; sourceTree = "<group>"; };
+		B2A3A2B326E0C86000ECC1BF /* TNCacheQueryResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheQueryResponse.h; sourceTree = "<group>"; };
+		B2A3A2B426E0C86000ECC1BF /* TNCacheQueryResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCacheQueryResponse.m; sourceTree = "<group>"; };
 		B2A3F91526B6E68D00D90289 /* TNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCache.h; sourceTree = "<group>"; };
 		B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCache.m; sourceTree = "<group>"; };
 		B2A3F91B26B6E70900D90289 /* TNCacheDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheDefines.h; sourceTree = "<group>"; };
@@ -227,8 +230,8 @@
 				B227C2D726C8027A00297E90 /* TNImageManager.h */,
 				B227C2D826C8027A00297E90 /* TNImageManager.m */,
 				B24C321126DB33DB002BF2F3 /* TNImageManagerDefines.h */,
-				B241064626C8C83300B71E49 /* TNImageManagerDownloadBlockObject.h */,
-				B241064726C8C83300B71E49 /* TNImageManagerDownloadBlockObject.m */,
+				B241064626C8C83300B71E49 /* TNImageManageLoaderObject.h */,
+				B241064726C8C83300B71E49 /* TNImageManageLoaderObject.m */,
 			);
 			path = ImageManager;
 			sourceTree = "<group>";
@@ -241,6 +244,8 @@
 				B28FF28726B923AF00085750 /* TNImageCache.m */,
 				B28FF28926B9261D00085750 /* TNImageCacheConfig.h */,
 				B28FF28A26B9261D00085750 /* TNImageCacheConfig.m */,
+				B2A3A2B326E0C86000ECC1BF /* TNCacheQueryResponse.h */,
+				B2A3A2B426E0C86000ECC1BF /* TNCacheQueryResponse.m */,
 			);
 			path = CacheImage;
 			sourceTree = "<group>";
@@ -559,6 +564,7 @@
 				B20077282690ADA80021CB38 /* TNImageCoder.m in Sources */,
 				B28FF28826B923AF00085750 /* TNImageCache.m in Sources */,
 				B227C2DC26C8044700297E90 /* TNImageCombineOperation.m in Sources */,
+				B2A3A2B526E0C86000ECC1BF /* TNCacheQueryResponse.m in Sources */,
 				B29D38992685DB0E003E1F8B /* Photo.swift in Sources */,
 				B29C2B7C2684DD3A003B4F17 /* ViewController.swift in Sources */,
 				B29F962A268767A700FFFD31 /* TNImageDownloaderConfig.m in Sources */,
@@ -587,7 +593,7 @@
 				B2A3F92C26B6FA5900D90289 /* TNEncryption.m in Sources */,
 				B217ACD72685F7ED00403AEB /* Endpoint.swift in Sources */,
 				B217ACD62685F7ED00403AEB /* NetworkService.swift in Sources */,
-				B241064826C8C83300B71E49 /* TNImageManagerDownloadBlockObject.m in Sources */,
+				B241064826C8C83300B71E49 /* TNImageManageLoaderObject.m in Sources */,
 				B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */,
 				B29D38AB2685DEF4003E1F8B /* ListPhotoRespository.swift in Sources */,
 				B29D38AF2685E126003E1F8B /* UserConfigurationUseCase.swift in Sources */,

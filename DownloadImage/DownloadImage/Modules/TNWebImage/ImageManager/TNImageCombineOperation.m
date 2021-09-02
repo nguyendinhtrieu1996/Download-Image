@@ -19,7 +19,7 @@
 @implementation TNImageCombineOperation
 
 @synthesize cacheOperation;
-@synthesize loaderOperation;
+@synthesize downloaderOperation;
 @synthesize cancelled = _cancelled;
 
 - (instancetype)initWithCacheOperation:(id<TNImageOperationType>)cacheOperation
@@ -28,7 +28,7 @@
     self = [super init];
     if (self) {
         self.cacheOperation = cacheOperation;
-        self.loaderOperation = loaderOperation;
+        self.downloaderOperation = loaderOperation;
     }
     return self;
 }
@@ -46,9 +46,9 @@
             self.cacheOperation = nil;
         }
         
-        if (self.loaderOperation) {
-            [self.loaderOperation cancel];
-            self.loaderOperation = nil;
+        if (self.downloaderOperation) {
+            [self.downloaderOperation cancel];
+            self.downloaderOperation = nil;
         }
     }
 }

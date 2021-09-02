@@ -21,13 +21,19 @@ typedef NS_OPTIONS(NSUInteger, TNImageOptions) {
     TNImage_FromCacheOnly         = 1 << 0,
     TNImage_FromLoaderOnly        = 1 << 1,
     
+    // Cache Type
+    TNImage_CacheNone             = 1 << 2,
+    TNImage_CacheMemory           = 1 << 3,
+    TNImage_CacheDisk             = 1 << 4,
+    TNImage_CacheAll              = 1 << 5,
+    
     // Download Policy
-    TNImage_RetryFailed           = 1 << 2,
-    TNImage_RefreshURLCached      = 1 << 3,
-    TNImage_LoaderLowPriority     = 1 << 4,
-    TNImage_LoaderHighPriority    = 1 << 5,
-    TNImage_ContinueInBackground  = 1 << 6,
-    TNImage_ScaleDownLargeImages  = 1 << 7,
+    TNImage_RetryFailed           = 1 << 6,
+    TNImage_RefreshURLCached      = 1 << 7,
+    TNImage_LoaderLowPriority     = 1 << 8,
+    TNImage_LoaderHighPriority    = 1 << 9,
+    TNImage_ContinueInBackground  = 1 << 10,
+    TNImage_ScaleDownLargeImages  = 1 << 11,
 };
 
 NS_ASSUME_NONNULL_END

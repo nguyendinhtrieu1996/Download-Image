@@ -12,6 +12,8 @@
 #import "TNImageCacheConfig.h"
 
 
+@protocol TNCacheQueryResponseType;
+
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Defines
@@ -26,13 +28,24 @@ typedef NS_ENUM(NSInteger, TNImageCacheType) {
 
 typedef NSString * TNImageCacheKey;
 
-typedef void(^TNImageCacheQueryCompletionBlock)(UIImage * _Nullable image,
-                                                NSData * _Nullable data,
-                                                TNImageCacheType cacheType);
+typedef void(^TNImageCacheQueryCompletionBlock)(id<TNCacheQueryResponseType> cacheQueryResponse);
 
 typedef void(^TNImageCacheContainCompletionBock)(TNImageCacheType cacheType);
 
 typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long totalSize);
+
+
+#pragma mark - <TNCacheQueryResponseType>
+
+@protocol TNCacheQueryResponseType <NSObject>
+
+@property (nonatomic, readonly, nullable) UIImage *image;
+
+@property (nonatomic, readonly, nullable) NSData *data;
+
+@property (nonatomic, readonly) TNImageCacheType cacheType;
+
+@end // @protocol TNCacheQueryResponse
 
 
 #pragma mark - <TNCacheType>

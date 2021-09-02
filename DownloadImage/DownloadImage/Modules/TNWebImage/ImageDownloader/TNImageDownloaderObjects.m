@@ -68,20 +68,21 @@
 @end // @implementation TNImageDownloaderCompleteObject
 
 
-@interface TNImageDownloadToken ()
+@interface TNImageDownloaderToken ()
 
 @property (nonatomic, getter=isCancelled) BOOL cancelled;
 
-@end // @interface TNImageDownloadToken ()
+@end // @interface TNImageDownloaderToken ()
 
 
-@implementation TNImageDownloadToken
+@implementation TNImageDownloaderToken
 
 @synthesize url;
 @synthesize request;
 @synthesize response;
 @synthesize identifier;
 @synthesize downloadOperation;
+@synthesize isCancelled;
 
 - (void)cancel {
     @synchronized (self) {
@@ -94,4 +95,4 @@
     }
 }
 
-@end // @implementation TNImageDownloadToken
+@end // @implementation TNImageDownloaderToken

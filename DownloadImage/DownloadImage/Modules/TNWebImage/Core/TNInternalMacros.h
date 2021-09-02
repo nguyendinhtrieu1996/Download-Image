@@ -29,6 +29,7 @@
 #define TN_UNLOCK(lock) os_unfair_lock_unlock(&lock)
 
 #define TN_OPTIONS_CONTAINS(options, value) (((options) & (value)) == (value))
+#define TN_OPTIONS_NOT_CONTAINS(options, value) (!(((options) & (value)) == (value)))
 
 #define TN_EMPTY_STR(str) (str.length == 0)
 #define TN_IS_KIND_OF_CLASS(data, objectType) (data && [data isKindOfClass:[objectType class]])

@@ -102,7 +102,7 @@ NSURLSessionTaskDelegate
 
 #pragma mark Download Token
 
-@protocol TNImageDownloadTokenType <TNImageOperationType>
+@protocol TNImageDownloaderTokenType <TNImageOperationType>
 
 @required
 
@@ -112,7 +112,7 @@ NSURLSessionTaskDelegate
 @property (nonatomic, nullable) TNImageDownloaderIdentifier identifier;
 @property (nonatomic, weak) NSOperation<TNImageDownloaderOperationType> *downloadOperation;
 
-@end // @protocol TNImageDownloadTokenType
+@end // @protocol TNImageDownloaderTokenType
 
 
 #pragma mark Config
@@ -135,10 +135,10 @@ NSURLSessionTaskDelegate
 
 @required
 
-- (nullable id<TNImageDownloadTokenType>)downloadImageWithURL:(NSURL *)url
+- (nullable id<TNImageDownloaderTokenType>)downloadImageWithURL:(NSURL *)url
                                                    completion:(TNImageDownloaderCompletionBlock)completionBlock;
 
-- (nullable id<TNImageDownloadTokenType>)downloadImageWithURL:(NSURL *)url
+- (nullable id<TNImageDownloaderTokenType>)downloadImageWithURL:(NSURL *)url
                                                       options:(TNImageDownloaderOptions)options
                                                 progressBlock:(nullable TNImageDownloaderProgressBlock)progressBlock
                                                    completion:(nullable TNImageDownloaderCompletionBlock)completionBlock;

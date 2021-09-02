@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end // @interface TNImageDownloaderCompleteObject
 
 
-@interface TNImageDownloadToken : NSObject <TNImageDownloadTokenType>
+@interface TNImageDownloaderToken : NSObject <TNImageDownloaderTokenType>
 
 @end // @interface TNWebImageDownloadToken
 

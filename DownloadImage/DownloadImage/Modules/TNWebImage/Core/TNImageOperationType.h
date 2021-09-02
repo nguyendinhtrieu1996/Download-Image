@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol TNCancellable <NSObject>
 
+@property (nonatomic, readonly) BOOL isCancelled;
+
 - (void)cancel;
 
 @end // @protocol TNCancellable
