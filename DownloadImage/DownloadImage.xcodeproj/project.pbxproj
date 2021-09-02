@@ -44,7 +44,7 @@
 		B29F96272687679100FFFD31 /* TNImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F96262687679100FFFD31 /* TNImageDownloader.m */; };
 		B29F962A268767A700FFFD31 /* TNImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9629268767A700FFFD31 /* TNImageDownloaderConfig.m */; };
 		B29F962D268767BD00FFFD31 /* TNImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962C268767BD00FFFD31 /* TNImageDownloaderOperation.m */; };
-		B29F963026876B1400FFFD31 /* TNImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962F26876B1400FFFD31 /* TNImageOperation.m */; };
+		B29F963026876B1400FFFD31 /* TNImageOperationType.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F962F26876B1400FFFD31 /* TNImageOperationType.m */; };
 		B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9634268777DD00FFFD31 /* TNWebImageError.m */; };
 		B2A3A2B526E0C86000ECC1BF /* TNCacheQueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2B426E0C86000ECC1BF /* TNCacheQueryResponse.m */; };
 		B2A3A2B926E0DAD300ECC1BF /* UIImageView+TNWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2B826E0DAD300ECC1BF /* UIImageView+TNWebImage.m */; };
@@ -116,7 +116,7 @@
 		B29F962B268767BD00FFFD31 /* TNImageDownloaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderOperation.h; sourceTree = "<group>"; };
 		B29F962C268767BD00FFFD31 /* TNImageDownloaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloaderOperation.m; sourceTree = "<group>"; };
 		B29F962E26876B1400FFFD31 /* TNImageOperationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageOperationType.h; sourceTree = "<group>"; };
-		B29F962F26876B1400FFFD31 /* TNImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageOperation.m; sourceTree = "<group>"; };
+		B29F962F26876B1400FFFD31 /* TNImageOperationType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageOperationType.m; sourceTree = "<group>"; };
 		B29F9632268776C900FFFD31 /* TNInternalMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNInternalMacros.h; sourceTree = "<group>"; };
 		B29F9633268777DD00FFFD31 /* TNWebImageError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageError.h; sourceTree = "<group>"; };
 		B29F9634268777DD00FFFD31 /* TNWebImageError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageError.m; sourceTree = "<group>"; };
@@ -404,7 +404,7 @@
 				B29F9633268777DD00FFFD31 /* TNWebImageError.h */,
 				B29F9634268777DD00FFFD31 /* TNWebImageError.m */,
 				B29F962E26876B1400FFFD31 /* TNImageOperationType.h */,
-				B29F962F26876B1400FFFD31 /* TNImageOperation.m */,
+				B29F962F26876B1400FFFD31 /* TNImageOperationType.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -593,7 +593,7 @@
 				B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */,
 				B28FF28B26B9261D00085750 /* TNImageCacheConfig.m in Sources */,
 				B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */,
-				B29F963026876B1400FFFD31 /* TNImageOperation.m in Sources */,
+				B29F963026876B1400FFFD31 /* TNImageOperationType.m in Sources */,
 				B2A3F92926B6EDD700D90289 /* TNDiskCache.m in Sources */,
 				B29D38B72685E80C003E1F8B /* DefaultListPhotoRespository.swift in Sources */,
 				B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */,
