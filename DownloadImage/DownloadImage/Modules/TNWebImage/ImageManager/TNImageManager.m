@@ -303,8 +303,14 @@ typedef NSMutableArray<id<TNImageManagerLoaderObjectType>> * TNImageRunningLoade
     NSError *finalError = nil;
     
     void (^notifyCompleteBlock)(void) = ^void(void) {
+        UIImage *finalImage = downloadCompleteObject.image;
+        ifnot (finalImage) {
+            finalImage = cacheQueryResponse.image;
+        }
+        
         [self _notifyCompleteWithLoaderObject:loaderObject
-                               completeObject:downloadCompleteObject
+                                        image:finalImage
+                                    cacheType:cacheQueryResponse.cacheType
                                         error:finalError];
     };
     
@@ -376,15 +382,13 @@ typedef NSMutableArray<id<TNImageManagerLoaderObjectType>> * TNImageRunningLoade
 }
 
 - (void)_notifyCompleteWithLoaderObject:(id<TNImageManagerLoaderObjectType>)loaderObject
-                         completeObject:(id<TNImageDownloaderCompleteObjectType>)completionObject
+                                  image:(UIImage *)image
+                              cacheType:(TNImageCacheType)cacheType
                                   error:(NSError *)error {
     
     TNImageManagerCompletionBlock completionBlock = loaderObject.blockObject.completionBlock;
     if (completionBlock) {
-        completionBlock(completionObject.image,
-                        error,
-                        loaderObject.cacheType,
-                        loaderObject.url);
+        completionBlock(image, error, cacheType, loaderObject.url);
     }
 }
 
