@@ -210,9 +210,9 @@
             if (data) {
                 [self->_diskCache setObject:data forKey:key];
             }
-            
-            safeExec(completionBlock);
         }
+        
+        safeExec(completionBlock);
     }];
     
     return operation;
