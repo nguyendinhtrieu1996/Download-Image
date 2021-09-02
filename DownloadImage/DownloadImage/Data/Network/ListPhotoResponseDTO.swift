@@ -17,6 +17,7 @@ struct PhotoResponseDTO: Decodable {
 }
 
 extension PhotoResponseDTO {
+    
     func toDomain() -> Photo {
         return .init(id: id,
                      author: author,

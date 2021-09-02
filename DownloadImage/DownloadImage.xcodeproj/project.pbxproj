@@ -16,8 +16,6 @@
 		B217ACDB2686292900403AEB /* ListPhotoAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACDA2686292900403AEB /* ListPhotoAPIEndPoint.swift */; };
 		B217ACDD2686296E00403AEB /* ListPhotoRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACDC2686296E00403AEB /* ListPhotoRequestDTO.swift */; };
 		B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACDE268629EE00403AEB /* ListPhotoResponseDTO.swift */; };
-		B217ACE22686371800403AEB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACE12686371800403AEB /* ImageDownloader.swift */; };
-		B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */; };
 		B227C2D926C8027A00297E90 /* TNImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B227C2D826C8027A00297E90 /* TNImageManager.m */; };
 		B227C2DC26C8044700297E90 /* TNImageManagerCombineOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B227C2DB26C8044700297E90 /* TNImageManagerCombineOperation.m */; };
 		B241064826C8C83300B71E49 /* TNImageManageLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B241064726C8C83300B71E49 /* TNImageManageLoaderObject.m */; };
@@ -29,8 +27,7 @@
 		B28FF29726B94D2A00085750 /* TNImageBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B28FF29626B94D2A00085750 /* TNImageBaseOperation.m */; };
 		B29C2B782684DD3A003B4F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B772684DD3A003B4F17 /* AppDelegate.swift */; };
 		B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */; };
-		B29C2B7C2684DD3A003B4F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B7B2684DD3A003B4F17 /* ViewController.swift */; };
-		B29C2B7F2684DD3A003B4F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29C2B7D2684DD3A003B4F17 /* Main.storyboard */; };
+		B29C2B7C2684DD3A003B4F17 /* ListPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B7B2684DD3A003B4F17 /* ListPhotoViewController.swift */; };
 		B29C2B812684DD3A003B4F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29C2B802684DD3A003B4F17 /* Assets.xcassets */; };
 		B29C2B842684DD3A003B4F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29C2B822684DD3A003B4F17 /* LaunchScreen.storyboard */; };
 		B29D38992685DB0E003E1F8B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29D38982685DB0E003E1F8B /* Photo.swift */; };
@@ -48,6 +45,15 @@
 		B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = B29F9634268777DD00FFFD31 /* TNWebImageError.m */; };
 		B2A3A2B526E0C86000ECC1BF /* TNCacheQueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2B426E0C86000ECC1BF /* TNCacheQueryResponse.m */; };
 		B2A3A2B926E0DAD300ECC1BF /* UIImageView+TNWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2B826E0DAD300ECC1BF /* UIImageView+TNWebImage.m */; };
+		B2A3A2BC26E1115B00ECC1BF /* DefaultUserConfigurationResponsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2BB26E1115B00ECC1BF /* DefaultUserConfigurationResponsitory.swift */; };
+		B2A3A2BF26E111FD00ECC1BF /* UserConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2BE26E111FD00ECC1BF /* UserConfigurationStorage.swift */; };
+		B2A3A2C326E112DB00ECC1BF /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2C126E112DB00ECC1BF /* KeychainItemAccessibility.swift */; };
+		B2A3A2C426E112DB00ECC1BF /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2C226E112DB00ECC1BF /* KeychainWrapper.swift */; };
+		B2A3A2C726E1132E00ECC1BF /* KeyValueStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2C626E1132E00ECC1BF /* KeyValueStoreProtocol.swift */; };
+		B2A3A2C926E113AB00ECC1BF /* TNSecureCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2C826E113AA00ECC1BF /* TNSecureCoding.swift */; };
+		B2A3A2CC26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2CB26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift */; };
+		B2A3A2D026E1186200ECC1BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */; };
+		B2A3A2D426E11AD900ECC1BF /* ListPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */; };
 		B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */; };
 		B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */; };
 		B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */; };
@@ -68,8 +74,6 @@
 		B217ACDA2686292900403AEB /* ListPhotoAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoAPIEndPoint.swift; sourceTree = "<group>"; };
 		B217ACDC2686296E00403AEB /* ListPhotoRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoRequestDTO.swift; sourceTree = "<group>"; };
 		B217ACDE268629EE00403AEB /* ListPhotoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoResponseDTO.swift; sourceTree = "<group>"; };
-		B217ACE12686371800403AEB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultImageDownloader.swift; sourceTree = "<group>"; };
 		B227C2D726C8027A00297E90 /* TNImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManager.h; sourceTree = "<group>"; };
 		B227C2D826C8027A00297E90 /* TNImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManager.m; sourceTree = "<group>"; };
 		B227C2DA26C8044700297E90 /* TNImageManagerCombineOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManagerCombineOperation.h; sourceTree = "<group>"; };
@@ -94,8 +98,7 @@
 		B29C2B742684DD3A003B4F17 /* DownloadImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29C2B772684DD3A003B4F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B29C2B7B2684DD3A003B4F17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B29C2B7E2684DD3A003B4F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B29C2B7B2684DD3A003B4F17 /* ListPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoViewController.swift; sourceTree = "<group>"; };
 		B29C2B802684DD3A003B4F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29C2B832684DD3A003B4F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B29C2B852684DD3A003B4F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +127,15 @@
 		B2A3A2B426E0C86000ECC1BF /* TNCacheQueryResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCacheQueryResponse.m; sourceTree = "<group>"; };
 		B2A3A2B726E0DAD300ECC1BF /* UIImageView+TNWebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TNWebImage.h"; sourceTree = "<group>"; };
 		B2A3A2B826E0DAD300ECC1BF /* UIImageView+TNWebImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TNWebImage.m"; sourceTree = "<group>"; };
+		B2A3A2BB26E1115B00ECC1BF /* DefaultUserConfigurationResponsitory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserConfigurationResponsitory.swift; sourceTree = "<group>"; };
+		B2A3A2BE26E111FD00ECC1BF /* UserConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationStorage.swift; sourceTree = "<group>"; };
+		B2A3A2C126E112DB00ECC1BF /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		B2A3A2C226E112DB00ECC1BF /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		B2A3A2C626E1132E00ECC1BF /* KeyValueStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStoreProtocol.swift; sourceTree = "<group>"; };
+		B2A3A2C826E113AA00ECC1BF /* TNSecureCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNSecureCoding.swift; sourceTree = "<group>"; };
+		B2A3A2CB26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationKeychainStorage.swift; sourceTree = "<group>"; };
+		B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoViewModel.swift; sourceTree = "<group>"; };
 		B2A3F91526B6E68D00D90289 /* TNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCache.h; sourceTree = "<group>"; };
 		B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCache.m; sourceTree = "<group>"; };
 		B2A3F91B26B6E70900D90289 /* TNCacheDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheDefines.h; sourceTree = "<group>"; };
@@ -216,15 +228,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		B217ACE0268635F300403AEB /* ImageDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				B217ACE12686371800403AEB /* ImageDownloader.swift */,
-				B217ACE32686384E00403AEB /* DefaultImageDownloader.swift */,
-			);
-			path = ImageDownloader;
-			sourceTree = "<group>";
-		};
 		B227C2D626C8026B00297E90 /* ImageManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,9 +281,9 @@
 				B29D38B42685E7BD003E1F8B /* Data */,
 				B29D38A42685DD8D003E1F8B /* Domain */,
 				B217ACCF2685F7CF00403AEB /* Infrastructure */,
+				B29F961D268766B700FFFD31 /* Modules */,
 				B29D38952685DADA003E1F8B /* Presentation */,
 				B29D38A22685DCD2003E1F8B /* Resources */,
-				B29F961D268766B700FFFD31 /* Modules */,
 			);
 			path = DownloadImage;
 			sourceTree = "<group>";
@@ -288,8 +291,8 @@
 		B29D38952685DADA003E1F8B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B29C2B7B2684DD3A003B4F17 /* ViewController.swift */,
-				B29C2B7D2684DD3A003B4F17 /* Main.storyboard */,
+				B2A3A2CE26E1185100ECC1BF /* Utils */,
+				B2A3A2CD26E1182100ECC1BF /* ListPhoto */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -355,9 +358,9 @@
 		B29D38B42685E7BD003E1F8B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B2A3A2BA26E1106D00ECC1BF /* PersistentStorages */,
 				B217ACD92686291300403AEB /* Network */,
 				B29D38B52685E7F5003E1F8B /* Respositories */,
-				B217ACE0268635F300403AEB /* ImageDownloader */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				B29D38B62685E80C003E1F8B /* DefaultListPhotoRespository.swift */,
+				B2A3A2BB26E1115B00ECC1BF /* DefaultUserConfigurationResponsitory.swift */,
 			);
 			path = Respositories;
 			sourceTree = "<group>";
@@ -432,6 +436,76 @@
 				B2A3A2B826E0DAD300ECC1BF /* UIImageView+TNWebImage.m */,
 			);
 			path = "Util-Extensions";
+			sourceTree = "<group>";
+		};
+		B2A3A2BA26E1106D00ECC1BF /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2C026E112D000ECC1BF /* Keychain */,
+				B2A3A2BD26E111D700ECC1BF /* UserConfigurationStorage */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		B2A3A2BD26E111D700ECC1BF /* UserConfigurationStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2CA26E1147B00ECC1BF /* Keychain */,
+				B2A3A2BE26E111FD00ECC1BF /* UserConfigurationStorage.swift */,
+			);
+			path = UserConfigurationStorage;
+			sourceTree = "<group>";
+		};
+		B2A3A2C026E112D000ECC1BF /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2C626E1132E00ECC1BF /* KeyValueStoreProtocol.swift */,
+				B2A3A2C826E113AA00ECC1BF /* TNSecureCoding.swift */,
+				B2A3A2C126E112DB00ECC1BF /* KeychainItemAccessibility.swift */,
+				B2A3A2C226E112DB00ECC1BF /* KeychainWrapper.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B2A3A2CA26E1147B00ECC1BF /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2CB26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B2A3A2CD26E1182100ECC1BF /* ListPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2D226E11ABA00ECC1BF /* ViewModel */,
+				B2A3A2D126E11A2400ECC1BF /* Cell */,
+			);
+			path = ListPhoto;
+			sourceTree = "<group>";
+		};
+		B2A3A2CE26E1185100ECC1BF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B2A3A2D126E11A2400ECC1BF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B29C2B7B2684DD3A003B4F17 /* ListPhotoViewController.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B2A3A2D226E11ABA00ECC1BF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B2A3F92226B6E83500D90289 /* MemCache */ = {
@@ -520,7 +594,6 @@
 			files = (
 				B29C2B842684DD3A003B4F17 /* LaunchScreen.storyboard in Resources */,
 				B29C2B812684DD3A003B4F17 /* Assets.xcassets in Resources */,
-				B29C2B7F2684DD3A003B4F17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,10 +649,11 @@
 				B217ACD52685F7ED00403AEB /* DataTransferService.swift in Sources */,
 				B20077282690ADA80021CB38 /* TNImageCoder.m in Sources */,
 				B28FF28826B923AF00085750 /* TNImageCache.m in Sources */,
+				B2A3A2BC26E1115B00ECC1BF /* DefaultUserConfigurationResponsitory.swift in Sources */,
 				B227C2DC26C8044700297E90 /* TNImageManagerCombineOperation.m in Sources */,
 				B2A3A2B526E0C86000ECC1BF /* TNCacheQueryResponse.m in Sources */,
 				B29D38992685DB0E003E1F8B /* Photo.swift in Sources */,
-				B29C2B7C2684DD3A003B4F17 /* ViewController.swift in Sources */,
+				B29C2B7C2684DD3A003B4F17 /* ListPhotoViewController.swift in Sources */,
 				B29F962A268767A700FFFD31 /* TNImageDownloaderConfig.m in Sources */,
 				B217ACDD2686296E00403AEB /* ListPhotoRequestDTO.swift in Sources */,
 				B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */,
@@ -588,20 +662,26 @@
 				B29D38A62685DDE6003E1F8B /* FetchListPhotoUseCase.swift in Sources */,
 				B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */,
 				B217ACD82685F7ED00403AEB /* NetworkConfig.swift in Sources */,
+				B2A3A2D426E11AD900ECC1BF /* ListPhotoViewModel.swift in Sources */,
 				B29D389D2685DBA9003E1F8B /* PhotoQuery.swift in Sources */,
-				B217ACE22686371800403AEB /* ImageDownloader.swift in Sources */,
 				B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */,
 				B28FF28B26B9261D00085750 /* TNImageCacheConfig.m in Sources */,
-				B217ACE42686384E00403AEB /* DefaultImageDownloader.swift in Sources */,
+				B2A3A2BF26E111FD00ECC1BF /* UserConfigurationStorage.swift in Sources */,
 				B29F963026876B1400FFFD31 /* TNImageOperationType.m in Sources */,
 				B2A3F92926B6EDD700D90289 /* TNDiskCache.m in Sources */,
+				B2A3A2C326E112DB00ECC1BF /* KeychainItemAccessibility.swift in Sources */,
 				B29D38B72685E80C003E1F8B /* DefaultListPhotoRespository.swift in Sources */,
 				B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */,
+				B2A3A2C426E112DB00ECC1BF /* KeychainWrapper.swift in Sources */,
+				B2A3A2C926E113AB00ECC1BF /* TNSecureCoding.swift in Sources */,
 				B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */,
 				B2A3A2B926E0DAD300ECC1BF /* UIImageView+TNWebImage.m in Sources */,
+				B2A3A2D026E1186200ECC1BF /* BaseViewController.swift in Sources */,
 				B27DCE7E26BA4D7600E14E32 /* TNImageCoderHelper.m in Sources */,
+				B2A3A2C726E1132E00ECC1BF /* KeyValueStoreProtocol.swift in Sources */,
 				B29F962D268767BD00FFFD31 /* TNImageDownloaderOperation.m in Sources */,
 				B29D38B32685E2A2003E1F8B /* UserConfigurtionRespository.swift in Sources */,
+				B2A3A2CC26E114A200ECC1BF /* UserConfigurationKeychainStorage.swift in Sources */,
 				B227C2D926C8027A00297E90 /* TNImageManager.m in Sources */,
 				B25C763C26D7E0EE0037922B /* TNImageDownloaderObjects.m in Sources */,
 				B2A3F92C26B6FA5900D90289 /* TNEncryption.m in Sources */,
@@ -621,14 +701,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B29C2B7D2684DD3A003B4F17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B29C2B7E2684DD3A003B4F17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B29C2B822684DD3A003B4F17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

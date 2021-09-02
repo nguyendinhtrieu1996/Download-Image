@@ -35,9 +35,4 @@ extension DefaultListPhotoRespository: ListPhotoRespository {
             }
         }
     }
-    
-    func fetchImage(from urlString: String, completion: @escaping FetchImageCompletion) {
-        
-    }
-    
 }
