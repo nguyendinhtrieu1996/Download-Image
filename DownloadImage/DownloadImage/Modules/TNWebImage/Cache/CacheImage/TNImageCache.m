@@ -418,7 +418,7 @@
     return count;
 }
 
-- (void)calculateSizeWithCompletionBlock:(TBWebImageCacheCalculateSizeBlock)completionBlock {
+- (void)calculateSizeWithCompletionBlock:(TNWebImageCacheCalculateSizeBlock)completionBlock {
     [_executeQueue addOperationWithBlock:^{
         NSUInteger fileCount = [self->_diskCache totalCount];
         NSUInteger fileSize = [self->_diskCache totalSize];

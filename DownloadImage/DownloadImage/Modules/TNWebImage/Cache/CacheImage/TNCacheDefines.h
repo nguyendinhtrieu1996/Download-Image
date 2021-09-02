@@ -32,7 +32,7 @@ typedef void(^TNImageCacheQueryCompletionBlock)(id<TNCacheQueryResponseType> cac
 
 typedef void(^TNImageCacheContainCompletionBock)(TNImageCacheType cacheType);
 
-typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long totalSize);
+typedef void(^TNWebImageCacheCalculateSizeBlock)(long long fileCount, long long totalSize);
 
 
 #pragma mark - <TNCacheQueryResponseType>
@@ -83,7 +83,7 @@ typedef void(^TBWebImageCacheCalculateSizeBlock)(long long fileCount, long long 
 
 @property (nonatomic, readonly) NSUInteger totalDiskCount;
 
-- (void)calculateSizeWithCompletionBlock:(nullable TBWebImageCacheCalculateSizeBlock)completionBlock;
+- (void)calculateSizeWithCompletionBlock:(nullable TNWebImageCacheCalculateSizeBlock)completionBlock;
 
 #pragma mark LifeCycle
 

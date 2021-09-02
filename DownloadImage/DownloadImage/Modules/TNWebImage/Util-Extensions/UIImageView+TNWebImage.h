@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)tn_loadImageFromURL:(NSURL *)url;
 
+- (void)tn_cancelLoadImage;
+
 @end // @interface UIImageView (TNWebImage)
 
 NS_ASSUME_NONNULL_END

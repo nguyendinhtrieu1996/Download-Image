@@ -17,13 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Combine Operation
 
-@protocol TNImageCombineOperationType <TNImageOperationType>
+@protocol TNImageManagerCombineOperationType <TNImageOperationType>
 
 @property (nonatomic, nullable) id<TNImageOperationType> cacheOperation;
 
 @property (nonatomic, nullable) id<TNImageOperationType> downloaderOperation;
 
-@end // @protocol TNImageCombineOperationType
+@end // @protocol TNImageManagerCombineOperationType
 
 
 #pragma mark - Downloader Block
@@ -56,7 +56,7 @@ typedef void(^TNImageManagerCompletionBlock)(UIImage * _Nullable image,
 @property (nonatomic, readonly) NSURL *url;
 @property (nonatomic, readonly) TNImageOptions options;
 @property (nonatomic, readonly) TNImageCacheType cacheType;
-@property (nonatomic, readonly) id<TNImageCombineOperationType> combineOperation;
+@property (nonatomic, readonly) id<TNImageManagerCombineOperationType> combineOperation;
 @property (nonatomic, readonly) id<TNImageManagerDownloaderBlockObjectType> blockObject;
 
 - (void)updateCacheOperation:(id<TNImageOperationType>)cacheOperation;

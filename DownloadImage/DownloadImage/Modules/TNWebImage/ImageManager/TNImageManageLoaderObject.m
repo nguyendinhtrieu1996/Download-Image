@@ -8,7 +8,7 @@
 #import "TNImageManageLoaderObject.h"
 
 #import "TNInternalMacros.h"
-#import "TNImageCombineOperation.h"
+#import "TNImageManagerCombineOperation.h"
 
 
 @implementation TNImageManagerDownloaderBlockObject
@@ -37,7 +37,7 @@
     NSURL *_url;
     TNImageOptions _options;
     TNImageCacheType _cacheType;
-    id<TNImageCombineOperationType> _combineOperation;
+    id<TNImageManagerCombineOperationType> _combineOperation;
     id<TNImageManagerDownloaderBlockObjectType> _blockObject;
 }
 
@@ -57,7 +57,7 @@
 {
     self = [super init];
     if (self) {
-        _combineOperation = [TNImageCombineOperation new];
+        _combineOperation = [TNImageManagerCombineOperation new];
     }
     return self;
 }
