@@ -29,16 +29,16 @@ final class UserConfigurationKeychainStorage {
 extension UserConfigurationKeychainStorage: UserConfigurationStorage {
     
     func loadConfig(with completion: (Result<UserConfiguration, Error>) -> Void) {
-        let userConfig: UserConfiguration? = self.keyValueStore.getCodableObj(forKey: KeyStore.userConfig)
+        let userConfigDTO: UserConfigurationDTO? = self.keyValueStore.getCodableObj(forKey: KeyStore.userConfig)
         
-        if let userConfig = userConfig {
-            completion(.success(userConfig))
+        if let userConfigDTO = userConfigDTO {
+            completion(.success(userConfigDTO.toDomain()))
         } else {
             completion(.failure(UserConfigurationStorageError.saveError))
         }
     }
     
     func saveConfig(_ config: UserConfiguration, completion: (Result<Void, Error>) -> Void) {
-        self.keyValueStore.set(config, forKey: KeyStore.userConfig)
+        self.keyValueStore.set(config.toDTO(), forKey: KeyStore.userConfig)
     }
 }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum TNSecureCodingError: Error {
+public enum TNSecureCodingError: Error {
     case unableArchived(underlyingError: Error)
     case unableUnarchived(underlyingError: Error)
     
-    var errorCode: Int {
+    public var errorCode: Int {
         switch self {
         case .unableArchived:
             return 640
@@ -20,7 +20,7 @@ enum TNSecureCodingError: Error {
         }
     }
     
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case .unableArchived(let underlyingError):
             return "unableArchived errorCode: \(self.errorCode) - underlyingError: \(underlyingError.localizedDescription)"
@@ -31,9 +31,9 @@ enum TNSecureCodingError: Error {
     }
 }
 
-final class TNSecureCoding {
+final public class TNSecureCoding {
     
-    static func archivedData(with rootObject: Any) throws -> Data? {
+    static public func archivedData(with rootObject: Any) throws -> Data? {
         var archiveData: Data? = nil
         
         if #available(iOS 11, *) {
@@ -56,11 +56,11 @@ final class TNSecureCoding {
         return archiveData
     }
     
-    static func unarchivedObjectOfClass(_ cls: AnyClass, data: Data) throws -> Any? {
+    static public func unarchivedObjectOfClass(_ cls: AnyClass, data: Data) throws -> Any? {
         return try self.unarchivedObjectOfClasses([cls], data: data)
     }
     
-    static func unarchivedObjectOfClasses(_ classes: [AnyClass], data: Data) throws -> Any? {
+    static public func unarchivedObjectOfClasses(_ classes: [AnyClass], data: Data) throws -> Any? {
         var object: Any? = nil
         
         if #available(iOS 11, *) {

@@ -22,8 +22,8 @@ final class DefaultListPhotoRespository {
 extension DefaultListPhotoRespository: ListPhotoRespository {
     
     func fetchListPhoto(query: PhotoQuery, completion: @escaping FetchListPhotoCompletion) {
-        let requestDTO = ListPhotoRequestDTO(page: query.page, limit: query.limit)
-        let endPoint = ListPhotoAPIEndPoint.getListPhoto(with: requestDTO)
+        let queryDTO = query.toDTO()
+        let endPoint = ListPhotoAPIEndPoint.getListPhoto(with: queryDTO)
         
         self.dataTransferService.request(with: endPoint) { result in
             switch result {

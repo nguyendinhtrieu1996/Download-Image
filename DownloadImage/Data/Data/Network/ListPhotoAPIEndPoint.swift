@@ -10,10 +10,10 @@ import Infrastructure
 
 struct ListPhotoAPIEndPoint {
     
-    static func getListPhoto(with listPhotoRequestDTO: ListPhotoRequestDTO) -> Endpoint<[PhotoResponseDTO]> {
+    static func getListPhoto(with queryDTO: PhotoQueryDTO) -> Endpoint<[PhotoResponseDTO]> {
         return Endpoint(path: "list/",
                         method: .get,
-                        queryParametersEncodable: listPhotoRequestDTO)
+                        queryParametersEncodable: queryDTO)
     }
     
 }

@@ -8,5 +8,7 @@
 import Foundation
 
 public protocol ListPhotoRespository {
+    
     func fetchListPhoto(query: PhotoQuery, completion: @escaping FetchListPhotoCompletion)
+    
 }

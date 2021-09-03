@@ -16,7 +16,7 @@
 		B29BC59626E21F0C003B75FA /* TNSecureCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC58626E21F00003B75FA /* TNSecureCoding.swift */; };
 		B29BC59726E21F11003B75FA /* UserConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC58C26E21F00003B75FA /* UserConfigurationStorage.swift */; };
 		B29BC59826E21F13003B75FA /* UserConfigurationKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC58A26E21F00003B75FA /* UserConfigurationKeychainStorage.swift */; };
-		B29BC59926E21F18003B75FA /* ListPhotoRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC59026E21F01003B75FA /* ListPhotoRequestDTO.swift */; };
+		B29BC59926E21F18003B75FA /* PhotoQueryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC59026E21F01003B75FA /* PhotoQueryDTO.swift */; };
 		B29BC59A26E21F18003B75FA /* ListPhotoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC59126E21F01003B75FA /* ListPhotoResponseDTO.swift */; };
 		B29BC59B26E21F18003B75FA /* ListPhotoAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC58F26E21F01003B75FA /* ListPhotoAPIEndPoint.swift */; };
 		B29BC59C26E21F1C003B75FA /* DefaultUserConfigurationResponsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC58326E21F00003B75FA /* DefaultUserConfigurationResponsitory.swift */; };
@@ -25,6 +25,7 @@
 		B29BC5A726E21F91003B75FA /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC5A526E21F91003B75FA /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B29BC5AA26E22016003B75FA /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC5A926E22016003B75FA /* Infrastructure.framework */; };
 		B29BC5AB26E22016003B75FA /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC5A926E22016003B75FA /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B29BC5AD26E22C49003B75FA /* UserConfigurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC5AC26E22C49003B75FA /* UserConfigurationDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +69,11 @@
 		B29BC58A26E21F00003B75FA /* UserConfigurationKeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationKeychainStorage.swift; sourceTree = "<group>"; };
 		B29BC58C26E21F00003B75FA /* UserConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationStorage.swift; sourceTree = "<group>"; };
 		B29BC58F26E21F01003B75FA /* ListPhotoAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoAPIEndPoint.swift; sourceTree = "<group>"; };
-		B29BC59026E21F01003B75FA /* ListPhotoRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoRequestDTO.swift; sourceTree = "<group>"; };
+		B29BC59026E21F01003B75FA /* PhotoQueryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQueryDTO.swift; sourceTree = "<group>"; };
 		B29BC59126E21F01003B75FA /* ListPhotoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoResponseDTO.swift; sourceTree = "<group>"; };
 		B29BC5A526E21F91003B75FA /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29BC5A926E22016003B75FA /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC5AC26E22C49003B75FA /* UserConfigurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				B29BC58B26E21F00003B75FA /* Keychain */,
 				B29BC58C26E21F00003B75FA /* UserConfigurationStorage.swift */,
+				B29BC5AC26E22C49003B75FA /* UserConfigurationDTO.swift */,
 			);
 			path = UserConfigurationStorage;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				B29BC58F26E21F01003B75FA /* ListPhotoAPIEndPoint.swift */,
-				B29BC59026E21F01003B75FA /* ListPhotoRequestDTO.swift */,
+				B29BC59026E21F01003B75FA /* PhotoQueryDTO.swift */,
 				B29BC59126E21F01003B75FA /* ListPhotoResponseDTO.swift */,
 			);
 			path = Network;
@@ -316,8 +319,9 @@
 				B29BC59D26E21F1C003B75FA /* DefaultListPhotoRespository.swift in Sources */,
 				B29BC59B26E21F18003B75FA /* ListPhotoAPIEndPoint.swift in Sources */,
 				B29BC59726E21F11003B75FA /* UserConfigurationStorage.swift in Sources */,
+				B29BC5AD26E22C49003B75FA /* UserConfigurationDTO.swift in Sources */,
 				B29BC59326E21F0C003B75FA /* KeyValueStoreProtocol.swift in Sources */,
-				B29BC59926E21F18003B75FA /* ListPhotoRequestDTO.swift in Sources */,
+				B29BC59926E21F18003B75FA /* PhotoQueryDTO.swift in Sources */,
 				B29BC59C26E21F1C003B75FA /* DefaultUserConfigurationResponsitory.swift in Sources */,
 				B29BC59426E21F0C003B75FA /* KeychainItemAccessibility.swift in Sources */,
 			);
