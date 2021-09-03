@@ -56,6 +56,9 @@
 		B2A3A2D426E11AD900ECC1BF /* ListPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */; };
 		B2A3A2D626E11F1F00ECC1BF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D526E11F1F00ECC1BF /* BaseViewModel.swift */; };
 		B2A3A2D826E11F3F00ECC1BF /* ViewModelTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2D726E11F3F00ECC1BF /* ViewModelTypeProtocol.swift */; };
+		B2A3A2E626E123A900ECC1BF /* ObservableExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2E326E123A900ECC1BF /* ObservableExt.swift */; };
+		B2A3A2E726E123A900ECC1BF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2E426E123A900ECC1BF /* ActivityIndicator.swift */; };
+		B2A3A2E826E123A900ECC1BF /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2E526E123A900ECC1BF /* ErrorTracker.swift */; };
 		B2A3F91726B6E68D00D90289 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */; };
 		B2A3F92026B6E82900D90289 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F91F26B6E82900D90289 /* TNMemoryCacheConfig.m */; };
 		B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A3F92526B6EDCB00D90289 /* TNDiskCacheConfig.m */; };
@@ -140,6 +143,9 @@
 		B2A3A2D326E11AD900ECC1BF /* ListPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoViewModel.swift; sourceTree = "<group>"; };
 		B2A3A2D526E11F1F00ECC1BF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		B2A3A2D726E11F3F00ECC1BF /* ViewModelTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTypeProtocol.swift; sourceTree = "<group>"; };
+		B2A3A2E326E123A900ECC1BF /* ObservableExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableExt.swift; sourceTree = "<group>"; };
+		B2A3A2E426E123A900ECC1BF /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B2A3A2E526E123A900ECC1BF /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		B2A3F91526B6E68D00D90289 /* TNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCache.h; sourceTree = "<group>"; };
 		B2A3F91626B6E68D00D90289 /* TNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCache.m; sourceTree = "<group>"; };
 		B2A3F91B26B6E70900D90289 /* TNCacheDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheDefines.h; sourceTree = "<group>"; };
@@ -491,6 +497,9 @@
 		B2A3A2CE26E1185100ECC1BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B2A3A2E426E123A900ECC1BF /* ActivityIndicator.swift */,
+				B2A3A2E526E123A900ECC1BF /* ErrorTracker.swift */,
+				B2A3A2E326E123A900ECC1BF /* ObservableExt.swift */,
 				B2A3A2CF26E1186200ECC1BF /* BaseViewController.swift */,
 				B2A3A2D526E11F1F00ECC1BF /* BaseViewModel.swift */,
 				B2A3A2D726E11F3F00ECC1BF /* ViewModelTypeProtocol.swift */,
@@ -668,6 +677,7 @@
 				B29D38A62685DDE6003E1F8B /* FetchListPhotoUseCase.swift in Sources */,
 				B29F9635268777DD00FFFD31 /* TNWebImageError.m in Sources */,
 				B217ACD82685F7ED00403AEB /* NetworkConfig.swift in Sources */,
+				B2A3A2E626E123A900ECC1BF /* ObservableExt.swift in Sources */,
 				B2A3A2D426E11AD900ECC1BF /* ListPhotoViewModel.swift in Sources */,
 				B29D389D2685DBA9003E1F8B /* PhotoQuery.swift in Sources */,
 				B217ACDF268629EE00403AEB /* ListPhotoResponseDTO.swift in Sources */,
@@ -682,6 +692,7 @@
 				B2A3A2C426E112DB00ECC1BF /* KeychainWrapper.swift in Sources */,
 				B2A3A2C926E113AB00ECC1BF /* TNSecureCoding.swift in Sources */,
 				B2A3F92626B6EDCB00D90289 /* TNDiskCacheConfig.m in Sources */,
+				B2A3A2E726E123A900ECC1BF /* ActivityIndicator.swift in Sources */,
 				B2A3A2B926E0DAD300ECC1BF /* UIImageView+TNWebImage.m in Sources */,
 				B2A3A2D026E1186200ECC1BF /* BaseViewController.swift in Sources */,
 				B2A3A2D626E11F1F00ECC1BF /* BaseViewModel.swift in Sources */,
@@ -699,6 +710,7 @@
 				B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */,
 				B29D38AB2685DEF4003E1F8B /* ListPhotoRespository.swift in Sources */,
 				B29D38AF2685E126003E1F8B /* UserConfigurationUseCase.swift in Sources */,
+				B2A3A2E826E123A900ECC1BF /* ErrorTracker.swift in Sources */,
 				B254658726B7DA8200EFC3E2 /* TNDiskCacheCleaner.m in Sources */,
 				B217ACDB2686292900403AEB /* ListPhotoAPIEndPoint.swift in Sources */,
 				B29D38B12685E13B003E1F8B /* UserConfiguration.swift in Sources */,
@@ -771,7 +783,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -826,7 +838,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
