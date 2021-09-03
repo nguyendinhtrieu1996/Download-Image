@@ -1,8 +1,8 @@
 //
 //  ServiceConfig.swift
-//  ExampleMVVM
+//  DownloadImage
 //
-//  Created by Oleh Kudinov on 01.10.18.
+//  Created by Trieu Nguyen on 02/09/2021.
 //
 
 import Foundation
@@ -21,6 +21,7 @@ public struct ApiDataNetworkConfig: NetworkConfigurable {
      public init(baseURL: URL,
                  headers: [String: String] = [:],
                  queryParameters: [String: String] = [:]) {
+        
         self.baseURL = baseURL
         self.headers = headers
         self.queryParameters = queryParameters

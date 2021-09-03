@@ -1,8 +1,8 @@
 //
 //  Endpoint.swift
-//  ExampleMVVM
+//  DownloadImage
 //
-//  Created by Oleh Kudinov on 01.10.18.
+//  Created by Trieu Nguyen on 02/09/2021.
 //
 
 import Foundation

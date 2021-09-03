@@ -1,8 +1,8 @@
 //
 //  NetworkService.swift
-//  ExampleMVVM
+//  DownloadImage
 //
-//  Created by Oleh Kudinov on 01.10.18.
+//  Created by Trieu Nguyen on 02/09/2021.
 //
 
 import Foundation
@@ -107,7 +107,7 @@ extension DefaultNetworkService: NetworkService {
 // MARK: - Default Network Session Manager
 // Note: If authorization is needed NetworkSessionManager can be implemented by using,
 // for example, Alamofire SessionManager with its RequestAdapter and RequestRetrier.
-// And it can be incjected into NetworkService instead of default one.
+// And it can be injected into NetworkService instead of default one.
 
 public class DefaultNetworkSessionManager: NetworkSessionManager {
     public init() {}
