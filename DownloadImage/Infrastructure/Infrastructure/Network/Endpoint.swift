@@ -36,16 +36,17 @@ public class Endpoint<R>: ResponseRequestable {
     public let bodyEncoding: BodyEncoding
     public let responseDecoder: ResponseDecoder
     
-    init(path: String,
-         isFullPath: Bool = false,
-         method: HTTPMethodType,
-         headerParamaters: [String: String] = [:],
-         queryParametersEncodable: Encodable? = nil,
-         queryParameters: [String: Any] = [:],
-         bodyParamatersEncodable: Encodable? = nil,
-         bodyParamaters: [String: Any] = [:],
-         bodyEncoding: BodyEncoding = .jsonSerializationData,
-         responseDecoder: ResponseDecoder = JSONResponseDecoder()) {
+    public init(path: String,
+                isFullPath: Bool = false,
+                method: HTTPMethodType,
+                headerParamaters: [String: String] = [:],
+                queryParametersEncodable: Encodable? = nil,
+                queryParameters: [String: Any] = [:],
+                bodyParamatersEncodable: Encodable? = nil,
+                bodyParamaters: [String: Any] = [:],
+                bodyEncoding: BodyEncoding = .jsonSerializationData,
+                responseDecoder: ResponseDecoder = JSONResponseDecoder()) {
+        
         self.path = path
         self.isFullPath = isFullPath
         self.method = method

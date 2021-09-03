@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 protocol UserConfigurationStorage {
     func loadConfig(with completion: (Result<UserConfiguration, Error>) -> Void)

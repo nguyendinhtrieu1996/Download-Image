@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Domain
 
 enum UserConfigurationStorageError: Error {
     case saveError

@@ -10,6 +10,13 @@
 		B29BC46826E1E989003B75FA /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC45E26E1E989003B75FA /* Domain.framework */; };
 		B29BC46D26E1E989003B75FA /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC46C26E1E989003B75FA /* DomainTests.swift */; };
 		B29BC46F26E1E989003B75FA /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = B29BC46126E1E989003B75FA /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B29BC57B26E21EDA003B75FA /* PhotoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57226E21ECE003B75FA /* PhotoQuery.swift */; };
+		B29BC57C26E21EDA003B75FA /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57326E21ECE003B75FA /* UserConfiguration.swift */; };
+		B29BC57D26E21EDA003B75FA /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57126E21ECE003B75FA /* Photo.swift */; };
+		B29BC57E26E21EDE003B75FA /* FetchListPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57526E21ECE003B75FA /* FetchListPhotoUseCase.swift */; };
+		B29BC57F26E21EDE003B75FA /* UserConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57626E21ECE003B75FA /* UserConfigurationUseCase.swift */; };
+		B29BC58026E21EE2003B75FA /* ListPhotoRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57826E21ECE003B75FA /* ListPhotoRespository.swift */; };
+		B29BC58126E21EE2003B75FA /* UserConfigurtionRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC57926E21ECE003B75FA /* UserConfigurtionRespository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,13 @@
 		B29BC46C26E1E989003B75FA /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		B29BC46E26E1E989003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29BC49D26E1EA0A003B75FA /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC57126E21ECE003B75FA /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B29BC57226E21ECE003B75FA /* PhotoQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQuery.swift; sourceTree = "<group>"; };
+		B29BC57326E21ECE003B75FA /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
+		B29BC57526E21ECE003B75FA /* FetchListPhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListPhotoUseCase.swift; sourceTree = "<group>"; };
+		B29BC57626E21ECE003B75FA /* UserConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationUseCase.swift; sourceTree = "<group>"; };
+		B29BC57826E21ECE003B75FA /* ListPhotoRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoRespository.swift; sourceTree = "<group>"; };
+		B29BC57926E21ECE003B75FA /* UserConfigurtionRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurtionRespository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +89,9 @@
 			children = (
 				B29BC46126E1E989003B75FA /* Domain.h */,
 				B29BC46226E1E989003B75FA /* Info.plist */,
+				B29BC57426E21ECE003B75FA /* Entities */,
+				B29BC57726E21ECE003B75FA /* UseCases */,
+				B29BC57A26E21ECE003B75FA /* Interfaces */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -94,6 +111,34 @@
 				B29BC49D26E1EA0A003B75FA /* Data.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B29BC57426E21ECE003B75FA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC57126E21ECE003B75FA /* Photo.swift */,
+				B29BC57226E21ECE003B75FA /* PhotoQuery.swift */,
+				B29BC57326E21ECE003B75FA /* UserConfiguration.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B29BC57726E21ECE003B75FA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC57526E21ECE003B75FA /* FetchListPhotoUseCase.swift */,
+				B29BC57626E21ECE003B75FA /* UserConfigurationUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B29BC57A26E21ECE003B75FA /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC57826E21ECE003B75FA /* ListPhotoRespository.swift */,
+				B29BC57926E21ECE003B75FA /* UserConfigurtionRespository.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29BC58126E21EE2003B75FA /* UserConfigurtionRespository.swift in Sources */,
+				B29BC57D26E21EDA003B75FA /* Photo.swift in Sources */,
+				B29BC57B26E21EDA003B75FA /* PhotoQuery.swift in Sources */,
+				B29BC57C26E21EDA003B75FA /* UserConfiguration.swift in Sources */,
+				B29BC57E26E21EDE003B75FA /* FetchListPhotoUseCase.swift in Sources */,
+				B29BC58026E21EE2003B75FA /* ListPhotoRespository.swift in Sources */,
+				B29BC57F26E21EDE003B75FA /* UserConfigurationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +411,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,6 +436,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Domain/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,6 +453,7 @@
 		B29BC47626E1E989003B75FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAA47P5N57;
 				INFOPLIST_FILE = DomainTests/Info.plist;
@@ -417,6 +472,7 @@
 		B29BC47726E1E989003B75FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAA47P5N57;
 				INFOPLIST_FILE = DomainTests/Info.plist;

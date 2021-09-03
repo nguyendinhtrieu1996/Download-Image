@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol UserConfigurtionRespository {
+public protocol UserConfigurtionRespository {
     
     func loadConfig(with completion: LoadUserConfigCompletion)
     

@@ -7,9 +7,9 @@
 
 import UIKit
 
-typealias FetchListPhotoCompletion = (Result<[Photo], Error>) -> Void
+public typealias FetchListPhotoCompletion = (Result<[Photo], Error>) -> Void
 
-protocol FetchListPhotoUseCase {
+public protocol FetchListPhotoUseCase {
     func fetchListPhoto(query: PhotoQuery, completion: @escaping FetchListPhotoCompletion)
 }
 

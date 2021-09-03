@@ -7,10 +7,10 @@
 
 import Foundation
 
-typealias LoadUserConfigCompletion = (Result<UserConfiguration, Error>) -> Void
-typealias SaveUserConfigCompletion = (Result<Void, Error>) -> Void
+public typealias LoadUserConfigCompletion = (Result<UserConfiguration, Error>) -> Void
+public typealias SaveUserConfigCompletion = (Result<Void, Error>) -> Void
 
-protocol UserConfigurationUseCase {
+public protocol UserConfigurationUseCase {
     func loadConfig(with completion: LoadUserConfigCompletion)
     func saveConfig(_ config: UserConfiguration, completion: SaveUserConfigCompletion)
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 final class DefaultUserConfigurationResponsitory {
     var userConfigurationStorage: UserConfigurationStorage

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Domain
+import Infrastructure
 
 final class DefaultListPhotoRespository {
     private var dataTransferService: DataTransferService
