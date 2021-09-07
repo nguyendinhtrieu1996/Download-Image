@@ -8,6 +8,83 @@
 
 /* Begin PBXBuildFile section */
 		34A60BFAB5C5AE1630C8A1CA /* Pods_DownloadImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D748D6E4B62DF8426EFD2B /* Pods_DownloadImage.framework */; };
+		B233830126E7C67200B8D953 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382FD26E7C66C00B8D953 /* Photo.swift */; };
+		B233832526E7C6E000B8D953 /* PhotoQueryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831626E7C67B00B8D953 /* PhotoQueryDTO.swift */; };
+		B233832626E7C6EC00B8D953 /* ListPhotoAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831526E7C67B00B8D953 /* ListPhotoAPIEndPoint.swift */; };
+		B233832726E7C6EC00B8D953 /* ListPhotoResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831726E7C67B00B8D953 /* ListPhotoResponseDTO.swift */; };
+		B233832826E7C6F300B8D953 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233830D26E7C67B00B8D953 /* KeychainWrapper.swift */; };
+		B233832926E7C6F300B8D953 /* TNSecureCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233830B26E7C67B00B8D953 /* TNSecureCoding.swift */; };
+		B233832A26E7C6F300B8D953 /* KeyValueStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233830A26E7C67B00B8D953 /* KeyValueStoreProtocol.swift */; };
+		B233832B26E7C6F300B8D953 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233830C26E7C67B00B8D953 /* KeychainItemAccessibility.swift */; };
+		B233832C26E7C6F800B8D953 /* UserConfigurationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831226E7C67B00B8D953 /* UserConfigurationDTO.swift */; };
+		B233832D26E7C6F800B8D953 /* UserConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831126E7C67B00B8D953 /* UserConfigurationStorage.swift */; };
+		B233832E26E7C6FC00B8D953 /* UserConfigurationKeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233830F26E7C67B00B8D953 /* UserConfigurationKeychainStorage.swift */; };
+		B233832F26E7C70100B8D953 /* DefaultListPhotoRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831926E7C67B00B8D953 /* DefaultListPhotoRespository.swift */; };
+		B233833026E7C70100B8D953 /* DefaultUserConfigurationResponsitory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233831A26E7C67B00B8D953 /* DefaultUserConfigurationResponsitory.swift */; };
+		B233833126E7C71100B8D953 /* PhotoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382FE26E7C66C00B8D953 /* PhotoQuery.swift */; };
+		B233833226E7C71100B8D953 /* UserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382FF26E7C66C00B8D953 /* UserConfiguration.swift */; };
+		B233833326E7C71700B8D953 /* FetchListPhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382FA26E7C66B00B8D953 /* FetchListPhotoUseCase.swift */; };
+		B233833426E7C71700B8D953 /* UserConfigurationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382FB26E7C66B00B8D953 /* UserConfigurationUseCase.swift */; };
+		B233833526E7C71A00B8D953 /* UserConfigurtionRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382F826E7C66B00B8D953 /* UserConfigurtionRespository.swift */; };
+		B233833626E7C71A00B8D953 /* ListPhotoRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23382F726E7C66B00B8D953 /* ListPhotoRespository.swift */; };
+		B233833726E7C72E00B8D953 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233832226E7C6BC00B8D953 /* Endpoint.swift */; };
+		B233833826E7C72E00B8D953 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233832026E7C6BC00B8D953 /* DataTransferService.swift */; };
+		B233833926E7C72E00B8D953 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233832126E7C6BC00B8D953 /* NetworkService.swift */; };
+		B233833A26E7C72E00B8D953 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B233832326E7C6BC00B8D953 /* NetworkConfig.swift */; };
+		B233837626E7C74800B8D953 /* UIImageView+TNWebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834826E7C73B00B8D953 /* UIImageView+TNWebImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B233837726E7C74800B8D953 /* UIImageView+TNWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B233834926E7C73B00B8D953 /* UIImageView+TNWebImage.m */; };
+		B233837826E7C74E00B8D953 /* TNImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B233833E26E7C73B00B8D953 /* TNImageManager.m */; };
+		B233837926E7C74E00B8D953 /* TNImageManagerCombineOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B233833C26E7C73B00B8D953 /* TNImageManagerCombineOperation.m */; };
+		B233837A26E7C74E00B8D953 /* TNImageManageLoaderObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834026E7C73B00B8D953 /* TNImageManageLoaderObject.h */; };
+		B233837B26E7C74E00B8D953 /* TNImageManagerCombineOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B233833B26E7C73B00B8D953 /* TNImageManagerCombineOperation.h */; };
+		B233837C26E7C74E00B8D953 /* TNImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B233833D26E7C73B00B8D953 /* TNImageManager.h */; };
+		B233837D26E7C74E00B8D953 /* TNImageManageLoaderObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B233834126E7C73B00B8D953 /* TNImageManageLoaderObject.m */; };
+		B233837E26E7C74E00B8D953 /* TNImageManagerDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B233833F26E7C73B00B8D953 /* TNImageManagerDefines.h */; };
+		B233837F26E7C75700B8D953 /* TNCacheQueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B233835126E7C73B00B8D953 /* TNCacheQueryResponse.m */; };
+		B233838026E7C75700B8D953 /* TNCacheQueryResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B233835026E7C73B00B8D953 /* TNCacheQueryResponse.h */; };
+		B233838126E7C75700B8D953 /* TNImageCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B233834F26E7C73B00B8D953 /* TNImageCacheConfig.m */; };
+		B233838226E7C75700B8D953 /* TNImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834C26E7C73B00B8D953 /* TNImageCache.h */; };
+		B233838326E7C75700B8D953 /* TNImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B233834D26E7C73B00B8D953 /* TNImageCache.m */; };
+		B233838426E7C75700B8D953 /* TNCacheDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834B26E7C73B00B8D953 /* TNCacheDefines.h */; };
+		B233838526E7C75700B8D953 /* TNImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834E26E7C73B00B8D953 /* TNImageCacheConfig.h */; };
+		B233838626E7C75D00B8D953 /* TNDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B233835626E7C73B00B8D953 /* TNDiskCache.m */; };
+		B233838726E7C75D00B8D953 /* TNDiskCacheCleaner.h in Headers */ = {isa = PBXBuildFile; fileRef = B233835726E7C73B00B8D953 /* TNDiskCacheCleaner.h */; };
+		B233838826E7C75D00B8D953 /* TNDiskCacheCleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = B233835826E7C73B00B8D953 /* TNDiskCacheCleaner.m */; };
+		B233838926E7C75D00B8D953 /* TNDiskCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B233835426E7C73B00B8D953 /* TNDiskCacheConfig.m */; };
+		B233838A26E7C75D00B8D953 /* TNDiskCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B233835326E7C73B00B8D953 /* TNDiskCacheConfig.h */; };
+		B233838B26E7C75D00B8D953 /* TNDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B233835526E7C73B00B8D953 /* TNDiskCache.h */; };
+		B233838C26E7C76100B8D953 /* TNMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B233835A26E7C73B00B8D953 /* TNMemoryCache.h */; };
+		B233838D26E7C76100B8D953 /* TNMemoryCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B233835C26E7C73B00B8D953 /* TNMemoryCacheConfig.h */; };
+		B233838E26E7C76100B8D953 /* TNMemoryCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B233835D26E7C73B00B8D953 /* TNMemoryCacheConfig.m */; };
+		B233838F26E7C76200B8D953 /* TNMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B233835B26E7C73B00B8D953 /* TNMemoryCache.m */; };
+		B233839026E7C76800B8D953 /* TNImageCoderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B233834626E7C73B00B8D953 /* TNImageCoderHelper.m */; };
+		B233839126E7C76800B8D953 /* TNImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B233834426E7C73B00B8D953 /* TNImageCoder.m */; };
+		B233839226E7C76800B8D953 /* TNImageCoderHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834526E7C73B00B8D953 /* TNImageCoderHelper.h */; };
+		B233839326E7C76800B8D953 /* TNImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B233834326E7C73B00B8D953 /* TNImageCoder.h */; };
+		B233839426E7C76D00B8D953 /* TNImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836326E7C73C00B8D953 /* TNImageDownloader.h */; };
+		B233839526E7C76D00B8D953 /* TNImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B233836826E7C73C00B8D953 /* TNImageDownloaderOperation.m */; };
+		B233839626E7C76D00B8D953 /* TNImageDownloaderConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836526E7C73C00B8D953 /* TNImageDownloaderConfig.h */; };
+		B233839726E7C76D00B8D953 /* TNImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836726E7C73C00B8D953 /* TNImageDownloaderOperation.h */; };
+		B233839826E7C76D00B8D953 /* TNImageDownloaderObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B233836226E7C73C00B8D953 /* TNImageDownloaderObjects.m */; };
+		B233839926E7C76D00B8D953 /* TNImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = B233836426E7C73C00B8D953 /* TNImageDownloader.m */; };
+		B233839A26E7C76D00B8D953 /* TNImageDownloaderConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B233836626E7C73C00B8D953 /* TNImageDownloaderConfig.m */; };
+		B233839B26E7C76D00B8D953 /* TNImageDownloaderDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836026E7C73C00B8D953 /* TNImageDownloaderDefines.h */; };
+		B233839C26E7C76D00B8D953 /* TNImageDownloaderObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836126E7C73C00B8D953 /* TNImageDownloaderObjects.h */; };
+		B233839D26E7C77400B8D953 /* TNWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = B233837126E7C73C00B8D953 /* TNWebImageError.h */; };
+		B233839E26E7C77400B8D953 /* TNImageOperationType.h in Headers */ = {isa = PBXBuildFile; fileRef = B233837326E7C73C00B8D953 /* TNImageOperationType.h */; };
+		B233839F26E7C77400B8D953 /* TNImageBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B233836E26E7C73C00B8D953 /* TNImageBaseOperation.m */; };
+		B23383A026E7C77400B8D953 /* TNImageBaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836D26E7C73C00B8D953 /* TNImageBaseOperation.h */; };
+		B23383A126E7C77400B8D953 /* TNEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = B233836B26E7C73C00B8D953 /* TNEncryption.m */; };
+		B23383A226E7C77400B8D953 /* TNImageBaseOperation+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836F26E7C73C00B8D953 /* TNImageBaseOperation+Internal.h */; };
+		B23383A326E7C77400B8D953 /* TNWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = B233837226E7C73C00B8D953 /* TNWebImageError.m */; };
+		B23383A426E7C77400B8D953 /* TNEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836A26E7C73C00B8D953 /* TNEncryption.h */; };
+		B23383A526E7C77400B8D953 /* TNInternalMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = B233836C26E7C73C00B8D953 /* TNInternalMacros.h */; };
+		B23383A626E7C77400B8D953 /* TNImageDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B233837026E7C73C00B8D953 /* TNImageDefines.h */; };
+		B23383A726E7C77400B8D953 /* TNImageOperationType.m in Sources */ = {isa = PBXBuildFile; fileRef = B233837426E7C73C00B8D953 /* TNImageOperationType.m */; };
+		B23383B526E7C87B00B8D953 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC66226E237B4003B75FA /* Infrastructure.framework */; };
+		B23383B626E7C87B00B8D953 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC66226E237B4003B75FA /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B23383BA26E7C88900B8D953 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B233831E26E7C67B00B8D953 /* Domain.framework */; };
+		B23383BB26E7C88900B8D953 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B233831E26E7C67B00B8D953 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B29BC55E26E21CF5003B75FA /* TNWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC55D26E21CF5003B75FA /* TNWebImage.framework */; };
 		B29BC55F26E21CF5003B75FA /* TNWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC55D26E21CF5003B75FA /* TNWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B29BC56F26E21E9A003B75FA /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC56E26E21E9A003B75FA /* Infrastructure.framework */; };
@@ -16,6 +93,18 @@
 		B29BC5A026E21F32003B75FA /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC59E26E21F32003B75FA /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B29BC5A226E21F49003B75FA /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC5A126E21F49003B75FA /* Domain.framework */; };
 		B29BC5A326E21F49003B75FA /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC5A126E21F49003B75FA /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B29BC60B26E23750003B75FA /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC60226E23750003B75FA /* Domain.framework */; };
+		B29BC61226E23750003B75FA /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC61126E23750003B75FA /* DomainTests.swift */; };
+		B29BC61426E23750003B75FA /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = B29BC60426E23750003B75FA /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B29BC62B26E23762003B75FA /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC62226E23762003B75FA /* Data.framework */; };
+		B29BC63226E23762003B75FA /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC63126E23762003B75FA /* DataTests.swift */; };
+		B29BC63426E23762003B75FA /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = B29BC62426E23762003B75FA /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B29BC64B26E237A4003B75FA /* TNWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC64226E237A3003B75FA /* TNWebImage.framework */; };
+		B29BC65226E237A4003B75FA /* TNWebImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC65126E237A4003B75FA /* TNWebImageTests.swift */; };
+		B29BC65426E237A4003B75FA /* TNWebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B29BC64426E237A3003B75FA /* TNWebImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B29BC66B26E237B5003B75FA /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29BC66226E237B4003B75FA /* Infrastructure.framework */; };
+		B29BC67226E237B5003B75FA /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29BC67126E237B5003B75FA /* InfrastructureTests.swift */; };
+		B29BC67426E237B5003B75FA /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = B29BC66426E237B4003B75FA /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B29C2B782684DD3A003B4F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B772684DD3A003B4F17 /* AppDelegate.swift */; };
 		B29C2B7A2684DD3A003B4F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */; };
 		B29C2B7C2684DD3A003B4F17 /* ListPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C2B7B2684DD3A003B4F17 /* ListPhotoViewController.swift */; };
@@ -30,7 +119,113 @@
 		B2A3A2E826E123A900ECC1BF /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A3A2E526E123A900ECC1BF /* ErrorTracker.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B23383B726E7C87B00B8D953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC66126E237B4003B75FA;
+			remoteInfo = Infrastructure;
+		};
+		B29BC60C26E23750003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC60126E23750003B75FA;
+			remoteInfo = Domain;
+		};
+		B29BC60E26E23750003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29C2B732684DD39003B4F17;
+			remoteInfo = DownloadImage;
+		};
+		B29BC61526E23750003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC60126E23750003B75FA;
+			remoteInfo = Domain;
+		};
+		B29BC62C26E23762003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC62126E23762003B75FA;
+			remoteInfo = Data;
+		};
+		B29BC62E26E23762003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29C2B732684DD39003B4F17;
+			remoteInfo = DownloadImage;
+		};
+		B29BC63526E23762003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC62126E23762003B75FA;
+			remoteInfo = Data;
+		};
+		B29BC64C26E237A4003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC64126E237A3003B75FA;
+			remoteInfo = TNWebImage;
+		};
+		B29BC64E26E237A4003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29C2B732684DD39003B4F17;
+			remoteInfo = DownloadImage;
+		};
+		B29BC65526E237A4003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC64126E237A3003B75FA;
+			remoteInfo = TNWebImage;
+		};
+		B29BC66C26E237B5003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC66126E237B4003B75FA;
+			remoteInfo = Infrastructure;
+		};
+		B29BC66E26E237B5003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29C2B732684DD39003B4F17;
+			remoteInfo = DownloadImage;
+		};
+		B29BC67526E237B5003B75FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29C2B6C2684DD39003B4F17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29BC66126E237B4003B75FA;
+			remoteInfo = Infrastructure;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		B23383B926E7C87B00B8D953 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B23383BB26E7C88900B8D953 /* Domain.framework in Embed Frameworks */,
+				B23383B626E7C87B00B8D953 /* Infrastructure.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B29BC56026E21CF5003B75FA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,10 +246,116 @@
 		132B10E8E75AF48F2F971363 /* Pods-DownloadImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadImage.debug.xcconfig"; path = "Target Support Files/Pods-DownloadImage/Pods-DownloadImage.debug.xcconfig"; sourceTree = "<group>"; };
 		64D748D6E4B62DF8426EFD2B /* Pods_DownloadImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DownloadImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		976218C5B58C95AB908EF1C4 /* Pods-DownloadImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadImage.release.xcconfig"; path = "Target Support Files/Pods-DownloadImage/Pods-DownloadImage.release.xcconfig"; sourceTree = "<group>"; };
+		B23382F626E7C66500B8D953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Domain/Info.plist; sourceTree = "<group>"; };
+		B23382F726E7C66B00B8D953 /* ListPhotoRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoRespository.swift; sourceTree = "<group>"; };
+		B23382F826E7C66B00B8D953 /* UserConfigurtionRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurtionRespository.swift; sourceTree = "<group>"; };
+		B23382FA26E7C66B00B8D953 /* FetchListPhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchListPhotoUseCase.swift; sourceTree = "<group>"; };
+		B23382FB26E7C66B00B8D953 /* UserConfigurationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationUseCase.swift; sourceTree = "<group>"; };
+		B23382FD26E7C66C00B8D953 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		B23382FE26E7C66C00B8D953 /* PhotoQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQuery.swift; sourceTree = "<group>"; };
+		B23382FF26E7C66C00B8D953 /* UserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfiguration.swift; sourceTree = "<group>"; };
+		B233830226E7C67B00B8D953 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		B233830326E7C67B00B8D953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B233830526E7C67B00B8D953 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B233830626E7C67B00B8D953 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B233830826E7C67B00B8D953 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		B233830926E7C67B00B8D953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B233830A26E7C67B00B8D953 /* KeyValueStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStoreProtocol.swift; sourceTree = "<group>"; };
+		B233830B26E7C67B00B8D953 /* TNSecureCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TNSecureCoding.swift; sourceTree = "<group>"; };
+		B233830C26E7C67B00B8D953 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		B233830D26E7C67B00B8D953 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		B233830F26E7C67B00B8D953 /* UserConfigurationKeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationKeychainStorage.swift; sourceTree = "<group>"; };
+		B233831126E7C67B00B8D953 /* UserConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationStorage.swift; sourceTree = "<group>"; };
+		B233831226E7C67B00B8D953 /* UserConfigurationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationDTO.swift; sourceTree = "<group>"; };
+		B233831526E7C67B00B8D953 /* ListPhotoAPIEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoAPIEndPoint.swift; sourceTree = "<group>"; };
+		B233831626E7C67B00B8D953 /* PhotoQueryDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQueryDTO.swift; sourceTree = "<group>"; };
+		B233831726E7C67B00B8D953 /* ListPhotoResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoResponseDTO.swift; sourceTree = "<group>"; };
+		B233831926E7C67B00B8D953 /* DefaultListPhotoRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultListPhotoRespository.swift; sourceTree = "<group>"; };
+		B233831A26E7C67B00B8D953 /* DefaultUserConfigurationResponsitory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUserConfigurationResponsitory.swift; sourceTree = "<group>"; };
+		B233831D26E7C67B00B8D953 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B233831E26E7C67B00B8D953 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B233832026E7C6BC00B8D953 /* DataTransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		B233832126E7C6BC00B8D953 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B233832226E7C6BC00B8D953 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B233832326E7C6BC00B8D953 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		B233833B26E7C73B00B8D953 /* TNImageManagerCombineOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManagerCombineOperation.h; sourceTree = "<group>"; };
+		B233833C26E7C73B00B8D953 /* TNImageManagerCombineOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManagerCombineOperation.m; sourceTree = "<group>"; };
+		B233833D26E7C73B00B8D953 /* TNImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManager.h; sourceTree = "<group>"; };
+		B233833E26E7C73B00B8D953 /* TNImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManager.m; sourceTree = "<group>"; };
+		B233833F26E7C73B00B8D953 /* TNImageManagerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManagerDefines.h; sourceTree = "<group>"; };
+		B233834026E7C73B00B8D953 /* TNImageManageLoaderObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageManageLoaderObject.h; sourceTree = "<group>"; };
+		B233834126E7C73B00B8D953 /* TNImageManageLoaderObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageManageLoaderObject.m; sourceTree = "<group>"; };
+		B233834326E7C73B00B8D953 /* TNImageCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCoder.h; sourceTree = "<group>"; };
+		B233834426E7C73B00B8D953 /* TNImageCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCoder.m; sourceTree = "<group>"; };
+		B233834526E7C73B00B8D953 /* TNImageCoderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCoderHelper.h; sourceTree = "<group>"; };
+		B233834626E7C73B00B8D953 /* TNImageCoderHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCoderHelper.m; sourceTree = "<group>"; };
+		B233834826E7C73B00B8D953 /* UIImageView+TNWebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+TNWebImage.h"; sourceTree = "<group>"; };
+		B233834926E7C73B00B8D953 /* UIImageView+TNWebImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+TNWebImage.m"; sourceTree = "<group>"; };
+		B233834B26E7C73B00B8D953 /* TNCacheDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheDefines.h; sourceTree = "<group>"; };
+		B233834C26E7C73B00B8D953 /* TNImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCache.h; sourceTree = "<group>"; };
+		B233834D26E7C73B00B8D953 /* TNImageCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCache.m; sourceTree = "<group>"; };
+		B233834E26E7C73B00B8D953 /* TNImageCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageCacheConfig.h; sourceTree = "<group>"; };
+		B233834F26E7C73B00B8D953 /* TNImageCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageCacheConfig.m; sourceTree = "<group>"; };
+		B233835026E7C73B00B8D953 /* TNCacheQueryResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNCacheQueryResponse.h; sourceTree = "<group>"; };
+		B233835126E7C73B00B8D953 /* TNCacheQueryResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCacheQueryResponse.m; sourceTree = "<group>"; };
+		B233835326E7C73B00B8D953 /* TNDiskCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCacheConfig.h; sourceTree = "<group>"; };
+		B233835426E7C73B00B8D953 /* TNDiskCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCacheConfig.m; sourceTree = "<group>"; };
+		B233835526E7C73B00B8D953 /* TNDiskCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCache.h; sourceTree = "<group>"; };
+		B233835626E7C73B00B8D953 /* TNDiskCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCache.m; sourceTree = "<group>"; };
+		B233835726E7C73B00B8D953 /* TNDiskCacheCleaner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDiskCacheCleaner.h; sourceTree = "<group>"; };
+		B233835826E7C73B00B8D953 /* TNDiskCacheCleaner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDiskCacheCleaner.m; sourceTree = "<group>"; };
+		B233835A26E7C73B00B8D953 /* TNMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCache.h; sourceTree = "<group>"; };
+		B233835B26E7C73B00B8D953 /* TNMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCache.m; sourceTree = "<group>"; };
+		B233835C26E7C73B00B8D953 /* TNMemoryCacheConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNMemoryCacheConfig.h; sourceTree = "<group>"; };
+		B233835D26E7C73B00B8D953 /* TNMemoryCacheConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNMemoryCacheConfig.m; sourceTree = "<group>"; };
+		B233836026E7C73C00B8D953 /* TNImageDownloaderDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderDefines.h; sourceTree = "<group>"; };
+		B233836126E7C73C00B8D953 /* TNImageDownloaderObjects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderObjects.h; sourceTree = "<group>"; };
+		B233836226E7C73C00B8D953 /* TNImageDownloaderObjects.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloaderObjects.m; sourceTree = "<group>"; };
+		B233836326E7C73C00B8D953 /* TNImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloader.h; sourceTree = "<group>"; };
+		B233836426E7C73C00B8D953 /* TNImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloader.m; sourceTree = "<group>"; };
+		B233836526E7C73C00B8D953 /* TNImageDownloaderConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderConfig.h; sourceTree = "<group>"; };
+		B233836626E7C73C00B8D953 /* TNImageDownloaderConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloaderConfig.m; sourceTree = "<group>"; };
+		B233836726E7C73C00B8D953 /* TNImageDownloaderOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDownloaderOperation.h; sourceTree = "<group>"; };
+		B233836826E7C73C00B8D953 /* TNImageDownloaderOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageDownloaderOperation.m; sourceTree = "<group>"; };
+		B233836A26E7C73C00B8D953 /* TNEncryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNEncryption.h; sourceTree = "<group>"; };
+		B233836B26E7C73C00B8D953 /* TNEncryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNEncryption.m; sourceTree = "<group>"; };
+		B233836C26E7C73C00B8D953 /* TNInternalMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNInternalMacros.h; sourceTree = "<group>"; };
+		B233836D26E7C73C00B8D953 /* TNImageBaseOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageBaseOperation.h; sourceTree = "<group>"; };
+		B233836E26E7C73C00B8D953 /* TNImageBaseOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageBaseOperation.m; sourceTree = "<group>"; };
+		B233836F26E7C73C00B8D953 /* TNImageBaseOperation+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNImageBaseOperation+Internal.h"; sourceTree = "<group>"; };
+		B233837026E7C73C00B8D953 /* TNImageDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageDefines.h; sourceTree = "<group>"; };
+		B233837126E7C73C00B8D953 /* TNWebImageError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImageError.h; sourceTree = "<group>"; };
+		B233837226E7C73C00B8D953 /* TNWebImageError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNWebImageError.m; sourceTree = "<group>"; };
+		B233837326E7C73C00B8D953 /* TNImageOperationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNImageOperationType.h; sourceTree = "<group>"; };
+		B233837426E7C73C00B8D953 /* TNImageOperationType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNImageOperationType.m; sourceTree = "<group>"; };
 		B29BC55D26E21CF5003B75FA /* TNWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TNWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29BC56E26E21E9A003B75FA /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29BC59E26E21F32003B75FA /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29BC5A126E21F49003B75FA /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC60226E23750003B75FA /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC60426E23750003B75FA /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		B29BC60526E23750003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC60A26E23750003B75FA /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC61126E23750003B75FA /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		B29BC61326E23750003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC62226E23762003B75FA /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC62426E23762003B75FA /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		B29BC62526E23762003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC62A26E23762003B75FA /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC63126E23762003B75FA /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		B29BC63326E23762003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC64226E237A3003B75FA /* TNWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TNWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC64426E237A3003B75FA /* TNWebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNWebImage.h; sourceTree = "<group>"; };
+		B29BC64526E237A3003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC64A26E237A4003B75FA /* TNWebImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNWebImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC65126E237A4003B75FA /* TNWebImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TNWebImageTests.swift; sourceTree = "<group>"; };
+		B29BC65326E237A4003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC66226E237B4003B75FA /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC66426E237B4003B75FA /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
+		B29BC66526E237B4003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29BC66A26E237B5003B75FA /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29BC67126E237B5003B75FA /* InfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureTests.swift; sourceTree = "<group>"; };
+		B29BC67326E237B5003B75FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29C2B742684DD3A003B4F17 /* DownloadImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29C2B772684DD3A003B4F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B29C2B792684DD3A003B4F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +374,68 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B29BC5FF26E23750003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC60726E23750003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC60B26E23750003B75FA /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC61F26E23762003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B23383BA26E7C88900B8D953 /* Domain.framework in Frameworks */,
+				B23383B526E7C87B00B8D953 /* Infrastructure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC62726E23762003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC62B26E23762003B75FA /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC63F26E237A3003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC64726E237A4003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC64B26E237A4003B75FA /* TNWebImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC65F26E237B4003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC66726E237B5003B75FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC66B26E237B5003B75FA /* Infrastructure.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B29C2B712684DD39003B4F17 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,10 +472,366 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B23382F926E7C66B00B8D953 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				B23382F726E7C66B00B8D953 /* ListPhotoRespository.swift */,
+				B23382F826E7C66B00B8D953 /* UserConfigurtionRespository.swift */,
+			);
+			name = Interfaces;
+			path = Domain/../Interfaces;
+			sourceTree = "<group>";
+		};
+		B23382FC26E7C66B00B8D953 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				B23382FA26E7C66B00B8D953 /* FetchListPhotoUseCase.swift */,
+				B23382FB26E7C66B00B8D953 /* UserConfigurationUseCase.swift */,
+			);
+			name = UseCases;
+			path = Domain/../UseCases;
+			sourceTree = "<group>";
+		};
+		B233830026E7C66C00B8D953 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B23382FD26E7C66C00B8D953 /* Photo.swift */,
+				B23382FE26E7C66C00B8D953 /* PhotoQuery.swift */,
+				B23382FF26E7C66C00B8D953 /* UserConfiguration.swift */,
+			);
+			name = Entities;
+			path = Domain/../Entities;
+			sourceTree = "<group>";
+		};
+		B233830426E7C67B00B8D953 /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				B233830226E7C67B00B8D953 /* DataTests.swift */,
+				B233830326E7C67B00B8D953 /* Info.plist */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
+		B233830726E7C67B00B8D953 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B233830526E7C67B00B8D953 /* Data.framework */,
+				B233830626E7C67B00B8D953 /* DataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B233830E26E7C67B00B8D953 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B233830A26E7C67B00B8D953 /* KeyValueStoreProtocol.swift */,
+				B233830B26E7C67B00B8D953 /* TNSecureCoding.swift */,
+				B233830C26E7C67B00B8D953 /* KeychainItemAccessibility.swift */,
+				B233830D26E7C67B00B8D953 /* KeychainWrapper.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B233831026E7C67B00B8D953 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				B233830F26E7C67B00B8D953 /* UserConfigurationKeychainStorage.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		B233831326E7C67B00B8D953 /* UserConfigurationStorage */ = {
+			isa = PBXGroup;
+			children = (
+				B233831026E7C67B00B8D953 /* Keychain */,
+				B233831126E7C67B00B8D953 /* UserConfigurationStorage.swift */,
+				B233831226E7C67B00B8D953 /* UserConfigurationDTO.swift */,
+			);
+			path = UserConfigurationStorage;
+			sourceTree = "<group>";
+		};
+		B233831426E7C67B00B8D953 /* PersistentStorages */ = {
+			isa = PBXGroup;
+			children = (
+				B233830E26E7C67B00B8D953 /* Keychain */,
+				B233831326E7C67B00B8D953 /* UserConfigurationStorage */,
+			);
+			path = PersistentStorages;
+			sourceTree = "<group>";
+		};
+		B233831826E7C67B00B8D953 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B233831526E7C67B00B8D953 /* ListPhotoAPIEndPoint.swift */,
+				B233831626E7C67B00B8D953 /* PhotoQueryDTO.swift */,
+				B233831726E7C67B00B8D953 /* ListPhotoResponseDTO.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B233831B26E7C67B00B8D953 /* Respositories */ = {
+			isa = PBXGroup;
+			children = (
+				B233831926E7C67B00B8D953 /* DefaultListPhotoRespository.swift */,
+				B233831A26E7C67B00B8D953 /* DefaultUserConfigurationResponsitory.swift */,
+			);
+			path = Respositories;
+			sourceTree = "<group>";
+		};
+		B233831C26E7C67B00B8D953 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B233830826E7C67B00B8D953 /* Data.h */,
+				B233830926E7C67B00B8D953 /* Info.plist */,
+				B233831426E7C67B00B8D953 /* PersistentStorages */,
+				B233831826E7C67B00B8D953 /* Network */,
+				B233831B26E7C67B00B8D953 /* Respositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B233831F26E7C67B00B8D953 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B233831D26E7C67B00B8D953 /* Infrastructure.framework */,
+				B233831E26E7C67B00B8D953 /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B233832426E7C6BC00B8D953 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B233832026E7C6BC00B8D953 /* DataTransferService.swift */,
+				B233832126E7C6BC00B8D953 /* NetworkService.swift */,
+				B233832226E7C6BC00B8D953 /* Endpoint.swift */,
+				B233832326E7C6BC00B8D953 /* NetworkConfig.swift */,
+			);
+			name = Network;
+			path = Infrastructure/../Network;
+			sourceTree = "<group>";
+		};
+		B233834226E7C73B00B8D953 /* ImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				B233833B26E7C73B00B8D953 /* TNImageManagerCombineOperation.h */,
+				B233833C26E7C73B00B8D953 /* TNImageManagerCombineOperation.m */,
+				B233833D26E7C73B00B8D953 /* TNImageManager.h */,
+				B233833E26E7C73B00B8D953 /* TNImageManager.m */,
+				B233833F26E7C73B00B8D953 /* TNImageManagerDefines.h */,
+				B233834026E7C73B00B8D953 /* TNImageManageLoaderObject.h */,
+				B233834126E7C73B00B8D953 /* TNImageManageLoaderObject.m */,
+			);
+			name = ImageManager;
+			path = TNWebImage/../ImageManager;
+			sourceTree = "<group>";
+		};
+		B233834726E7C73B00B8D953 /* ImageCoder */ = {
+			isa = PBXGroup;
+			children = (
+				B233834326E7C73B00B8D953 /* TNImageCoder.h */,
+				B233834426E7C73B00B8D953 /* TNImageCoder.m */,
+				B233834526E7C73B00B8D953 /* TNImageCoderHelper.h */,
+				B233834626E7C73B00B8D953 /* TNImageCoderHelper.m */,
+			);
+			name = ImageCoder;
+			path = TNWebImage/../ImageCoder;
+			sourceTree = "<group>";
+		};
+		B233834A26E7C73B00B8D953 /* Util-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B233834826E7C73B00B8D953 /* UIImageView+TNWebImage.h */,
+				B233834926E7C73B00B8D953 /* UIImageView+TNWebImage.m */,
+			);
+			name = "Util-Extensions";
+			path = "TNWebImage/../Util-Extensions";
+			sourceTree = "<group>";
+		};
+		B233835226E7C73B00B8D953 /* CacheImage */ = {
+			isa = PBXGroup;
+			children = (
+				B233834B26E7C73B00B8D953 /* TNCacheDefines.h */,
+				B233834C26E7C73B00B8D953 /* TNImageCache.h */,
+				B233834D26E7C73B00B8D953 /* TNImageCache.m */,
+				B233834E26E7C73B00B8D953 /* TNImageCacheConfig.h */,
+				B233834F26E7C73B00B8D953 /* TNImageCacheConfig.m */,
+				B233835026E7C73B00B8D953 /* TNCacheQueryResponse.h */,
+				B233835126E7C73B00B8D953 /* TNCacheQueryResponse.m */,
+			);
+			path = CacheImage;
+			sourceTree = "<group>";
+		};
+		B233835926E7C73B00B8D953 /* DiskCache */ = {
+			isa = PBXGroup;
+			children = (
+				B233835326E7C73B00B8D953 /* TNDiskCacheConfig.h */,
+				B233835426E7C73B00B8D953 /* TNDiskCacheConfig.m */,
+				B233835526E7C73B00B8D953 /* TNDiskCache.h */,
+				B233835626E7C73B00B8D953 /* TNDiskCache.m */,
+				B233835726E7C73B00B8D953 /* TNDiskCacheCleaner.h */,
+				B233835826E7C73B00B8D953 /* TNDiskCacheCleaner.m */,
+			);
+			path = DiskCache;
+			sourceTree = "<group>";
+		};
+		B233835E26E7C73B00B8D953 /* MemCache */ = {
+			isa = PBXGroup;
+			children = (
+				B233835A26E7C73B00B8D953 /* TNMemoryCache.h */,
+				B233835B26E7C73B00B8D953 /* TNMemoryCache.m */,
+				B233835C26E7C73B00B8D953 /* TNMemoryCacheConfig.h */,
+				B233835D26E7C73B00B8D953 /* TNMemoryCacheConfig.m */,
+			);
+			path = MemCache;
+			sourceTree = "<group>";
+		};
+		B233835F26E7C73B00B8D953 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				B233835226E7C73B00B8D953 /* CacheImage */,
+				B233835926E7C73B00B8D953 /* DiskCache */,
+				B233835E26E7C73B00B8D953 /* MemCache */,
+			);
+			name = Cache;
+			path = TNWebImage/../Cache;
+			sourceTree = "<group>";
+		};
+		B233836926E7C73C00B8D953 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				B233836026E7C73C00B8D953 /* TNImageDownloaderDefines.h */,
+				B233836126E7C73C00B8D953 /* TNImageDownloaderObjects.h */,
+				B233836226E7C73C00B8D953 /* TNImageDownloaderObjects.m */,
+				B233836326E7C73C00B8D953 /* TNImageDownloader.h */,
+				B233836426E7C73C00B8D953 /* TNImageDownloader.m */,
+				B233836526E7C73C00B8D953 /* TNImageDownloaderConfig.h */,
+				B233836626E7C73C00B8D953 /* TNImageDownloaderConfig.m */,
+				B233836726E7C73C00B8D953 /* TNImageDownloaderOperation.h */,
+				B233836826E7C73C00B8D953 /* TNImageDownloaderOperation.m */,
+			);
+			name = ImageDownloader;
+			path = TNWebImage/../ImageDownloader;
+			sourceTree = "<group>";
+		};
+		B233837526E7C73C00B8D953 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B233836A26E7C73C00B8D953 /* TNEncryption.h */,
+				B233836B26E7C73C00B8D953 /* TNEncryption.m */,
+				B233836C26E7C73C00B8D953 /* TNInternalMacros.h */,
+				B233836D26E7C73C00B8D953 /* TNImageBaseOperation.h */,
+				B233836E26E7C73C00B8D953 /* TNImageBaseOperation.m */,
+				B233836F26E7C73C00B8D953 /* TNImageBaseOperation+Internal.h */,
+				B233837026E7C73C00B8D953 /* TNImageDefines.h */,
+				B233837126E7C73C00B8D953 /* TNWebImageError.h */,
+				B233837226E7C73C00B8D953 /* TNWebImageError.m */,
+				B233837326E7C73C00B8D953 /* TNImageOperationType.h */,
+				B233837426E7C73C00B8D953 /* TNImageOperationType.m */,
+			);
+			name = Core;
+			path = TNWebImage/../Core;
+			sourceTree = "<group>";
+		};
+		B29BC60326E23750003B75FA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B233830026E7C66C00B8D953 /* Entities */,
+				B23382FC26E7C66B00B8D953 /* UseCases */,
+				B23382F926E7C66B00B8D953 /* Interfaces */,
+				B23382F626E7C66500B8D953 /* Info.plist */,
+				B29BC60426E23750003B75FA /* Domain.h */,
+				B29BC60526E23750003B75FA /* Info.plist */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B29BC61026E23750003B75FA /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC61126E23750003B75FA /* DomainTests.swift */,
+				B29BC61326E23750003B75FA /* Info.plist */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		B29BC62326E23762003B75FA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC62426E23762003B75FA /* Data.h */,
+				B29BC62526E23762003B75FA /* Info.plist */,
+				B233831C26E7C67B00B8D953 /* Data */,
+				B233830426E7C67B00B8D953 /* DataTests */,
+				B233830726E7C67B00B8D953 /* Products */,
+				B233831F26E7C67B00B8D953 /* Frameworks */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B29BC63026E23762003B75FA /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC63126E23762003B75FA /* DataTests.swift */,
+				B29BC63326E23762003B75FA /* Info.plist */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
+		B29BC64326E237A3003B75FA /* TNWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				B233834A26E7C73B00B8D953 /* Util-Extensions */,
+				B233834226E7C73B00B8D953 /* ImageManager */,
+				B233835F26E7C73B00B8D953 /* Cache */,
+				B233834726E7C73B00B8D953 /* ImageCoder */,
+				B233836926E7C73C00B8D953 /* ImageDownloader */,
+				B233837526E7C73C00B8D953 /* Core */,
+				B29BC64426E237A3003B75FA /* TNWebImage.h */,
+				B29BC64526E237A3003B75FA /* Info.plist */,
+			);
+			path = TNWebImage;
+			sourceTree = "<group>";
+		};
+		B29BC65026E237A4003B75FA /* TNWebImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC65126E237A4003B75FA /* TNWebImageTests.swift */,
+				B29BC65326E237A4003B75FA /* Info.plist */,
+			);
+			path = TNWebImageTests;
+			sourceTree = "<group>";
+		};
+		B29BC66326E237B4003B75FA /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				B233832426E7C6BC00B8D953 /* Network */,
+				B29BC66426E237B4003B75FA /* Infrastructure.h */,
+				B29BC66526E237B4003B75FA /* Info.plist */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		B29BC67026E237B5003B75FA /* InfrastructureTests */ = {
+			isa = PBXGroup;
+			children = (
+				B29BC67126E237B5003B75FA /* InfrastructureTests.swift */,
+				B29BC67326E237B5003B75FA /* Info.plist */,
+			);
+			path = InfrastructureTests;
+			sourceTree = "<group>";
+		};
 		B29C2B6B2684DD39003B4F17 = {
 			isa = PBXGroup;
 			children = (
 				B29C2B762684DD3A003B4F17 /* DownloadImage */,
+				B29BC60326E23750003B75FA /* Domain */,
+				B29BC61026E23750003B75FA /* DomainTests */,
+				B29BC62326E23762003B75FA /* Data */,
+				B29BC63026E23762003B75FA /* DataTests */,
+				B29BC64326E237A3003B75FA /* TNWebImage */,
+				B29BC65026E237A4003B75FA /* TNWebImageTests */,
+				B29BC66326E237B4003B75FA /* Infrastructure */,
+				B29BC67026E237B5003B75FA /* InfrastructureTests */,
 				B29C2B752684DD3A003B4F17 /* Products */,
 				7A8F21E377C8047C037BDF6F /* Pods */,
 				A18631B42C24A7EC5582121F /* Frameworks */,
@@ -123,6 +842,14 @@
 			isa = PBXGroup;
 			children = (
 				B29C2B742684DD3A003B4F17 /* DownloadImage.app */,
+				B29BC60226E23750003B75FA /* Domain.framework */,
+				B29BC60A26E23750003B75FA /* DomainTests.xctest */,
+				B29BC62226E23762003B75FA /* Data.framework */,
+				B29BC62A26E23762003B75FA /* DataTests.xctest */,
+				B29BC64226E237A3003B75FA /* TNWebImage.framework */,
+				B29BC64A26E237A4003B75FA /* TNWebImageTests.xctest */,
+				B29BC66226E237B4003B75FA /* Infrastructure.framework */,
+				B29BC66A26E237B5003B75FA /* InfrastructureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,7 +933,220 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B29BC5FD26E23750003B75FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC61426E23750003B75FA /* Domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC61D26E23762003B75FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC63426E23762003B75FA /* Data.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC63D26E237A3003B75FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233838A26E7C75D00B8D953 /* TNDiskCacheConfig.h in Headers */,
+				B233837B26E7C74E00B8D953 /* TNImageManagerCombineOperation.h in Headers */,
+				B233838026E7C75700B8D953 /* TNCacheQueryResponse.h in Headers */,
+				B233839D26E7C77400B8D953 /* TNWebImageError.h in Headers */,
+				B23383A426E7C77400B8D953 /* TNEncryption.h in Headers */,
+				B233839326E7C76800B8D953 /* TNImageCoder.h in Headers */,
+				B233837C26E7C74E00B8D953 /* TNImageManager.h in Headers */,
+				B233837626E7C74800B8D953 /* UIImageView+TNWebImage.h in Headers */,
+				B233837A26E7C74E00B8D953 /* TNImageManageLoaderObject.h in Headers */,
+				B233839426E7C76D00B8D953 /* TNImageDownloader.h in Headers */,
+				B233838526E7C75700B8D953 /* TNImageCacheConfig.h in Headers */,
+				B233838226E7C75700B8D953 /* TNImageCache.h in Headers */,
+				B233838726E7C75D00B8D953 /* TNDiskCacheCleaner.h in Headers */,
+				B233839E26E7C77400B8D953 /* TNImageOperationType.h in Headers */,
+				B233838D26E7C76100B8D953 /* TNMemoryCacheConfig.h in Headers */,
+				B233839626E7C76D00B8D953 /* TNImageDownloaderConfig.h in Headers */,
+				B23383A626E7C77400B8D953 /* TNImageDefines.h in Headers */,
+				B23383A526E7C77400B8D953 /* TNInternalMacros.h in Headers */,
+				B23383A026E7C77400B8D953 /* TNImageBaseOperation.h in Headers */,
+				B233838426E7C75700B8D953 /* TNCacheDefines.h in Headers */,
+				B233838B26E7C75D00B8D953 /* TNDiskCache.h in Headers */,
+				B233839226E7C76800B8D953 /* TNImageCoderHelper.h in Headers */,
+				B29BC65426E237A4003B75FA /* TNWebImage.h in Headers */,
+				B233839B26E7C76D00B8D953 /* TNImageDownloaderDefines.h in Headers */,
+				B233838C26E7C76100B8D953 /* TNMemoryCache.h in Headers */,
+				B233837E26E7C74E00B8D953 /* TNImageManagerDefines.h in Headers */,
+				B233839C26E7C76D00B8D953 /* TNImageDownloaderObjects.h in Headers */,
+				B23383A226E7C77400B8D953 /* TNImageBaseOperation+Internal.h in Headers */,
+				B233839726E7C76D00B8D953 /* TNImageDownloaderOperation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC65D26E237B4003B75FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC67426E237B5003B75FA /* Infrastructure.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		B29BC60126E23750003B75FA /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC61B26E23750003B75FA /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				B29BC5FD26E23750003B75FA /* Headers */,
+				B29BC5FE26E23750003B75FA /* Sources */,
+				B29BC5FF26E23750003B75FA /* Frameworks */,
+				B29BC60026E23750003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Domain;
+			productName = Domain;
+			productReference = B29BC60226E23750003B75FA /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B29BC60926E23750003B75FA /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC61C26E23750003B75FA /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				B29BC60626E23750003B75FA /* Sources */,
+				B29BC60726E23750003B75FA /* Frameworks */,
+				B29BC60826E23750003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29BC60D26E23750003B75FA /* PBXTargetDependency */,
+				B29BC60F26E23750003B75FA /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = B29BC60A26E23750003B75FA /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B29BC62126E23762003B75FA /* Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC63726E23762003B75FA /* Build configuration list for PBXNativeTarget "Data" */;
+			buildPhases = (
+				B29BC61D26E23762003B75FA /* Headers */,
+				B29BC61E26E23762003B75FA /* Sources */,
+				B29BC61F26E23762003B75FA /* Frameworks */,
+				B29BC62026E23762003B75FA /* Resources */,
+				B23383B926E7C87B00B8D953 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B23383B826E7C87B00B8D953 /* PBXTargetDependency */,
+			);
+			name = Data;
+			productName = Data;
+			productReference = B29BC62226E23762003B75FA /* Data.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B29BC62926E23762003B75FA /* DataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC63A26E23762003B75FA /* Build configuration list for PBXNativeTarget "DataTests" */;
+			buildPhases = (
+				B29BC62626E23762003B75FA /* Sources */,
+				B29BC62726E23762003B75FA /* Frameworks */,
+				B29BC62826E23762003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29BC62D26E23762003B75FA /* PBXTargetDependency */,
+				B29BC62F26E23762003B75FA /* PBXTargetDependency */,
+			);
+			name = DataTests;
+			productName = DataTests;
+			productReference = B29BC62A26E23762003B75FA /* DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B29BC64126E237A3003B75FA /* TNWebImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC65726E237A4003B75FA /* Build configuration list for PBXNativeTarget "TNWebImage" */;
+			buildPhases = (
+				B29BC63D26E237A3003B75FA /* Headers */,
+				B29BC63E26E237A3003B75FA /* Sources */,
+				B29BC63F26E237A3003B75FA /* Frameworks */,
+				B29BC64026E237A3003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TNWebImage;
+			productName = TNWebImage;
+			productReference = B29BC64226E237A3003B75FA /* TNWebImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B29BC64926E237A4003B75FA /* TNWebImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC65A26E237A4003B75FA /* Build configuration list for PBXNativeTarget "TNWebImageTests" */;
+			buildPhases = (
+				B29BC64626E237A4003B75FA /* Sources */,
+				B29BC64726E237A4003B75FA /* Frameworks */,
+				B29BC64826E237A4003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29BC64D26E237A4003B75FA /* PBXTargetDependency */,
+				B29BC64F26E237A4003B75FA /* PBXTargetDependency */,
+			);
+			name = TNWebImageTests;
+			productName = TNWebImageTests;
+			productReference = B29BC64A26E237A4003B75FA /* TNWebImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B29BC66126E237B4003B75FA /* Infrastructure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC67726E237B5003B75FA /* Build configuration list for PBXNativeTarget "Infrastructure" */;
+			buildPhases = (
+				B29BC65D26E237B4003B75FA /* Headers */,
+				B29BC65E26E237B4003B75FA /* Sources */,
+				B29BC65F26E237B4003B75FA /* Frameworks */,
+				B29BC66026E237B4003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Infrastructure;
+			productName = Infrastructure;
+			productReference = B29BC66226E237B4003B75FA /* Infrastructure.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B29BC66926E237B5003B75FA /* InfrastructureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29BC67A26E237B5003B75FA /* Build configuration list for PBXNativeTarget "InfrastructureTests" */;
+			buildPhases = (
+				B29BC66626E237B5003B75FA /* Sources */,
+				B29BC66726E237B5003B75FA /* Frameworks */,
+				B29BC66826E237B5003B75FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29BC66D26E237B5003B75FA /* PBXTargetDependency */,
+				B29BC66F26E237B5003B75FA /* PBXTargetDependency */,
+			);
+			name = InfrastructureTests;
+			productName = InfrastructureTests;
+			productReference = B29BC66A26E237B5003B75FA /* InfrastructureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B29C2B732684DD39003B4F17 /* DownloadImage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B29C2B882684DD3A003B4F17 /* Build configuration list for PBXNativeTarget "DownloadImage" */;
@@ -221,6 +1161,10 @@
 			buildRules = (
 			);
 			dependencies = (
+				B29BC61626E23750003B75FA /* PBXTargetDependency */,
+				B29BC63626E23762003B75FA /* PBXTargetDependency */,
+				B29BC65626E237A4003B75FA /* PBXTargetDependency */,
+				B29BC67626E237B5003B75FA /* PBXTargetDependency */,
 			);
 			name = DownloadImage;
 			productName = DownloadImage;
@@ -236,6 +1180,34 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					B29BC60126E23750003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					B29BC60926E23750003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B29C2B732684DD39003B4F17;
+					};
+					B29BC62126E23762003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					B29BC62926E23762003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B29C2B732684DD39003B4F17;
+					};
+					B29BC64126E237A3003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					B29BC64926E237A4003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B29C2B732684DD39003B4F17;
+					};
+					B29BC66126E237B4003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					B29BC66926E237B5003B75FA = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B29C2B732684DD39003B4F17;
+					};
 					B29C2B732684DD39003B4F17 = {
 						CreatedOnToolsVersion = 12.5.1;
 						LastSwiftMigration = 1250;
@@ -256,11 +1228,75 @@
 			projectRoot = "";
 			targets = (
 				B29C2B732684DD39003B4F17 /* DownloadImage */,
+				B29BC60126E23750003B75FA /* Domain */,
+				B29BC60926E23750003B75FA /* DomainTests */,
+				B29BC62126E23762003B75FA /* Data */,
+				B29BC62926E23762003B75FA /* DataTests */,
+				B29BC64126E237A3003B75FA /* TNWebImage */,
+				B29BC64926E237A4003B75FA /* TNWebImageTests */,
+				B29BC66126E237B4003B75FA /* Infrastructure */,
+				B29BC66926E237B5003B75FA /* InfrastructureTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B29BC60026E23750003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC60826E23750003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC62026E23762003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC62826E23762003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC64026E237A3003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC64826E237A4003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC66026E237B4003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC66826E237B5003B75FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B29C2B722684DD39003B4F17 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +1351,111 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B29BC5FE26E23750003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233833226E7C71100B8D953 /* UserConfiguration.swift in Sources */,
+				B233833626E7C71A00B8D953 /* ListPhotoRespository.swift in Sources */,
+				B233833526E7C71A00B8D953 /* UserConfigurtionRespository.swift in Sources */,
+				B233830126E7C67200B8D953 /* Photo.swift in Sources */,
+				B233833126E7C71100B8D953 /* PhotoQuery.swift in Sources */,
+				B233833326E7C71700B8D953 /* FetchListPhotoUseCase.swift in Sources */,
+				B233833426E7C71700B8D953 /* UserConfigurationUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC60626E23750003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC61226E23750003B75FA /* DomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC61E26E23762003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233832626E7C6EC00B8D953 /* ListPhotoAPIEndPoint.swift in Sources */,
+				B233832826E7C6F300B8D953 /* KeychainWrapper.swift in Sources */,
+				B233832726E7C6EC00B8D953 /* ListPhotoResponseDTO.swift in Sources */,
+				B233832E26E7C6FC00B8D953 /* UserConfigurationKeychainStorage.swift in Sources */,
+				B233832F26E7C70100B8D953 /* DefaultListPhotoRespository.swift in Sources */,
+				B233832C26E7C6F800B8D953 /* UserConfigurationDTO.swift in Sources */,
+				B233832D26E7C6F800B8D953 /* UserConfigurationStorage.swift in Sources */,
+				B233832526E7C6E000B8D953 /* PhotoQueryDTO.swift in Sources */,
+				B233832926E7C6F300B8D953 /* TNSecureCoding.swift in Sources */,
+				B233832B26E7C6F300B8D953 /* KeychainItemAccessibility.swift in Sources */,
+				B233833026E7C70100B8D953 /* DefaultUserConfigurationResponsitory.swift in Sources */,
+				B233832A26E7C6F300B8D953 /* KeyValueStoreProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC62626E23762003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC63226E23762003B75FA /* DataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC63E26E237A3003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233839926E7C76D00B8D953 /* TNImageDownloader.m in Sources */,
+				B233837726E7C74800B8D953 /* UIImageView+TNWebImage.m in Sources */,
+				B23383A126E7C77400B8D953 /* TNEncryption.m in Sources */,
+				B233838926E7C75D00B8D953 /* TNDiskCacheConfig.m in Sources */,
+				B233838626E7C75D00B8D953 /* TNDiskCache.m in Sources */,
+				B233839826E7C76D00B8D953 /* TNImageDownloaderObjects.m in Sources */,
+				B233837926E7C74E00B8D953 /* TNImageManagerCombineOperation.m in Sources */,
+				B233838E26E7C76100B8D953 /* TNMemoryCacheConfig.m in Sources */,
+				B233839026E7C76800B8D953 /* TNImageCoderHelper.m in Sources */,
+				B23383A726E7C77400B8D953 /* TNImageOperationType.m in Sources */,
+				B233838F26E7C76200B8D953 /* TNMemoryCache.m in Sources */,
+				B233838126E7C75700B8D953 /* TNImageCacheConfig.m in Sources */,
+				B23383A326E7C77400B8D953 /* TNWebImageError.m in Sources */,
+				B233839F26E7C77400B8D953 /* TNImageBaseOperation.m in Sources */,
+				B233837F26E7C75700B8D953 /* TNCacheQueryResponse.m in Sources */,
+				B233839126E7C76800B8D953 /* TNImageCoder.m in Sources */,
+				B233838326E7C75700B8D953 /* TNImageCache.m in Sources */,
+				B233837D26E7C74E00B8D953 /* TNImageManageLoaderObject.m in Sources */,
+				B233839A26E7C76D00B8D953 /* TNImageDownloaderConfig.m in Sources */,
+				B233838826E7C75D00B8D953 /* TNDiskCacheCleaner.m in Sources */,
+				B233837826E7C74E00B8D953 /* TNImageManager.m in Sources */,
+				B233839526E7C76D00B8D953 /* TNImageDownloaderOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC64626E237A4003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC65226E237A4003B75FA /* TNWebImageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC65E26E237B4003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B233833826E7C72E00B8D953 /* DataTransferService.swift in Sources */,
+				B233833926E7C72E00B8D953 /* NetworkService.swift in Sources */,
+				B233833A26E7C72E00B8D953 /* NetworkConfig.swift in Sources */,
+				B233833726E7C72E00B8D953 /* Endpoint.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29BC66626E237B5003B75FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29BC67226E237B5003B75FA /* InfrastructureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B29C2B702684DD39003B4F17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +1475,74 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B23383B826E7C87B00B8D953 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC66126E237B4003B75FA /* Infrastructure */;
+			targetProxy = B23383B726E7C87B00B8D953 /* PBXContainerItemProxy */;
+		};
+		B29BC60D26E23750003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC60126E23750003B75FA /* Domain */;
+			targetProxy = B29BC60C26E23750003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC60F26E23750003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29C2B732684DD39003B4F17 /* DownloadImage */;
+			targetProxy = B29BC60E26E23750003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC61626E23750003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC60126E23750003B75FA /* Domain */;
+			targetProxy = B29BC61526E23750003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC62D26E23762003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC62126E23762003B75FA /* Data */;
+			targetProxy = B29BC62C26E23762003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC62F26E23762003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29C2B732684DD39003B4F17 /* DownloadImage */;
+			targetProxy = B29BC62E26E23762003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC63626E23762003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC62126E23762003B75FA /* Data */;
+			targetProxy = B29BC63526E23762003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC64D26E237A4003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC64126E237A3003B75FA /* TNWebImage */;
+			targetProxy = B29BC64C26E237A4003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC64F26E237A4003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29C2B732684DD39003B4F17 /* DownloadImage */;
+			targetProxy = B29BC64E26E237A4003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC65626E237A4003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC64126E237A3003B75FA /* TNWebImage */;
+			targetProxy = B29BC65526E237A4003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC66D26E237B5003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC66126E237B4003B75FA /* Infrastructure */;
+			targetProxy = B29BC66C26E237B5003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC66F26E237B5003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29C2B732684DD39003B4F17 /* DownloadImage */;
+			targetProxy = B29BC66E26E237B5003B75FA /* PBXContainerItemProxy */;
+		};
+		B29BC67626E237B5003B75FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29BC66126E237B4003B75FA /* Infrastructure */;
+			targetProxy = B29BC67526E237B5003B75FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B29C2B822684DD3A003B4F17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -346,6 +1555,406 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B29BC61726E23750003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B29BC61826E23750003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Domain/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B29BC61926E23750003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = DomainTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Debug;
+		};
+		B29BC61A26E23750003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = DomainTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Release;
+		};
+		B29BC63826E23762003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Data/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B29BC63926E23762003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Data/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B29BC63B26E23762003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = DataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Debug;
+		};
+		B29BC63C26E23762003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = DataTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Release;
+		};
+		B29BC65826E237A4003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TNWebImage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.TNWebImage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B29BC65926E237A4003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TNWebImage/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.TNWebImage;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B29BC65B26E237A4003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = TNWebImageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.TNWebImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Debug;
+		};
+		B29BC65C26E237A4003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = TNWebImageTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.TNWebImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Release;
+		};
+		B29BC67826E237B5003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Infrastructure/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.Infrastructure;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B29BC67926E237B5003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = T5C62MBXTS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Infrastructure/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.Infrastructure;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B29BC67B26E237B5003B75FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = InfrastructureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.InfrastructureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Debug;
+		};
+		B29BC67C26E237B5003B75FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DAA47P5N57;
+				INFOPLIST_FILE = InfrastructureTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trieunguyen.InfrastructureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DownloadImage.app/DownloadImage";
+			};
+			name = Release;
+		};
 		B29C2B862684DD3A003B4F17 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -518,6 +2127,78 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B29BC61B26E23750003B75FA /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC61726E23750003B75FA /* Debug */,
+				B29BC61826E23750003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC61C26E23750003B75FA /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC61926E23750003B75FA /* Debug */,
+				B29BC61A26E23750003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC63726E23762003B75FA /* Build configuration list for PBXNativeTarget "Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC63826E23762003B75FA /* Debug */,
+				B29BC63926E23762003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC63A26E23762003B75FA /* Build configuration list for PBXNativeTarget "DataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC63B26E23762003B75FA /* Debug */,
+				B29BC63C26E23762003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC65726E237A4003B75FA /* Build configuration list for PBXNativeTarget "TNWebImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC65826E237A4003B75FA /* Debug */,
+				B29BC65926E237A4003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC65A26E237A4003B75FA /* Build configuration list for PBXNativeTarget "TNWebImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC65B26E237A4003B75FA /* Debug */,
+				B29BC65C26E237A4003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC67726E237B5003B75FA /* Build configuration list for PBXNativeTarget "Infrastructure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC67826E237B5003B75FA /* Debug */,
+				B29BC67926E237B5003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29BC67A26E237B5003B75FA /* Build configuration list for PBXNativeTarget "InfrastructureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29BC67B26E237B5003B75FA /* Debug */,
+				B29BC67C26E237B5003B75FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B29C2B6F2684DD39003B4F17 /* Build configuration list for PBXProject "DownloadImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

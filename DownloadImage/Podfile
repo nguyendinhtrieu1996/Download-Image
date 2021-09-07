@@ -1,10 +1,44 @@
-use_frameworks!
 platform :ios, '10.0'
+inhibit_all_warnings!
+
+def rx_swift
+  pod 'RxSwift', '6.2.0'
+end
+
+def rx_cocoa
+  pod 'RxCocoa', '6.2.0'
+end
 
 target 'DownloadImage' do
- 
-   pod 'SDWebImage'
-   pod 'RxSwift', '6.2.0'
-   pod 'RxCocoa', '6.2.0'
-   
-end
+  
+  use_frameworks!
+  rx_swift
+  rx_cocoa
+  pod 'SDWebImage'
+  
+end # target 'DownloadImage'
+
+target 'Domain' do
+  
+  use_frameworks!
+  rx_swift
+  rx_cocoa
+  
+end # target 'Domain'
+
+target 'Data' do
+  
+  use_frameworks!
+  rx_swift
+  rx_cocoa
+  
+end # target 'Data'
+
+target 'Infrastructure' do
+  
+  use_frameworks!
+  rx_swift
+  rx_cocoa
+  
+end # target Infrastructure
+
